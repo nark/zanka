@@ -1,0 +1,32 @@
+#!/bin/sh
+
+##
+# Wired server
+##
+
+. /etc/rc.common
+
+StartService ()
+{
+	if [ -f /Library/Wired/etc/wired.startup ]; then
+		ConsoleMessage "Starting Wired"
+		rm -f /Library/Wired/wired.pid
+		/Library/Wired/wiredctl start
+	fi
+}
+
+StopService ()
+{
+   	ConsoleMessage "Stopping Wired"
+   	/Library/Wired/wiredctl stop
+}
+
+RestartService ()
+{
+	if [ -f /Library/Wired/etc/wired.startup ]; then
+		ConsoleMessage "Restarting Wired"
+		/Library/Wired/wiredctl restart
+	fi
+}
+
+RunService "$1"

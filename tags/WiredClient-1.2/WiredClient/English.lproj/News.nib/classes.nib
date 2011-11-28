@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {clear = id; post = id; reload = id; }; 
+            CLASS = WCNews; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_clearButton" = NSButton; 
+                "_newsTextView" = WCTextView; 
+                "_postButton" = NSButton; 
+                "_postPanel" = NSPanel; 
+                "_postTextView" = NSTextView; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadButton" = NSButton; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

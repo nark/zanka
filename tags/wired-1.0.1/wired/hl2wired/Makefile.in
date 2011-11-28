@@ -1,0 +1,54 @@
+OBJECTS				= main.o
+
+bindir				= @bindir@
+datadir				= @datadir@
+exec_prefix			= @exec_prefix@
+includedir			= @includedir@
+infodir				= @infodir@
+libdir				= @libdir@
+libexecdir			= @libexecdir@
+localstatedir		= @localstatedir@
+mandir				= @mandir@
+prefix				= @prefix@
+sbindir				= @sbindir@
+srcdir				= @srcdir@
+sysconfdir			= @sysconfdir@
+top_srcdir			= @top_srcdir@
+
+RM              	= @RM@
+CP              	= @CP@
+MV					= @MV@
+MKDIR           	= @MKDIR@
+TAR             	= @TAR@
+INSTALL				= @INSTALL@
+
+DEFS				= @DEFS@ -DWD_ROOT="\"$(prefix)/wired\""
+CC					= @CC@
+CFLAGS				= @CFLAGS@
+CPPFLAGS			= @CPPFLAGS@
+LDFLAGS				= @LDFLAGS@
+LIBS				= @LIBS@
+INCLUDES			= -I$(top_srcdir) -I$(srcdir)
+
+COMPILE				= $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+LINK				= $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+all: hl2wired
+
+hl2wired: $(OBJECTS)
+	$(RM) -f $@
+	$(LINK) $(OBJECTS) $(LIBS)
+	$(CP) hl2wired ../run/
+
+.c.o:
+	$(COMPILE) -c $<
+
+clean:
+	$(RM) -f *.o *.core
+
+distclean: clean
+	$(RM) -f hl2wired Makefile config.*
+	$(RM) -f ../run/hl2wired

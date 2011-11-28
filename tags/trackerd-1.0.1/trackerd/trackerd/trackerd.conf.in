@@ -1,0 +1,107 @@
+# trackerd.conf
+
+### TRACKER ###########################################################
+
+# Name of the server.
+# (default "Wired Tracker")
+name = Wired Tracker
+
+# A short description of the server.
+# (default "Wired Tracker")
+description = Wired Tracker
+
+# A specific address to bind to, instead of binding to all available
+# addresses. Can be specified more than once, for each address the
+# tracker should listen on.
+# (no default)
+#address = localhost
+
+# Port number to listen on.
+# (default 2002)
+port = 2002
+
+# Name or id of the user that the tracker should operate as.
+# (default "@WT_USER@")
+user = @WT_USER@
+
+# Name or id of the group that the tracker should operate as.
+# (default "@WT_GROUP@")
+group = @WT_GROUP@
+
+# Number of seconds a server may go between updating. After this
+# interval the server is remove from the list.
+# (default 300)
+min update time = 300
+
+# Number of seconds a server must wait between updating. If a server
+# attempts to update more often than this, it is removed from the list.
+# (default 10)
+max update time = 10
+
+# Minimum bandwidth in bytes/sec a server may be registered with.
+# (no default)
+#min bandwidth = 8000
+
+# Maximum bandwidth in bytes/sec a server may be registered with.
+# (no default)
+#max bandwidth = 1280000
+
+# If set, enables hostname lookup. This requires that the hostname
+# a server tries to register with must resolve back to the IP it is
+# connecting from.
+# (default "yes")
+lookup = yes
+
+# If set, enables reverse lookup. This requires that the IP a server
+# is connecting from resolves to the hostname it's trying to register
+# under.
+# (default "no")
+reverse lookup = no
+
+# If set, servers that fail any of the lookup tests will be denied
+# registration. If not set, the tracker will instead generate a new
+# proper URL based on the source IP and the default port and enter
+# this into the list.
+# (default "no")
+strict lookup = no
+
+# If set, allows a single IP to register multiple servers under
+# different ports.
+# (default "no")
+allow multiple = no
+
+# An OpenSSL cipher list to use for connections. See ciphers(1)
+# for information on its format.
+# (default "ALL:NULL:!MD5:@STRENGTH")
+cipher = ALL:NULL:!MD5:@STRENGTH
+
+
+### PATHS #############################################################
+
+# Paths that do not begin with a / are taken to be relative the root
+# path (-d flag).
+
+# Path to the file in which place to process id of the running daemon.
+# (default "trackerd.pid")
+pid = trackerd.pid
+
+# Path to the file in which to place the current status.
+# (default "trackerd.status")
+status = trackerd.status
+
+# Path to the banlist file.
+# (default "banlist")
+banlist = banlist
+
+# Path to the categories file.
+# (default "categories")
+categories = categories
+
+# Path to the servers file.
+# (default "servers")
+servers = servers
+
+# Path to an OpenSSL certificate PEM file. See req(1) for information
+# on its format.
+# (default "etc/certificate.pem")
+certificate = etc/certificate.pem

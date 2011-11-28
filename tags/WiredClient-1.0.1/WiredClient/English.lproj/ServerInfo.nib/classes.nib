@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCServerInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bannerImageView" = NSImageView; 
+                "_cipherTextField" = NSTextField; 
+                "_cipherTitleTextField" = NSTextField; 
+                "_descriptionTextField" = NSTextField; 
+                "_descriptionTitleTextField" = NSTextField; 
+                "_nameTextField" = NSTextField; 
+                "_protocolTextField" = NSTextField; 
+                "_protocolTitleTextField" = NSTextField; 
+                "_uptimeTextField" = NSTextField; 
+                "_uptimeTitleTextField" = NSTextField; 
+                "_urlTextField" = NSTextField; 
+                "_urlTitleTextField" = NSTextField; 
+                "_versionTextField" = NSTextField; 
+                "_versionTitleTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

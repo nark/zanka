@@ -1,0 +1,137 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {CLASS = WCIconMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                addHighlight = id; 
+                addIgnore = id; 
+                addTrackerBookmark = id; 
+                clearIcon = id; 
+                deleteBookmark = id; 
+                deleteHighlight = id; 
+                deleteIgnore = id; 
+                deleteTrackerBookmark = id; 
+                icon = id; 
+                selectDownloadFolder = id; 
+                selectEvent = id; 
+                selectSound = id; 
+                setIcon = id; 
+                showFontPanel = id; 
+                touchEvent = id; 
+            }; 
+            CLASS = WCPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addBookmarkButton" = NSButton; 
+                "_addHiglightButton" = NSButton; 
+                "_addIgnoreButton" = NSButton; 
+                "_addTrackerBookmarkButton" = NSButton; 
+                "_autoHideOnSwitchButton" = NSButton; 
+                "_bookmarksAddressTextField" = NSTextField; 
+                "_bookmarksLoginTextField" = NSTextField; 
+                "_bookmarksNameTableColumn" = NSTableColumn; 
+                "_bookmarksNameTextField" = NSTextField; 
+                "_bookmarksNickTextField" = NSTextField; 
+                "_bookmarksPasswordTextField" = NSSecureTextField; 
+                "_bookmarksStatusTextField" = NSTextField; 
+                "_bookmarksTableView" = NSTableView; 
+                "_bounceInDockButton" = NSButton; 
+                "_chatBackgroundColorWell" = NSColorWell; 
+                "_chatEventsColorWell" = NSColorWell; 
+                "_chatFontButton" = NSButton; 
+                "_chatFontTextField" = NSTextField; 
+                "_chatStyleMatrix" = NSMatrix; 
+                "_chatTextColorWell" = NSColorWell; 
+                "_chatURLsColorWell" = NSColorWell; 
+                "_chatUserListAlternateRowsButton" = NSButton; 
+                "_chatUserListFontButton" = NSButton; 
+                "_chatUserListFontTextField" = NSTextField; 
+                "_chatUserListIconSizeMatrix" = NSMatrix; 
+                "_confirmDisconnectButton" = NSButton; 
+                "_deleteBookmarkButton" = NSButton; 
+                "_deleteHiglightButton" = NSButton; 
+                "_deleteIgnoreButton" = NSButton; 
+                "_deleteTrackerBookmarkButton" = NSButton; 
+                "_downloadFolderTextField" = NSTextField; 
+                "_encryptTransfersButton" = NSButton; 
+                "_eventsPopUpButton" = NSPopUpButton; 
+                "_filesAlternateRowsButton" = NSButton; 
+                "_filesFontButton" = NSButton; 
+                "_filesFontTextField" = NSTextField; 
+                "_highlightsColorTableColumn" = NSTableColumn; 
+                "_highlightsPatternTableColumn" = NSTableColumn; 
+                "_highlightsTableView" = NSTableView; 
+                "_historyScrollbackButton" = NSButton; 
+                "_historyScrollbackModifierPopUpButton" = NSPopUpButton; 
+                "_iconImageView" = NSImageView; 
+                "_ignoresAddressTableColumn" = NSTableColumn; 
+                "_ignoresLoginTableColumn" = NSTableColumn; 
+                "_ignoresNickTableColumn" = NSTableColumn; 
+                "_ignoresTableView" = NSTableView; 
+                "_messagesBackgroundColorWell" = NSColorWell; 
+                "_messagesFontButton" = NSButton; 
+                "_messagesFontTextField" = NSTextField; 
+                "_messagesListAlternateRowsButton" = NSButton; 
+                "_messagesListFontButton" = NSButton; 
+                "_messagesListFontTextField" = NSTextField; 
+                "_messagesTextColorWell" = NSColorWell; 
+                "_newsBackgroundColorWell" = NSColorWell; 
+                "_newsFontButton" = NSButton; 
+                "_newsFontTextField" = NSTextField; 
+                "_newsTextColorWell" = NSColorWell; 
+                "_newsTitlesColorWell" = NSColorWell; 
+                "_nickTextField" = NSTextField; 
+                "_openFoldersInNewWindowsButton" = NSButton; 
+                "_playSoundButton" = NSButton; 
+                "_postInChatButton" = NSButton; 
+                "_preferencesTabView" = NSTabView; 
+                "_previewBackgroundColorWell" = NSColorWell; 
+                "_previewFontButton" = NSButton; 
+                "_previewFontTextField" = NSTextField; 
+                "_previewTextColorWell" = NSColorWell; 
+                "_queueTransfersButton" = NSButton; 
+                "_removeTransfersButton" = NSButton; 
+                "_showConnectAtStartupButton" = NSButton; 
+                "_showDockAtStartupButton" = NSButton; 
+                "_showTrackersAtStartupButton" = NSButton; 
+                "_soundsPopUpButton" = NSPopUpButton; 
+                "_statusTextField" = NSTextField; 
+                "_tabCompleteNicksButton" = NSButton; 
+                "_tabCompleteNicksTextField" = NSTextField; 
+                "_timestampChatButton" = NSButton; 
+                "_timestampChatIntervalTextField" = NSTextField; 
+                "_timestampEveryLineButton" = NSButton; 
+                "_timestampEveryLineColorWell" = NSColorWell; 
+                "_trackerBookmarksAddressTextField" = NSTextField; 
+                "_trackerBookmarksNameTableColumn" = NSTableColumn; 
+                "_trackerBookmarksNameTextField" = NSTextField; 
+                "_trackerBookmarksTableView" = NSTableView; 
+                "_trackersAlternateRowsButton" = NSButton; 
+                "_transfersAlternateRowsButton" = NSButton; 
+                "_transfersShowProgressBarButton" = NSButton; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

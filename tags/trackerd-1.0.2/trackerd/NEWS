@@ -1,0 +1,17 @@
+NEWS
+====
+
+1.0.2
+- Fix a crash if starting with no arguments at all
+- Fix parsing of IPv6 addresses in config
+- Automatically generate SSL certificate if not configured
+- Stability fix
+- Remove chroot option
+- Error 531 was incorrectly reported as 530
+
+1.0.1
+- Mac OS X 10.5 support
+- Created Mac OS X installer package
+
+1.0
+- Initial release

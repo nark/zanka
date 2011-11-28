@@ -1,0 +1,192 @@
+#!/bin/sh
+
+# The path to your config file
+CONFIGFILE="@prefix@/wired/etc/wired.conf"
+
+# The path to your pid file, should be the same as in your wired.conf
+PIDFILE="@prefix@/wired/wired.pid"
+
+# The path to your status file, should be the same as in your wired.conf
+STATUSFILE="@prefix@/wired/status"
+
+# The path to your wired binary
+WIRED="@prefix@/wired/wired"
+
+# Flags to pass to wired
+WIREDFLAGS="-d @prefix@/wired -ll"
+
+# Begin script
+PROG=`basename $0`
+RUNNING=0
+
+if [ -f $PIDFILE ]; then
+	PID=`cat $PIDFILE`
+		
+	if [ "x$PID" != "x" ] && kill -0 $PID 2>/dev/null ; then
+		RUNNING=1
+	fi
+fi
+
+case $1 in
+	start)
+		if [ $RUNNING -eq 1 ]; then
+			echo "$PROG: $1: wired (pid $PID) already running"
+			exit
+		fi
+
+		if $WIRED $WIREDFLAGS $2; then
+			echo "$PROG: $1: wired started"
+		else
+			echo "$PROG: $1: wired could not be started"
+		fi
+		;;
+	
+	stop)
+		if [ $RUNNING -eq 0 ]; then
+			echo "$PROG: $1: wired is not running"
+			exit
+		fi
+
+		if kill $PID; then
+			echo "$PROG: $1: wired stopped"
+		else
+			echo "$PROG: $1: wired could not be stopped"
+			exit
+		fi
+		;;
+
+	restart)
+		if [ $RUNNING -eq 1 ]; then
+			if kill $PID; then
+				echo "$PROG: $1: wired stopped"
+			else
+				echo "$PROG: $1: wired could not be stopped"
+				exit
+			fi
+		fi
+
+		if $WIRED $WIREDFLAGS $2; then
+			echo "$PROG: $1: wired started"
+		else
+			echo "$PROG: $1: wired could not be started"
+		fi
+		;;
+
+	reload)
+		if [ $RUNNING -eq 0 ]; then
+			echo "$PROG: $1: wired is not running"
+			exit
+		fi
+
+		if kill -HUP $PID; then
+			echo "$PROG: $1: wired reloaded"
+		else
+			echo "$PROG: $1: wired could not be reloaded"
+		fi
+		;;
+
+	configtest)
+		$WIRED -t
+		;;
+	
+	status)
+		if [ $RUNNING -eq 0 ]; then
+			echo "$PROG: $1: wired is not running"
+			exit
+		fi
+
+		if [ -f $STATUSFILE ]; then
+			$WIRED -v
+			awk '
+				function pad(number) {
+					if(number < 10)
+						return "0" number
+					else
+						return number
+				}
+			
+				function ftime(time) {
+					days = int(time / 86400)
+					time = time % 86400
+
+					hours = int(time / 3600)
+					time = time % 3600
+
+					minutes = int(time / 60)
+					time = time % 60
+					
+					seconds = time
+
+					if(days > 0)
+						return pad(days) ":" pad(hours) ":" \
+							   pad(minutes) ":" pad(seconds) \
+							   " days"
+					else if(hours > 0)
+						return pad(hours) ":" pad(minutes) ":" \
+							   pad(seconds) " hours"
+					else if(minutes > 0)
+						return pad(minutes) ":" pad(seconds) \
+							   " minutes"
+					else
+						return pad(seconds) " seconds"
+				}
+				
+				function fbytes(bytes) {
+					power = 0
+					
+					while(bytes > (1024 ^ ++power))
+						;
+					
+					value = sprintf("%.2f", bytes / (1024 ^ --power))
+					
+					if(power == 4)
+						return value " TB"
+					else if(power == 3)
+						return value " GB"
+					else if(power == 2)
+						return value " MB"
+					else if(power == 1)
+						return value " KB"
+					else if(power == 0)
+						if(bytes == 1)
+							return bytes " byte"
+						else
+							return bytes " bytes"
+				}
+
+				{
+					"date +%s" | getline now
+					print "Up " ftime(now - $1)
+					print ""
+					print "Current users:         " $2
+					print "Total users:           " $3
+					print "Current downloads:     " $4
+					print "Total downloads:       " $5
+					print "Current uploads:       " $6
+					print "Total uploads:         " $7
+					print "Downloads traffic:     " fbytes($8)
+					print "Uploads traffic:       " fbytes($9)
+					print "Total traffic:         " fbytes($8 + $9)
+				}
+			' $STATUSFILE
+		else
+			echo "$PROG: $1: $STATUSFILE could not be found"
+		fi
+		;;
+	
+	*)
+		echo "Usage: $PROG [start | stop | restart | reload | configtest | status | help]"
+		cat <<EOF
+
+    start       start wired
+    stop        stop wired
+    restart     restart wired
+    reload      send wired a SIGHUP, causing it to reload its configuration
+    configtest  run a configuration syntax test
+    status      show a status screen
+    help        display this information
+
+By Axel Andersson <axel@zankasoftware.com>
+EOF
+		;;
+esac

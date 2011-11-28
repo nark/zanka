@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {orderFrontReleaseNotesWindow = id; }; 
+            CLASS = WIApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_releaseNotesTextView" = NSTextView; "_releaseNotesWindow" = NSWindow; }; 
+            SUPERCLASS = NSApplication; 
+        }
+    ); 
+    IBVersion = 1; 
+}

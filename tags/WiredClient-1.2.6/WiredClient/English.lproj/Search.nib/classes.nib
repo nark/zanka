@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {download = id; info = id; open = id; revealInFiles = id; search = id; }; 
+            CLASS = WCSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_downloadMenuItem" = NSMenuItem; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_kindPopUpButton" = NSPopUpButton; 
+                "_openMenuItem" = NSMenuItem; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_revealInFilesMenuItem" = NSMenuItem; 
+                "_searchTableView" = WCTableView; 
+                "_searchTextField" = NSTextField; 
+                "_statusTextField" = NSTextField; 
+                "_viewOptionsPanel" = NSPanel; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

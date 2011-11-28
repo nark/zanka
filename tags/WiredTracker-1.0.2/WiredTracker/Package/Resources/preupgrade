@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Match these in postupgrade
+PRESERVE="etc/trackerd.conf etc/certificate.pem banlist categories"
+
+for i in ${PRESERVE}; do
+	if [ -e "/Library/Wired/${i}" ]; then
+		cp -p "/Library/Wired/${i}" "/Library/Wired/${i}~"
+	elif [ -e "/usr/local/wired/${i}" ]; then
+		cp -p "/usr/local/wired/${i}" "/Library/Wired/${i}~"
+	fi
+done
+
+exit 0

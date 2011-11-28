@@ -1,0 +1,10 @@
+svn_path=Footagehead
+
+xcodebuild=1
+
+tarball=Footagehead.zip
+distname=Footagehead-%X.zip
+releaseball=footagehead-latest.zip
+
+readme=English.lproj/ReleaseNotes.rtf
+appcasts=nightly=footagehead-nightly.xml release=footagehead.xml

@@ -1,0 +1,60 @@
+OBJECTS					= client.o commands.o main.o utility.o
+
+WR_PACKAGE_VERSION		= @WR_PACKAGE_VERSION@
+
+bindir					= @bindir@
+datadir				 	= @datadir@
+exec_prefix				= @exec_prefix@
+includedir				= @includedir@
+infodir					= @infodir@
+libdir					= @libdir@
+libexecdir				= @libexecdir@
+localstatedir			= @localstatedir@
+mandir					= @mandir@
+prefix					= @prefix@
+sbindir					= @sbindir@
+srcdir					= @srcdir@
+sysconfdir				= @sysconfdir@
+top_srcdir				= @top_srcdir@
+
+INSTALL					= @INSTALL@
+RM						= @RM@
+CP						= @CP@
+MV						= @MV@
+MKDIR					= @MKDIR@
+CHMOD					= @CHMOD@
+TAR						= @TAR@
+SED						= @SED@
+CUT						= @CUT@
+OPENSSL					= @OPENSSL@
+
+DEFS					= @DEFS@
+CC						= @CC@
+CFLAGS					= @CFLAGS@
+CPPFLAGS				= @CPPFLAGS@
+LDFLAGS					= @LDFLAGS@
+LIBS					= @LIBS@
+INCLUDES				= -I$(top_srcdir) -I$(srcdir)
+
+COMPILE					= $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+LINK					= $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+all: wire
+
+wire: $(OBJECTS)
+	$(RM) -f $@
+	$(LINK) $(OBJECTS) $(LIBS)
+	$(CP) wire ../run/
+	
+.c.o:
+	$(COMPILE) -c $<
+
+clean:
+	$(RM) -f *.o *.core
+
+distclean: clean
+	$(RM) -f wire Makefile config.*
+	$(RM) -f ../run/wire 

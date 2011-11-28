@@ -1,0 +1,9 @@
+svn_path=Tuna
+
+xcodebuild=1
+
+tarball=Tuna.zip
+distname=Tuna-%X.zip
+releaseball=tuna-latest.zip
+
+readme=English.lproj/ReleaseNotes.rtf

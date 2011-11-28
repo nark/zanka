@@ -1,0 +1,106 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                autoSwitch = id; 
+                firstFile = id; 
+                lastFile = id; 
+                nextImage = id; 
+                nextPage = id; 
+                openDirectory = id; 
+                openFile = id; 
+                openParent = id; 
+                previousImage = id; 
+                previousPage = id; 
+            }; 
+            CLASS = FHBrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_contentBox" = NSBox; 
+                "_fileTableColumn" = NSTableColumn; 
+                "_leftStatusTextField" = NSTextField; 
+                "_leftView" = NSView; 
+                "_openSpotlightPanel" = NSPanel; 
+                "_openSpotlightTextView" = NSTextView; 
+                "_openURLPanel" = NSPanel; 
+                "_openURLPopUpButton" = NSPopUpButton; 
+                "_openURLTextView" = NSTextView; 
+                "_rightStatusTextField" = NSTextField; 
+                "_rightView" = NSView; 
+                "_screenAutoSwitchButton" = NSButton; 
+                "_screenAutoSwitchTextField" = NSTextField; 
+                "_screenBackgroundBlackMenuItem" = NSMenuItem; 
+                "_screenBackgroundGrayMenuItem" = NSMenuItem; 
+                "_screenBackgroundPopUpButton" = NSPopUpButton; 
+                "_screenBackgroundWhiteMenuItem" = NSMenuItem; 
+                "_screenPanel" = NSPanel; 
+                "_screenPopUpButton" = NSPopUpButton; 
+                "_scrollView" = NSScrollView; 
+                "_splitView" = WISplitView; 
+                "_statusBox" = NSBox; 
+                "_tableView" = FHTableView; 
+            }; 
+            SUPERCLASS = FHWindowController; 
+        }, 
+        {
+            CLASS = FHImageView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_delegate" = id; "_scrollView" = NSScrollView; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = FHImageViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageView" = FHImageView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = FHTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageScrollView" = NSScrollView; "_imageView" = FHImageView; }; 
+            SUPERCLASS = WITableView; 
+        }, 
+        {
+            ACTIONS = {
+                firstFile = id; 
+                lastFile = id; 
+                nextImage = id; 
+                nextPage = id; 
+                previousImage = id; 
+                previousPage = id; 
+                rotateLeft = id; 
+                rotateRight = id; 
+                zoomMode = id; 
+            }; 
+            CLASS = FHWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageView" = FHImageView; "_progressIndicator" = NSProgressIndicator; }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {CLASS = WISplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

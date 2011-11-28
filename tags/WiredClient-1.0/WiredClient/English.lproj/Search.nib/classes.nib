@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {search = id; }; 
+            CLASS = WCSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_kindPopUpButton" = NSPopUpButton; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_searchTableView" = WCTableView; 
+                "_searchTextField" = NSTextField; 
+                "_sizeTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTypeAheadTableView; LANGUAGE = ObjC; SUPERCLASS = WCTableView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

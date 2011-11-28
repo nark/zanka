@@ -1,0 +1,702 @@
+﻿/* Action chat message, IRC style (nick, message) */
+" * %@ %@" = " * %1$@ %2$@";
+
+/* Action chat message, Wired style (nick, message) */
+" *** %@ %@" = " *** %1$@ %2$@";
+
+/* Chat topic set by (nick, time) */
+"%@ %C %@" = "%1$@ %2$C %3$@";
+
+/* Client rename message (nick, status) */
+"%@ changed status to %@" = "%1$@ a changé de statut pour %2$@";
+
+/* Stats message */
+"%@ downloaded, %@/s max download speed, %@ uploaded, %@/s max upload speed, %@ chat, %@ online, %lu %@ received, %lu %@ sent" = "%1$@ téléchargé, à une vitesse maximum %2$@/s, %3$@ envoyé, à une vitesse maximum %4$@/s, %5$@ discussion, %6$@ en ligne, %7$lu %8$@ reçu, %9$lu %10$@ envoyé";
+
+/* Private chat decline message (nick) */
+"%@ has declined invitation" = "%@ a décliné l’invitation";
+
+/* Private chat invite dialog title (nick) */
+"%@ has invited you to a private chat." = "%@ vous invite à une discussion privée.";
+
+/* Client has joined message (nick) */
+"%@ has joined" = "%@ est arrivé";
+
+/* Client has left message (nick) */
+"%@ has left" = "%@ est parti";
+
+/* Server info window title (server)
+   File info window title (filename)
+   User info window title (nick) */
+"%@ Info" = "%@ info";
+
+/* Client rename message (oldnick, newnick) */
+"%@ is now known as %@" = "%1$@ se renomme %2$@";
+
+/* User info transfer (transferred, total, speed) */
+"%@ of %@, %@/s" = "%1$@ de %2$@, %3$@/s";
+
+/* Transfer status (transferred, size, speed, time) */
+"%@ of %@, %@/s, %@" = "%1$@ de %2$@, %3$@/s, %4$@";
+
+/* Save chat file name (server) */
+"%@ Private Chat" = "%@ discussion privée";
+
+/* Save chat file name (server) */
+"%@ Public Chat" = "%@ discussion publique";
+
+/* Client banned message (victim, killer) */
+"%@ was banned by %@" = "%1$@ a été banni par %2$@";
+
+/* Client banned message (victim, killer, message) */
+"%@ was banned by %@ (%@)" = "%1$@ a été banni par %2$@ (%3$@)";
+
+/* Client kicked message (victim, killer) */
+"%@ was kicked by %@" = "%1$@ a été viré par %2$@";
+
+/* Client kicked message (victim, killer, message) */
+"%@ was kicked by %@ (%@)" = "%1$@ a été viré par %2$@ (%3$@)";
+
+/* Time stamp (time counter, time string) */
+"%@,\nsince %@" = "%1$@,\ndepuis %2$@";
+
+/* Cipher description (name, bits) */
+"%@/%lu bits" = "%1$@/%2$lu bits";
+
+/* Certificate description (name, bits, hostname) */
+"%@/%lu bits, %@" = "%1$@/%2$lu bits, %3$@";
+
+/* Chat message, Wired style (nick, message) */
+"%@: %@" = "%1$@: %2$@";
+
+/* Search info (items, 'item(s)', total) */
+"%lu %@, %@ total" = "%1$lu %2$@, %3$@ totalisé";
+
+/* Files info (count, 'item(s)', size, available) */
+"%lu %@, %@ total, %@ available" = "%1$lu %2$@, %3$@ totalisé, %4$@ disponible";
+
+/* Accounts status (users, 'user(s)', groups, 'group(s)') */
+"%lu %@, %lu %@" = "%1$lu %2$@, %3$lu %4$@";
+
+/* File info folder size (count, 'item(s)'
+   Files folder size (count, 'item(s)' */
+"%llu %@" = "%1$llu %2$@";
+
+/* Dock status (connections, 'connection(s)') */
+"%lu %@" = "%1$lu %2$@";
+
+/* Transfer status (files, transferred, size, speed, time) */
+"%lu of %lu files, %@ of %@, %@/s, %@" = "%1$lu of %2$lu fichiers, %3$@ de %4$@, %5$@/s, %6$@";
+
+/* Chat message, IRC style (nick, message) */
+"<%@> %@" = "<%1$@> %2$@";
+
+/* Chat event (message) */
+"<<< %@ >>>" = "<<< %@ >>>";
+
+/* Account editor window title */
+"Account Editor" = "Editeur de compte";
+
+/* Wired Protocol error 514 title */
+"Account Exists" = "Compte existant";
+
+/* Wired Protocol error 513 title */
+"Account Not found" = "Compte introuvable";
+
+/* Accounts toolbar item
+   Accounts window title */
+"Accounts" = "Comptes";
+
+/* Account Editor button title */
+"Add" = "Ajouter";
+
+/* Wired Protocol unknown error description (code, message) */
+"An unknown server error occured. The message we got back was: \"%u %@\"." = "Une erreur serveur est survenue. Le message reçu était: \"%1$u %2$@\".";
+
+/* Smiley */
+"Angry" = "Fâché";
+
+/* Clear messages dialog title */
+"Are you sure you want to clear the message history?" = "Voulez-vous effacer l’historique des messages?";
+
+/* Clear news dialog title */
+"Are you sure you want to clear the news?" = "Voulez-vous effacer l’ensemble des nouvelles?";
+
+/* Delete file dialog title (count)
+   Delete account dialog title (count) */
+"Are you sure you want to delete %lu items?" = "Confirmez-vous effacer %lu objets?";
+
+/* Delete bookmark dialog title (bookmark)
+   Delete account dialog title (filename)
+   Delete file dialog title (filename)
+   Delete tracker bookmark dialog title (bookmark) */
+"Are you sure you want to delete \"%@\"?" = "Confirmez-vous effacer \"%@\"?";
+
+/* Delete highlight dialog title (bookmark) */
+"Are you sure you want to delete the selected highlight?" = "Voulez-vous réellement supprimer la sélection?";
+
+/* Delete ignore dialog title (bookmark) */
+"Are you sure you want to delete the selected ignore?" = "Voulez-vous réintégrer en discussion l’utilisateur sélectionné?";
+
+/* Disconnect dialog title */
+"Are you sure you want to disconnect?" = "Confirmez-vous la déconnexion?";
+
+/* Wired Protocol error 511 title */
+"Banned" = "Banni";
+
+/* Banner toolbar item */
+"Banner" = "Bannière";
+
+/* Cipher string */
+"bits" = "bits";
+
+/* Description of Bonjour tracker ('-', servers, 'server(s)' */
+"Bonjour local service discovery %C %lu %@" = "Réseau local Bonjour détécté %1$C %2$lu %3$@";
+
+/* Bookmarks toolbar item */
+"Bookmarks" = "Favoris";
+
+/* Broadcast dialog title (nick, server, time) */
+"Broadcast from %@ on %@ at %@" = "Annonces de %1$@ sur %2$@ à %3$@";
+
+/* Event */
+"Broadcast Received" = "Annonce reçue";
+
+/* Messages item */
+"Broadcasts" = "Annonces";
+
+/* Delete bookmark dialog button title
+   Delete ignore dialog button title
+   Transfers overwrite alert button
+   Delete file button title
+   Restore all layouts to default dialog button title
+   Disconnect dialog button title
+   Delete account dialog button title
+   Make layout default dialog button title
+   Delete tracker bookmark dialog button title
+   Clear news button title
+   Clear messages dialog button
+   Restore layout to default dialog button title
+   Delete highlight dialog button title */
+"Cancel" = "Annuler";
+
+/* Wired Protocol error 515 title */
+"Cannot Be Disconnected" = "Utilisateur protégé";
+
+/* Chat toolbar item
+   Chat window title */
+"Chat" = "Discussion";
+
+/* Event */
+"Chat Received" = "Discussion reçue";
+
+/* Error
+   Wired Protocol error 522 title */
+"Checksum Mismatch" = "Erreur de vérification";
+
+/* Clear news button title
+   Clear messages dialog button */
+"Clear" = "Effacer";
+
+/* Wired Protocol error 512 title */
+"Client Not Found" = "Client non trouvé";
+
+/* Connect window title */
+"Connect" = "Connexion";
+
+/* Connection singular */
+"connection" = "connexion";
+
+/* Connection plural */
+"connections" = "connexions";
+
+/* Console window title */
+"Console" = "Console";
+
+/* Messages item */
+"Conversations" = "Conversations";
+
+/* Smiley */
+"Cool" = "Cool";
+
+/* Error (path) */
+"Could not create the file \"%@\"." = "Impossible de créer le fichier \"%@\".";
+
+/* Wired Protocol error 521 description */
+"Could not create the file or directory, it already exists." = "Impossible de créer le fichier ou dossier, déjà existant.";
+
+/* Wired Protocol error 513 description */
+"Could not find the account you referred to. Perhaps someone deleted it." = "Impossible de trouver cet utilisateur, il a peut être été supprimé.";
+
+/* Wired Protocol error 512 description */
+"Could not find the client you referred to. Perhaps that client left before the command could be completed." = "Impossible de trouver ce client, peut être est-il parti avant la fin de la commande.";
+
+/* Wired Protocol error 520 description */
+"Could not find the file or folder you referred to. Perhaps someone deleted it." = "Impossible de trouver ce fichier ou dossier, il a sans doute été effacé.";
+
+/* Wired Protocol error 510 description */
+"Could not login, the user name and/or password you supplied was rejected." = "Impossible d’entrer, le nom ou le mot de passe sont rejetés.";
+
+/* Wired Protocol error 511 description */
+"Could not login, you are banned from this server." = "Impossible d’entrer, vous êtes banni.";
+
+/* Error (path) */
+"Could not open the file \"%@\"." = "Impossible de trouver ce fichier \"%@\".";
+
+/* Error (path) */
+"Could not resume transfer of \"%@\", the checksums do not match." = "Impossible de reprendre \"%@\", la vérification a échouée.";
+
+/* Wired Protocol error 523 description */
+"Could not start a transfer, the limit has been exceeded." = "Impossible de commencer le transfert, la limite a été dépassée.";
+
+/* Wired Protocol error 522 description */
+"Could not start an upload, the checksums do not match." = "Impossible de démarrer l’envoi, la vérification n’est pas valide.";
+
+/* Error */
+"Create Failed" = "Echec de création";
+
+/* Smiley */
+"Cry" = "Triste";
+
+/* Delete ignore dialog button title
+   Delete account dialog button title
+   Delete tracker bookmark dialog button title
+   Delete highlight dialog button title
+   Delete bookmark dialog button title
+   Delete file button title */
+"Delete" = "Effacer";
+
+/* Disconnect toolbar item
+   Disconnect dialog button
+   Disconnect menu item */
+"Disconnect" = "Déconnexion";
+
+/* Chat window title */
+"Disconnected" = "Déconnecté";
+
+/* Event */
+"Private Chat Invitation Received" = "Private Chat Invitation Received";
+
+/* Growl event private chat invitation received title */
+"Private chat invitation received" = "Private chat invitation received";
+
+/* Disconnect dialog description */
+"Disconnecting will close any ongoing file transfers." = "La déconnexion entraîne l’arrêt des transferts.";
+
+/* File info folder type popup title */
+"Don't Change" = "Don't Change";
+
+/* Short drop box folder kind */
+"drop box" = "dossier personnel";
+
+/* Drop box folder kind */
+"Drop Box Folder" = "Dossier personnel";
+
+/* Smiley */
+"Embarrassed" = "Embarrasé";
+
+/* Event */
+"Error" = "Erreur";
+
+/* Events toolbar item */
+"Events" = "Actions";
+
+/* File singular */
+"file" = "fichier";
+
+/* Error
+   Transfers overwrite alert title */
+"File Exists" = "Fichier existant";
+
+/* Wired Protocol error 521 title */
+"File or Folder Exists" = "Fichier ou dossier existant";
+
+/* Wired Protocol error 520 title */
+"File or Folder Not Found" = "Fichier ou dossier introuvable";
+
+/* File plural */
+"files" = "fichiers";
+
+/* Files toolbar item */
+"Files" = "Fichiers";
+
+/* Transfer finished (files, transferred, speed, time) */
+"Finished %@, average %@/s, took %@" = "Achevé %1$@, à environ %2$@/s, restant %3$@";
+
+/* Transfer finished (files, transferred, speed, time) */
+"Finished %lu files, %@, average %@/s, took %@" = "Achevé %1$lu fichiers, %2$@, à environ %3$@/s, restant %4$@";
+
+/* Error */
+"Folder Exists" = "Dossier existant";
+
+/* Smiley */
+"Foot in mouth" = "Gaffeur";
+
+/* News header (nick, time) */
+"From %@ (%@):\n" = "De %1$@ (%2$@):\n";
+
+/* Message from (nick) */
+"From: %@" = "De: %@";
+
+/* Smiley */
+"Frown" = "Mécontent";
+
+/* Smiley */
+"Gasp" = "Béat";
+
+/* General toolbar item */
+"General" = "Généralité";
+
+/* Account type */
+"Group" = "Groupe";
+
+/* Group singular */
+"group" = "groupe";
+
+/* Group plural */
+"groups" = "groupes";
+
+/* Show/hide button title */
+"Hide" = "Masquer";
+
+/* User list menu title */
+"Ignore" = "Ignorer";
+
+/* Smiley */
+"Innocent" = "Innocent";
+
+/* Interface toolbar item */
+"Interface" = "Apparence";
+
+/* Item singular */
+"item" = "objet";
+
+/* Item plural */
+"items" = "objets";
+
+/* Private chat invite dialog description (nick) */
+"Join to open a separate private chat with %@." = "Rejoindre et ouvrir une discussion séparée avec %@.";
+
+/* Smiley */
+"Kiss" = "Bisou";
+
+/* Smiley */
+"Laugh" = "Rire";
+
+/* Smiley */
+"Lips are sealed" = "Qui se tait";
+
+/* Transfer listing (files, 'file(s)' */
+"Listing directory... %lu %@" = "Afficher répertoire... %1$lu %2$@";
+
+/* Description of server via Bonjour tracker */
+"Local server via Bonjour" = "Serveur local via Bonjour";
+
+/* Wired Protocol error 510 title */
+"Login Failed" = "Echec d’identification";
+
+/* Disconnected chat message */
+"Lost connection to %@" = "Connexion perdue avec %@";
+
+/* Make layout default dialog title */
+"Make Current Layout Default?" = "Définir la disposition par défaut?";
+
+/* Message singular */
+"message" = "message";
+
+/* Event */
+"Message Received" = "Message reçu";
+
+/* Message plural */
+"messages" = "messages";
+
+/* Messages toolbar item
+   Messages window title */
+"Messages" = "Messages";
+
+/* Smiley */
+"Money-mouth" = "Riche";
+
+/* File info window title for multiple files */
+"Multiple Items Info" = "Multiple Items Info";
+
+/* News toolbar item
+   News window title */
+"News" = "Nouvelles";
+
+/* Event */
+"News Posted" = "Nouvelle postée";
+
+/* 'No' */
+"No" = "Non";
+
+/* Restore all layouts to default dialog button title
+   Make layout default dialog button title
+   Restore layout to default dialog button title */
+"OK" = "Valider";
+
+/* Error */
+"Open Failed" = "Echec d’ouverture";
+
+/* Transfers overwrite alert button */
+"Overwrite" = "Remplacer";
+
+/* Transfers pause button title */
+"Pause" = "Pause";
+
+/* Transfer stopped (transferred, size) */
+"Paused at %@ of %@" = "Paused at %1$@ of %2$@";
+
+/* Transfer paused (files, transferred, size) */
+"Paused at %lu of %lu files, %@ of %@" = "Paused at %1$lu of %2$lu files, %3$@ of %4$@";
+
+/* Transfer pausing */
+"Pausing" = "Pausing";
+
+/* Wired Protocol error 516 title */
+"Permission Denied" = "Permission refusée";
+
+/* Save chat format */
+"Plain Text" = "Texte seul";
+
+/* Chat window title */
+"Private Chat" = "Discussion privée";
+
+/* Message dialog title (nick, server, time) */
+"Private message from %@ on %@ at %@" = "Message privé de %1$@ sur %2$@ à %3$@";
+
+/* WCWiredClientProtocolMismatch title */
+"Protocol Mismatch" = "Disparité de protocole";
+
+/* Wired Protocol error 523 title */
+"Queue Limit Exceeded" = "Dépassement de file d’attente";
+
+/* Transfer locally queued */
+"Queued" = "En attente";
+
+/* Transfer queued (position) */
+"Queued at position %lu" = "En attente à la position %lu";
+
+/* Ping received message (interval) */
+"Received ping reply after %.2fms" = "Réception d’une réponse de \"ping\" après %.2fms";
+
+/* Disconnect toolbar item */
+"Reconnect" = "Reconnecter";
+
+/* Reconnected chat message */
+"Reconnected to %@" = "Reconnected to %@";
+
+/* Auto-reconnecting chat message */
+"Reconnecting to %@ in %.1f seconds..." = "Reconnecting to %1$@ in %2$.1f seconds...";
+
+/* Reconnecting chat message */
+"Reconnecting to %@..." = "Reconnecting to %@...";
+
+/* Restore all layouts to default dialog title */
+"Restore All Layouts To Default?" = "Rétablir la disposition par défaut pour tous?";
+
+/* Restore layout to default dialog title */
+"Restore Layout To Default?" = "Rétablir la disposition par défaut?";
+
+/* Save chat format */
+"Rich Text Format (RTF)" = "Texte avec mise en page (RTF)";
+
+/* Save chat format */
+"Rich Text With Graphics Format (RTFD)" = "Texte avec mise en page et images (RTFD)";
+
+/* Account Editor button title */
+"Save" = "Sauver";
+
+/* Save chat save panel title */
+"Save Chat" = "Sauver discussion";
+
+/* Search toolbar item
+   Search window title */
+"Search" = "Rechercher";
+
+/* Server singular */
+"server" = "serveur";
+
+/* Event */
+"Server Connected" = "Serveur connecté";
+
+/* Event
+   WCWiredClientServerDisconnected title */
+"Server Disconnected" = "Serveur déconnecté";
+
+/* Wired Protocol error 501 title
+   Wired Protocol error 500 title
+   Wired Protocol error 502 title
+   Wired Protocol error 503 title
+   Wired Protocol unknown error title */
+"Server Error" = "Erreur de serveur";
+
+/* Server plural */
+"servers" = "serveurs";
+
+/* Show/hide button title */
+"Show" = "Afficher";
+
+/* Smiley */
+"Smile" = "Sourire";
+
+/* Bookmarks toolbar item */
+"Sounds" = "Sons";
+
+/* Transfers start button title */
+"Start" = "Démarrer";
+
+/* About box title */
+"Stats" = "Statistiques";
+
+/* Smiley */
+"Sticking out tongue" = "Bavard";
+
+/* Transfer stopped (transferred, size) */
+"Stopped at %@ of %@" = "Arrêté à %1$@ de %2$@";
+
+/* Transfer stopped (files, transferred, size) */
+"Stopped at %lu of %lu files, %@ of %@" = "Arrêté à %1$lu de %2$lu fichiers, %3$@ de %4$@";
+
+/* Transfer stopping */
+"Stopping" = "En arrêt";
+
+/* Wired Protocol error 514 description */
+"The account you tried to create already exists on the server." = "Le compte que vous voulez créer existe déjà sur ce serveur.";
+
+/* Wired Protocol error 515 description */
+"The client you tried to disconnect is protected." = "L’utilisateur que vous voulez virer est protégé.";
+
+/* Wired Protocol error 516 description */
+"The command could not be completed due to insufficient privileges." = "La commande ne peut aboutir faute d’autorisation.";
+
+/* Error (path) */
+"The file \"%@\" already exists." = "Le fichier \"%@\" existe déjà.";
+
+/* Transfers overwrite alert title */
+"The file \"%@\" already exists. Overwrite?" = "Le fichier \"%@\" existe déjà. Remplacer?";
+
+/* Error (path) */
+"The file \"%@\" has a resource fork, which is not handled by Wired. Only the data part will be uploaded, possibly resulting in a corrupted file. Please use an archiver to ensure the file will be uploaded correctly." = "Le fichier \"%@\" comprend un ensemble de données non reconnues par Wired. Seules les données seront envoyées, pouvant causer la corruption du fichier. Utilisez de préférence une archive du fichier pour garantir son intégrité.";
+
+/* Error (path) */
+"The folder \"%@\" already exists." = "Le dossier \"%@\" existé déjà.";
+
+/* Error (number) */
+"The folder contains %lu files with resource forks, which are not handled by Wired. Only the data parts will be uploaded, possibly resulting in corrupted files. Please use an archiver to ensure the files will be uploaded correctly." = "Le dossier comprend %lu fichiers non reconnus par Wired. Les données seront envoyées sans information complémentaire, pouvant causer la corruption du fichier. Utilisez de préférence une archive du dossier pour garantir son intégrité.";
+
+/* Wired Protocol error 503 description */
+"The server could not parse a command. This is probably because of an protocol incompatibility between the client and the server." = "Le serveur ne comprend pas la commande. Il est possible que ceci soit causé par une incompatibilité de protocole entre client et serveur.";
+
+/* Wired Protocol error 501 description */
+"The server did not recognize a command. This is probably because of an protocol incompatibility between the client and the server." = "Le serveur ne reconnaît pas la demande. Il est possible que ceci soit causé par une incompatibilité de protocole entre client et serveur.";
+
+/* Wired Protocol error 500 description */
+"The server failed to process a command. The server administrator can check the log for more information." = "Le serveur a échoué dans la demande. L’administrateur du serveur pourra consulter les \"logs\" du serveur pour plus d’information.";
+
+/* Wired Protocol error 502 description */
+"The server has not implemented a command. This is probably because of an protocol incompatibility between the client and the server." = "Le serveur n’a pas ajouter la commande. Il est possible que ceci soit causé par une incompatibilité de protocole entre client et serveur.";
+
+/* WCWiredClientServerDisconnected description */
+"The server has unexpectedly disconnected." = "Le serveur s’est subitement déconnecté.";
+
+/* Error (name) */
+"The transfer of \"%@\" failed." = "Le transfert de \"%@\" a échoué.";
+
+/* Delete ignore dialog description
+   Delete tracker bookmark dialog description
+   Clear news dialog description
+   Delete bookmark dialog description
+   Clear messages dialog description
+   Delete file dialog description
+   Delete account dialog description
+   Delete highlight dialog description */
+"This cannot be undone." = "Ceci ne peut être annulé.";
+
+/* WCWiredClientProtocolMismatch description */
+"This server uses a newer protocol version than this client supports. Protocol errors may occur during the connection." = "Ce serveur utilise un protocole plus récent que le client. Des problèmes peuvent donc survenir durant cette connexion.";
+
+/* Restore all layouts to default dialog button description */
+"This will restore all windows for all connections to the previously saved default layout." = "Ceci rétablira la précédente disposition par défaut pour toutes les fenêtres de toutes les connexions.";
+
+/* Restore layout to default dialog button description */
+"This will restore all windows for the currently shown connection to the previously saved default layout." = "Ceci rétablira la précédente disposition par défaut pour toutes les fenêtres de la connexion en premier plan.";
+
+/* Make layout default dialog button description */
+"This will set the windows for the currently shown connection as the default layout." = "Ceci va définir la disposition de la fenêtre actuelle comme la disposition par défaut.";
+
+/* Message to (nick) */
+"To: %@" = "Pour: %@";
+
+/* Trackers toolbar item */
+"Trackers" = "Annuaire";
+
+/* Error */
+"Transfer Exists" = "Transfert existant";
+
+/* Error */
+"Transfer Failed" = "Erreur de transfert";
+
+/* Event */
+"Transfer Finished" = "Transfert terminé";
+
+/* Error */
+"Transfer Not Supported" = "Transfert non supporté";
+
+/* Event */
+"Transfer Started" = "Transfert commencé";
+
+/* Transfers toolbar item
+   Transfers window title */
+"Transfers" = "Transferts";
+
+/* Smiley */
+"Undecided" = "Indécis";
+
+/* User list menu title */
+"Unignore" = "Réintegrer";
+
+/* New folder name
+   Untitled bookmark
+   Untitled tracker bookmark
+   Untitled ignore */
+"Untitled" = "Sans titre";
+
+/* Short uploads folder kind */
+"upload" = "Envoi";
+
+/* Uploads folder kind */
+"Uploads Folder" = "Dossier d’envois";
+
+/* Account type */
+"User" = "Utilisateur";
+
+/* User singular */
+"user" = "utilisateur";
+
+/* Event */
+"User Changed Nick" = "Un membre a changé de pseudo";
+
+/* Event */
+"User Changed Status" = "Un membre a changé de statut";
+
+/* Event */
+"User Joined" = "Un membre est arrivé";
+
+/* Event */
+"User Left" = "Un membre est parti";
+
+/* User plural */
+"users" = "utlisateurs";
+
+/* Transfer waiting */
+"Waiting" = "En attente";
+
+/* Smiley */
+"Wink" = "Clin d’oeil";
+
+/* 'Yes' */
+"Yes" = "Oui";
+
+/* Error (path) */
+"You are already transferring \"%@\"." = "Vous transférez déjà \"%@\".";

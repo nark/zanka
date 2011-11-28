@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCConsole; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_consoleScrollView" = NSScrollView; "_consoleTextView" = NSTextView; }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

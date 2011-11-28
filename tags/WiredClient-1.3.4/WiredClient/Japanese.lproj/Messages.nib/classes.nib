@@ -1,0 +1,60 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {broadcast = id; clearMessages = id; reply = id; }; 
+            CLASS = WCMessages; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_broadcastPanel" = NSPanel; 
+                "_broadcastTextView" = NSTextView; 
+                "_clearButton" = NSButton; 
+                "_conversationsOutlineView" = NSOutlineView; 
+                "_conversationsSplitView" = WISplitView; 
+                "_conversationsView" = NSView; 
+                "_messageListView" = NSView; 
+                "_messageTextView" = WITextView; 
+                "_messageView" = NSView; 
+                "_messagesSplitView" = WISplitView; 
+                "_messagesTableColumn" = NSTableColumn; 
+                "_messagesTableView" = WITableView; 
+                "_messagesView" = NSView; 
+                "_replyButton" = NSButton; 
+                "_replyPanel" = NSPanel; 
+                "_replyTextView" = NSTextView; 
+                "_timeTableColumn" = NSTableColumn; 
+                "_userTableColumn" = NSTableColumn; 
+                "_userTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WCMessagesWindow; LANGUAGE = ObjC; SUPERCLASS = WIWindow; }, 
+        {CLASS = WISplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = WITextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {CLASS = WIWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

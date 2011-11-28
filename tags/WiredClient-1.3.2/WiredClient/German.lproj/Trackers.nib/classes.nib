@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {search = id; }; 
+            CLASS = WCTrackers; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_descriptionTableColumn" = NSTableColumn; 
+                "_downloadTableColumn" = NSTableColumn; 
+                "_filesTableColumn" = NSTableColumn; 
+                "_guestTableColumn" = NSTableColumn; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_searchField" = NSSearchField; 
+                "_sizeTableColumn" = NSTableColumn; 
+                "_speedTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+                "_trackersOutlineView" = WIOutlineView; 
+                "_usersTableColumn" = NSTableColumn; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WIOutlineView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSOutlineView; 
+        }, 
+        {CLASS = WISearchField; LANGUAGE = ObjC; SUPERCLASS = NSSearchField; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {
+            CLASS = FHImageView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_scrollView" = NSScrollView; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = FHSlideshowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = FHWindowController; 
+        }, 
+        {CLASS = FHSlideshowWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = FHWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageView" = FHImageView; }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$(dirname $0)/scripts/build.pl $(basename $0) $*

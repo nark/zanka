@@ -1,0 +1,88 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                back = id; 
+                browser = id; 
+                createFolder = id; 
+                deleteFiles = id; 
+                down = id; 
+                forward = id; 
+                list = id; 
+                preview = id; 
+                reloadFiles = id; 
+                up = id; 
+                upload = id; 
+            }; 
+            CLASS = WCFiles; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_backButton" = NSButton; 
+                "_createFolderButton" = NSButton; 
+                "_createFolderPanel" = NSPanel; 
+                "_createFolderPopUpButton" = NSPopUpButton; 
+                "_createFolderTextField" = NSTextField; 
+                "_deleteButton" = NSButton; 
+                "_downloadButton" = NSButton; 
+                "_filesBrowser" = NSBrowser; 
+                "_filesTabView" = NSTabView; 
+                "_forwardButton" = NSButton; 
+                "_infoButton" = NSButton; 
+                "_previewButton" = NSButton; 
+                "_reloadButton" = NSButton; 
+                "_styleMatrix" = NSMatrix; 
+                "_titleBarMenu" = NSMenu; 
+                "_uploadButton" = NSButton; 
+            }; 
+            SUPERCLASS = WCFiles2; 
+        }, 
+        {
+            ACTIONS = {download = id; getInfo = id; }; 
+            CLASS = WCFiles2; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_createdTableColumn" = NSTableColumn; 
+                "_filesTableView" = WITableView; 
+                "_kindTableColumn" = NSTableColumn; 
+                "_modifiedTableColumn" = NSTableColumn; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_sizeTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WCFilesTableView; LANGUAGE = ObjC; SUPERCLASS = WITableView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = WIWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

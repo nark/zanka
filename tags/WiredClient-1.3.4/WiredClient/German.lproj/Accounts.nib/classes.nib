@@ -1,0 +1,40 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {add = id; delete = id; edit = id; reload = id; }; 
+            CLASS = WCAccounts; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_accountsTableView" = WITableView; 
+                "_addButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_editButton" = NSButton; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadButton" = NSButton; 
+                "_statusTextField" = NSTextField; 
+                "_typeTableColumn" = NSTableColumn; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

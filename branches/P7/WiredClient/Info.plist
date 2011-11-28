@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredTransfer</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredTransfer</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Transfer</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredBookmarks</string>
+				<string>WiredTrackerBookmarks</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredBookmarks</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Bookmarks</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredTheme</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredTheme</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Theme</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredSettings</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredSettings</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Settings</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Wired Client</string>
+	<key>CFBundleIconFile</key>
+	<string>WiredClient</string>
+	<key>CFBundleIdentifier</key>
+	<string>${PRODUCT_IDENTIFIER}</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLIconFile</key>
+			<string>WiredScheme</string>
+			<key>CFBundleURLName</key>
+			<string>Wired URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wired</string>
+				<string>wiredp7</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>CFBundleVersionKey</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>WCApplication</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>SUPublicDSAKeyFile.pem</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.text</string>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>NFO</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.zankasoftware.WiredCilent.nfo</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>TEXT</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>nfo</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5.0</string>
+</dict>
+</plist>

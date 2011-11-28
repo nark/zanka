@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {clearHistory = id; reply = id; send = id; }; 
+            CLASS = WCMessages; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_broadcastTextView" = NSTextView; 
+                "_broadcastWindow" = NSWindow; 
+                "_messageListTableView" = NSTableView; 
+                "_messageSplitView" = WCSplitView; 
+                "_messageTextView" = WCURLTextView; 
+                "_nickTableColumn" = NSTableColumn; 
+                "_timeTableColumn" = NSTableColumn; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCURLTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

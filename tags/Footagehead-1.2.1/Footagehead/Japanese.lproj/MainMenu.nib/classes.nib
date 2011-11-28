@@ -1,0 +1,101 @@
+{
+    IBClasses = (
+        {CLASS = FHBrowserView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {
+                autoSwitch = id; 
+                delete = id; 
+                firstFile = id; 
+                lastFile = id; 
+                nextImage = id; 
+                nextPage = id; 
+                open = id; 
+                openFile = id; 
+                openMenu = id; 
+                openParent = id; 
+                openSpotlight = id; 
+                openURL = id; 
+                previousImage = id; 
+                previousPage = id; 
+                reload = id; 
+                revealInFinder = id; 
+                rotateLeft = id; 
+                rotateRight = id; 
+                setAsDesktopPicture = id; 
+                slideshow = id; 
+                zoom = id; 
+            }; 
+            CLASS = FHController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_fileTableColumn" = NSTableColumn; 
+                "_fullscreenImageView" = FHImageView; 
+                "_fullscreenPanel" = NSPanel; 
+                "_imageView" = FHImageView; 
+                "_leftStatusTextField" = NSTextField; 
+                "_leftView" = NSView; 
+                "_menu" = NSPopUpButton; 
+                "_moveToTrashButton" = NSButton; 
+                "_openSpotlightMenuItem" = NSMenuItem; 
+                "_openSpotlightPanel" = NSPanel; 
+                "_openSpotlightTextView" = NSTextView; 
+                "_openURLPanel" = NSPanel; 
+                "_openURLPopUpButton" = NSPopUpButton; 
+                "_openURLTextView" = NSTextView; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_revealInFinderButton" = NSButton; 
+                "_rightStatusTextField" = NSTextField; 
+                "_rightView" = NSView; 
+                "_screenAutoSwitchButton" = NSButton; 
+                "_screenAutoSwitchTextField" = NSTextField; 
+                "_screenBackgroundPopUpButton" = NSPopUpButton; 
+                "_screenPanel" = NSPanel; 
+                "_screenPopUpButton" = NSPopUpButton; 
+                "_scrollView" = NSScrollView; 
+                "_splitView" = WISplitView; 
+                "_tableView" = WITableView; 
+                "_zoomButton" = NSButton; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = FHImageView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_scrollView" = NSScrollView; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = FHTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageScrollView" = NSScrollView; "_imageView" = FHImageView; }; 
+            SUPERCLASS = WITableView; 
+        }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {orderFrontReleaseNotesWindow = id; }; 
+            CLASS = WIApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_releaseNotesTextView" = NSTextView; "_releaseNotesWindow" = NSWindow; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {CLASS = WISplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

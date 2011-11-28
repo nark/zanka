@@ -1,0 +1,48 @@
+NEWS
+====
+
+1.1.3
+- Support downloads/uploads of full directories
+- Add /download command to set the local download directory
+- Make /open command take its options before the hostname, instead of after
+- Add more descriptions to /help command
+- Fix problems with completing file paths
+- Fix parsing of IPv6 addresses
+- Fix a crash in /uptime command
+
+1.1.2
+- Add globbing, e.g. /get *.mp3
+- Add support for private chats
+- Clear the chat action indicator when scrolling to the bottom of a window
+- Include timestamp and icon path when saving bookmark
+
+1.1.1
+- Add new /icon command, takes a path to an image file to use as icon
+- Add new /timestamp command, disables or changes format of timestamps
+- Fix a crash with parsing dates on some platforms
+- Fix a crash in /cd
+
+1.1
+- IPv6 support
+- Add /search command
+- When called without arguments, /topic prints the current topic
+- Add -P flag to /open for alternate port
+- Display status in user listings, remove login and IP
+- Remove /icon command, icon ids are being phased out
+- Add default custom 32x32 Wire icon
+- Several bug fixes related to scrolling
+- Server pinging to keep connections alive
+- Add /ping command
+- Add /charset command to change character set during execution, remove -c flag
+- Add /serverinfo command
+- Timestamp chat
+
+1.0.2
+- Handle kick and ban messages
+- Better handling of broadcast messages
+
+1.0.1
+- Fix an unhandled error message on 1.1 servers
+
+1.0
+- Initial release

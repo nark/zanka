@@ -1,0 +1,91 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"_cycleWindows" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {myAction = id; }; 
+            CLASS = NSPanel; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            ACTIONS = {
+                about = id; 
+                accounts = id; 
+                addBookmark = id; 
+                back = id; 
+                bookmark = id; 
+                broadcast = id; 
+                chat = id; 
+                connect = id; 
+                connectWithWindow = id; 
+                console = id; 
+                delete = id; 
+                disconnect = id; 
+                files = id; 
+                findNext = id; 
+                findPanel = id; 
+                findPrevious = id; 
+                forward = id; 
+                getInfo = id; 
+                jumpToSelection = id; 
+                largerText = id; 
+                messages = id; 
+                newFolder = id; 
+                news = id; 
+                postNews = id; 
+                preferences = id; 
+                reload = id; 
+                saveChat = id; 
+                search = id; 
+                serverInfo = id; 
+                setTopic = id; 
+                showTrackers = id; 
+                smallerText = id; 
+                transfers = id; 
+                useSelectionForFind = id; 
+                viewOptions = id; 
+            }; 
+            CLASS = WCMain; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_accountsMenuItem" = NSMenuItem; 
+                "_addBookmarkMenuItem" = NSMenuItem; 
+                "_addressTextField" = NSTextField; 
+                "_backMenuItem" = NSMenuItem; 
+                "_bookmarksMenu" = NSMenu; 
+                "_broadcastMenuItem" = NSMenuItem; 
+                "_chatMenuItem" = NSMenuItem; 
+                "_connectionMenu" = NSMenu; 
+                "_consoleMenuItem" = NSMenuItem; 
+                "_deleteMenuItem" = NSMenuItem; 
+                "_disconnectMenuItem" = NSMenuItem; 
+                "_filesMenu" = NSMenu; 
+                "_filesMenuItem" = NSMenuItem; 
+                "_forwardMenuItem" = NSMenuItem; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_loginTextField" = NSTextField; 
+                "_messagesMenuItem" = NSMenuItem; 
+                "_newFolderMenuItem" = NSMenuItem; 
+                "_newsMenuItem" = NSMenuItem; 
+                "_passwordTextField" = NSSecureTextField; 
+                "_postNewMenuItem" = NSMenuItem; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadMenuItem" = NSMenuItem; 
+                "_saveChatMenuItem" = NSMenuItem; 
+                "_searchMenuItem" = NSMenuItem; 
+                "_serverInfoMenuItem" = NSMenuItem; 
+                "_setTopicMenuItem" = NSMenuItem; 
+                "_transfersMenuItem" = NSMenuItem; 
+                "_viewMenu" = NSMenu; 
+                "_viewOptionsMenuItem" = NSMenuItem; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

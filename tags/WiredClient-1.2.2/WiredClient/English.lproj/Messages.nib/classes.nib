@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {clearHistory = id; reply = id; }; 
+            CLASS = WCMessages; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_broadcastPanel" = NSPanel; 
+                "_broadcastTextView" = NSTextView; 
+                "_messageListTableView" = WCTableView; 
+                "_messageSplitView" = WCSplitView; 
+                "_messageTextView" = WCTextView; 
+                "_nickTableColumn" = NSTableColumn; 
+                "_timeTableColumn" = NSTableColumn; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

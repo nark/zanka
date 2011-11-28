@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {remove = id; start = id; stop = id; }; 
+            CLASS = WCTransfers; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_iconTableColumn" = NSTableColumn; 
+                "_infoTableColumn" = NSTableColumn; 
+                "_removeButton" = NSButton; 
+                "_startButton" = NSButton; 
+                "_stopButton" = NSButton; 
+                "_transfersTableView" = WCTableView; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

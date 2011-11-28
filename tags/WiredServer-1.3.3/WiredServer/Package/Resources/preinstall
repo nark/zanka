@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Create user
+if [ -x /usr/bin/dscl ]; then
+	dscl . -create /users/wired
+	dscl . -create /users/wired name wired
+	dscl . -create /users/wired uid 120
+	dscl . -create /users/wired gid 1
+	dscl . -create /users/wired passwd '*'
+	dscl . -create /users/wired home "/var/empty"
+	dscl . -create /users/wired shell "/usr/bin/false"
+	dscl . -create /users/wired realname "Wired Server"
+	dscl . -create /users/wired _writers_passwd wired
+else
+	niutil -create . /users/wired
+	niutil -createprop . /users/wired uid 120
+	niutil -createprop . /users/wired gid 1
+	niutil -createprop . /users/wired passwd "*"
+	niutil -createprop . /users/wired home "/var/empty"
+	niutil -createprop . /users/wired shell "/usr/bin/false"
+	niutil -createprop . /users/wired realname "Wired Server"
+	niutil -createprop . /users/wired expire 0
+	niutil -createprop . /users/wired change 0
+	niutil -createprop . /users/wired _writers_passwd wired
+fi
+
+exit 0

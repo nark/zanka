@@ -1,0 +1,53 @@
+PREREQUISITES
+=============
+
+To install the Wired tracker, you need the following prerequisites:
+
+    1. OpenSSL Library
+       http://www.openssl.org/source/
+    
+These are usually distributed with operating systems.
+
+
+INSTALLATION
+============
+
+To install the Wired tracker, follow these instructions:
+
+    1. Unpack the tarball:
+    
+         tar -xzf wired-tracker-X.X.tar.gz
+         cd wired-tracker-X.X.tar.gz
+    
+    2. Run the configuration script:
+    
+         ./configure
+       
+       This will install the Wired tracker into /usr/local by default. To
+       change this, instead run:
+       
+         ./configure --prefix=/path
+       
+       To change the default user the installation will write files as,
+       run:
+       
+         ./configure --with-user=USER
+     
+    3. Run make. Note, GNU make is required.
+    
+         gmake
+       
+    4. If make is successful, install the software:
+    
+         gmake install
+       
+       This will require write permissions to /usr/local/wired, or
+       whatever directory you set as the prefix above.
+
+
+RUNNING
+=======
+
+To start an installed Wired tracker, run:
+
+    /usr/local/wired/trackerdctl start

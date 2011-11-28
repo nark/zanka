@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Match these in preupgrade
+PRESERVE="etc/trackerd.conf etc/certificate.pem banlist categories"
+
+for i in ${PRESERVE}; do
+	if [ -e "/Library/Wired/${i}~" ]; then
+		mv "/Library/Wired/${i}~" "/Library/Wired/${i}"
+	fi
+done
+
+exit 0

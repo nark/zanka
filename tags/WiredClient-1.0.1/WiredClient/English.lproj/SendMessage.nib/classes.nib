@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {send = id; }; 
+            CLASS = WCSendMessage; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_messageTextView" = NSTextView; "_nickTextField" = NSTextField; }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

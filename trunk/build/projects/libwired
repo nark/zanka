@@ -1,0 +1,8 @@
+svn_path=libwired
+
+configure=1
+configure_flags=--enable-warnings --enable-pthreads --enable-termcap --enable-ssl --enable-iconv --enable-p7 --enable-libxml2 --enable-sqlite3
+make_targets=all test dist
+
+tarball=libwired-*.tar.gz
+distname=libwired-%X.tar.gz

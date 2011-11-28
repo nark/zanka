@@ -1,0 +1,56 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                back = id; 
+                delete = id; 
+                download = id; 
+                forward = id; 
+                info = id; 
+                newFolder = id; 
+                preview = id; 
+                reload = id; 
+                upload = id; 
+            }; 
+            CLASS = WCFiles; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_backButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_deleteMenuItem" = NSMenuItem; 
+                "_downloadButton" = NSButton; 
+                "_downloadMenuItem" = NSMenuItem; 
+                "_filesScrollView" = NSScrollView; 
+                "_filesTableView" = NSTableView; 
+                "_forwardButton" = NSButton; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_infoButton" = NSButton; 
+                "_newFolderButton" = NSButton; 
+                "_newFolderPanel" = NSPanel; 
+                "_newFolderTextField" = NSTextField; 
+                "_previewButton" = NSButton; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadButton" = NSButton; 
+                "_statusTextField" = NSTextField; 
+                "_uploadButton" = NSButton; 
+                "_viewOptionsPanel" = NSPanel; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCFilesTableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WCTypeAheadTableView; 
+        }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTypeAheadTableView; LANGUAGE = ObjC; SUPERCLASS = WCTableView; }, 
+        {
+            ACTIONS = {cancelSheet = id; okSheet = id; }; 
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

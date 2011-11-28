@@ -1,0 +1,108 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                changeKanaType = id; 
+                changeMode = id; 
+                changeRomanisationSystem = id; 
+                clickKana = id; 
+                linesOK = id; 
+                linesSelectAll = id; 
+                openLines = id; 
+                writeKana = id; 
+            }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                buttonsKana = id; 
+                fieldKana = id; 
+                imageKana = id; 
+                itemHepburn = id; 
+                itemHiragana = id; 
+                itemKatakana = id; 
+                itemKunreiSiki = id; 
+                itemLearningMode = id; 
+                itemMixed = id; 
+                itemNihonSiki = id; 
+                itemQuizMode = id; 
+                kanaDi = id; 
+                kanaDu = id; 
+                kanaHu = id; 
+                kanaSi = id; 
+                kanaTi = id; 
+                kanaTu = id; 
+                kanaZi = id; 
+                linesA = id; 
+                linesBa = id; 
+                linesDa = id; 
+                linesGa = id; 
+                linesHa = id; 
+                linesKa = id; 
+                linesMa = id; 
+                linesNa = id; 
+                linesPa = id; 
+                linesRa = id; 
+                linesSa = id; 
+                linesTa = id; 
+                linesWa = id; 
+                linesYa = id; 
+                linesZa = id; 
+                menuSettings = id; 
+                sessionOutlet = id; 
+                textAnswer = id; 
+                textCorrect = id; 
+                textPercent = id; 
+                textScore = id; 
+                windowLines = id; 
+                windowTutor = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NukuView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controllerOutlet = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                endSession = id; 
+                enterKana = id; 
+                enterTime = id; 
+                newSession = id; 
+                print = id; 
+                start = id; 
+                stepKana = id; 
+                stepTime = id; 
+                switchType = id; 
+            }; 
+            CLASS = Session; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                boxAwait = id; 
+                boxLock = id; 
+                controllerOutlet = id; 
+                fieldKana = id; 
+                fieldTime = id; 
+                itemFree = id; 
+                itemLimited = id; 
+                reportAnswered = id; 
+                reportCorrect = id; 
+                reportIncorrect = id; 
+                reportMissed = id; 
+                reportPercent = id; 
+                reportTime = id; 
+                selectSession = id; 
+                stepperKana = id; 
+                stepperTime = id; 
+                viewPrint = id; 
+                viewText = id; 
+                windowReport = id; 
+                windowSession = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

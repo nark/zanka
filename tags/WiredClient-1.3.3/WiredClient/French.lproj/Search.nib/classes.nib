@@ -1,0 +1,57 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {download = id; getInfo = id; }; 
+            CLASS = WCFilesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_createdTableColumn" = NSTableColumn; 
+                "_filesTableView" = WITableView; 
+                "_kindTableColumn" = NSTableColumn; 
+                "_modifiedTableColumn" = NSTableColumn; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_sizeTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WCFilesTableView; LANGUAGE = ObjC; SUPERCLASS = WITableView; }, 
+        {
+            ACTIONS = {open = id; revealInFiles = id; search = id; }; 
+            CLASS = WCSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_kindPopUpButton" = NSPopUpButton; 
+                "_searchButton" = NSButton; 
+                "_searchTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCFilesController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

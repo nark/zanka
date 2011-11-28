@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {search = id; }; 
+            CLASS = WCTrackers; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_descriptionTableColumn" = NSTableColumn; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_searchTextField" = NSTextField; 
+                "_statusTextField" = NSTextField; 
+                "_trackersOutlineView" = NSOutlineView; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

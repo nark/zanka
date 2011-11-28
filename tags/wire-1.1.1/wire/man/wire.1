@@ -1,0 +1,318 @@
+.\" wire.1
+.\"
+.\" Copyright (c) 2004-2006 Axel Andersson
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, and the entire permission notice in its entirety,
+.\"    including the disclaimer of warranties.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+.\" AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+.\" MARCUS D. WATTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+.\" BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+.\" OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+.\" ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+.\" TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+.\" USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd Jan 22, 2006
+.Dt WIRE 1
+.Os
+.Sh NAME
+.Nm wire
+.Nd
+Wired client
+.Sh SYNOPSIS
+.Nm wire
+.Op Ar bookmark
+.Sh DESCRIPTION
+.Nm wire
+is a screen-oriented Wired client. It is used to connect to Wired servers.
+.Pp
+At startup,
+.Nm wire
+will read
+.Pa ~/.wire/config
+and interpret and execute each line as a command. Similarly, if a named bookmark is given as an argument to
+.Nm wire ,
+.Pa ~/.wire/bookmark
+will also be read and interpreted. Note that commands in bookmarks should not be prepended by a
+.Sq /
+character.
+.Pp
+The options are as follows:
+.Pp
+.Bl -tag -width Ds
+.It Fl D
+Enables debug mode.
+.Nm wire
+will log extra debug messages to the chat window.
+.It Fl h
+Displays a brief help message and exits.
+.It Fl v
+Displays version information and exits.
+.El
+.Sh WINDOWS
+.Nm wire
+creates new windows in certain situations. To cycle windows, press
+.Pa Control-P
+for previous and
+.Pa Control-N
+for next. The
+.Nm close
+command closes the current window, or, if in the main window, disconnects from the server.
+.Sh COMMANDS
+The following commands can be given to
+.Nm wire :
+.Bl -tag -width
+.It Nm ban Ar user Ar message
+Bans a user. The first argument is the user to ban, the second is the message to send.
+.Pp
+Example: /ban morris get lost
+.Pp
+See also:
+.Nm kick
+.It Nm broadcast Ar message
+Broadcast a message to all users.
+.Pp
+Example: /broadcast restarting server
+.It Nm cd Ar path
+Changes the working directory.
+.Pp
+Example: /cd /Uploads
+.It Nm charset Ar charset
+Sets the character set that
+.Nm wire
+will convert all text from the server to. This string is passed directly to the
+.Xr iconv 3
+character conversion system. The default value is
+.Sq ISO-8859-1 .
+.Pp
+Example: /charset UTF-8
+.It Nm clear
+Clears all output.
+.Pp
+Example: /clear
+.It Nm clearnews
+Clear the news.
+.Pp
+Example: /clearnews
+.It Nm close
+If in main window, disconnects from the current server. Otherwise, closes the window.
+.Pp
+Example: /close
+.It Nm comment Ar path Ar comment
+Sets a file comment. The first argument is the path, the second is the comment to set.
+.Pp
+Example: /comment "/Uploads/a file.txt" uploaded by morris
+.It Nm get Ar path
+Downloads a file. If a transfer is already running, queue the download. Files are downloaded into the directory from which Wire was started.
+.Pp
+Example: /get "/Uploads/a file.txt"
+.It Nm help Op Ar command
+Shows online help. If an argument is provided, shows online help for that command.
+.Pp
+Example: /help, /help get
+.It Nm icon Ar path
+Loads a custom icon from an image file. It is recommended that the image is in PNG format, and does not exceed 32x32 pixels in dimension. You will not be able to see the icon in
+.Nm wire ,
+but only in other graphical clients.
+.Pp
+Example: /icon ~/.wire/icon.png
+.Pp
+.It Nm ignore Op Ar nick
+Manage user ignores. Without arguments, shows the current list of ignores, identified by id. With an argument, adds a user to the list. No chat or messages are printed from users whose nicks match an entry in the ignore list.
+.Pp
+Example: /ignore, /ignore morris
+.Pp
+See also:
+.Nm unignore
+.It Nm info Ar user
+Gets user info on the user with the nick name provided.
+.Pp
+Example: /info morris
+.It Nm kick Ar user Ar message
+Kicks a user. The first argument is the user to kick, the second is the message to send.
+.Pp
+Example: /kick morris get lost
+.Pp
+See also:
+.Nm ban
+.It Nm load Ar bookmark
+Loads a bookmark with the name provided from
+.Pa ~/.wire/ .
+.Pp
+Example: /load myserver
+.It Nm log Ar filename
+Saves a copy of the current output to the file provided.
+.Pp
+Example: /log myserver.log
+.It Nm ls Op Ar path
+Lists the current directory, or if an argument is provided, the path.
+.Pp
+Example: /ls, /ls Uploads
+.It Nm me Ar chat
+Sends the argument as action chat.
+.Pp
+Example: /me is away
+.It Nm mkdir Ar path
+Creates a new directory.
+.Pp
+Example: /mkdir /Uploads
+.It Nm msg Ar user Ar message
+Sends a private message to the user with the nick name in the first argument. The second argument is the message to send.
+.Pp
+.Nm wire
+will create a new window when sending or receiving a private message for every user. Typing text in these windows will send private messages to that user.
+.Pp
+Example: /msg morris hey!
+.It Nm mv Ar from Ar to
+Moves or renames one path to another.
+.Pp
+Example: /mv /Uploads "/Old Uploads"
+.It Nm news Op Fl Ar number | Fl ALL
+Shows the server news. A flag can be passed to set how many news entries to show, which is 10 by default. If
+.Sq ALL
+is specified rather than a number, the whole news is shown.
+.Pp
+Example: /news, /news -20, /news -ALL
+.It Nm nick Ar nick
+Sets the current nick name.
+.Pp
+Example: /nick morris
+.It Xo
+.Nm open Ar host Ns Op Ns : Ns Ar port
+.Op Fl l Ar login
+.Op Fl p Ar password
+.Op Fl P Ar port
+.Xc
+Opens a new connection to a server. The current connection is closed. Login and password can be set with the
+.Fl l
+and 
+.Fl p
+flags.
+.Pp
+Example: /open my.server.com, /open my.server.com:3000 -l morris -p p4ssw0rd
+.It Nm ping
+Pings the server to determine latency.
+.Pp
+Example: /ping
+.It Nm post Ar message
+Posts a new entry to the server news.
+.Pp
+Example: /post check out /Uploads/a file.txt
+.It Nm put Ar path
+Uploads a file to the current working directory. If a transfer is already running, adds the upload to the transfer queue.
+.Pp
+Example: /put ~/a\ file.txt
+.It Nm pwd
+Shows the current working directory.
+.Pp
+Example: /pwd
+.It Nm quit
+Quits
+.Nm wire .
+.Pp
+Example: /quit
+.It Nm reply Ar message
+Like
+.Nm msg ,
+but sends the message to the user who sent you a message last.
+.Pp
+Example: /reply i agree
+.It Nm rm Ar path
+Deletes the path.
+.Pp
+Example: /rm /Uploads
+.It Nm save Ar bookmark
+Saves the current settings and connection as a bookmark in
+.Pa ~/.wire/ .
+.Pp
+Example: /save myserver
+.It Nm search Ar query
+Searches the files on the server and displays a list of results.
+.Pp
+Example: /search .jpg
+.It Nm serverinfo
+Prints information about the current server.
+.Pp
+Example: /serverinfo
+.It Nm start Ar transfer
+Starts a previously queued transfer by id.
+.Pp
+Example: /start 1
+.It Nm stat Ar path
+Gets file info on the path.
+.Pp
+Example: /stat /Uploads/a\ file.txt
+.It Nm status Ar message
+Sets the current status.
+.Pp
+Example: /status away
+.It Nm stop Ar transfer
+Stops a running transfer by id.
+.Pp
+Example: /stop 1
+.It Nm timestamp Op Ar format
+Without arguments, disables the timestamps. With an argument, sets the timestamp format, a la
+.Xr strftime 3 .
+Default is 
+.Sq %H:%M .
+.Pp
+Example: /timestamp %H:%M:%S
+.It Nm topic Op Ar message
+Without arguments, prints the current chat topic. With an argument, sets a new topic.
+.Pp
+Example: /topic, /topic welcome to my.server.com
+.It Nm type Ar path Ar type
+Sets the folder type. The first argument is the path, the second is one of
+.Sq folder ,
+.Sq uploads
+and
+.Sq dropbox ,
+indicating the folder type.
+.Pp
+Example: /type /Uploads uploads
+.It Nm unignore Op Ar ignore
+Removes an ignored user by id.
+.Pp
+Example: /uignore 1
+.Pp
+See also:
+.Nm ignore
+.It Nm uptime
+Shows current uptime statistics.
+.Pp
+Example: /uptime
+.It Nm version
+Shows version information.
+.Pp
+Example: /version
+.It Nm who
+Shows the user list.
+.Pp
+Example: /who
+.El
+.Sh FILES
+.Bl -tag -width
+.It Pa ~/.wire/config
+Default configuration file. Read at startup. Consists of a newline separated list of commands.
+.It Pa ~/.wire/bookmark
+A named bookmark. Read at startup if
+.Ar bookmark
+is specified. Read at runtime using the
+.Nm load
+command. Consists of a newline separated list of commands.
+.El
+.Sh AUTHORS
+.Nm wire
+and the Wired protocol were developed by Axel Andersson, Zanka Software.

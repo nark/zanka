@@ -1,0 +1,13 @@
+svn_path=WiredClient
+svn_branch=P7
+
+xcodebuild=1
+xcode_version=3.0
+
+tarball=WiredClient.zip
+distname=WiredClient-2.0-%X.zip
+distribute_url=svn.zankasoftware.com:/home/sites/zankasoftware.com/nightly/wired-2.0
+releaseball=wiredclient-latest.zip
+
+readme=English.lproj/ReleaseNotes.rtf
+appcasts=nightly=wiredclientp7-nightly.xml

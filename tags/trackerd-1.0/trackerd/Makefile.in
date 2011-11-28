@@ -1,0 +1,189 @@
+# Makefile.in
+
+top_srcdir		= @top_srcdir@
+exec_prefix		= @exec_prefix@
+fake_prefix		= @fake_prefix@
+installdir		= $(prefix)/$(trackerddir)
+objdir			= obj
+rundir			= run
+mandir			= @mandir@
+prefix			= @prefix@
+trackerddir		= @trackerddir@
+
+WT_VERSION		= @WT_VERSION@
+WT_MAINTAINER	= @WT_MAINTAINER@
+WT_USER			= @WT_USER@
+WT_GROUP		= @WT_GROUP@
+
+DISTFILES		= INSTALL LICENSE NEWS README Makefile Makefile.in \
+				  config.guess config.status config.h.in config.sub configure \
+				  configure.in install-sh libwired man run trackerd
+SUBDIRS			= libwired
+
+TRACKERDOBJECTS	= $(objdir)/banlist.o \
+				  $(objdir)/clients.o \
+				  $(objdir)/commands.o \
+				  $(objdir)/main.o \
+				  $(objdir)/servers.o \
+				  $(objdir)/settings.o \
+				  $(objdir)/tracker.o \
+				  $(objdir)/version.o
+
+DEFS            = @DEFS@ -DWT_ROOT="\"$(fake_prefix)/$(trackerddir)\""
+CC              = @CC@
+CFLAGS          = @CFLAGS@
+CPPFLAGS        = @CPPFLAGS@
+LDFLAGS         = -L$(top_srcdir)/libwired/run/lib @LDFLAGS@
+LIBS			= -lwired @LIBS@
+INCLUDES        = -I$(top_srcdir) -Ilibwired/run/include
+
+INSTALL			= @INSTALL@
+COMPILE         = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+PREPROCESS      = $(CC) -E $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+DEPEND          = $(CC) -MM $(INCLUDES)
+LINK            = $(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+ARCHIVE         = ar rcs $@
+
+ifeq ($(WT_MAINTAINER), 1)
+all: all-recursive Makefile configure config.h.in $(rundir)/trackerd $(rundir)/trackerdctl $(rundir)/etc/trackerd.conf
+else
+all: all-recursive $(rundir)/trackerd $(rundir)/trackerdctl $(rundir)/etc/trackerd.conf
+endif
+
+all-recursive clean-recursive distclean-recursive:
+	@list='$(SUBDIRS)'; \
+	for subdir in $$list; do \
+		target=`echo $@ | sed s/-recursive//`; \
+		(cd $$subdir && $(MAKE) $$target) || exit 1; \
+	done
+
+ifeq ($(WT_MAINTAINER), 1)
+Makefile: Makefile.in config.status
+	./config.status
+	    
+configure: configure.in
+	autoconf
+
+config.h.in: configure.in
+	autoheader
+	touch $@
+	rm -f $@~
+endif
+
+$(rundir)/trackerd: $(TRACKERDOBJECTS) libwired/run/lib/libwired.a
+	$(LINK) $(TRACKERDOBJECTS) $(LIBS)
+
+$(rundir)/trackerdctl: trackerd/trackerdctl.in
+	sed -e 's,@trackerddir\@,$(fake_prefix)/$(trackerddir),g' $< > $@
+	chmod +x $@
+
+$(rundir)/etc/trackerd.conf: trackerd/trackerd.conf.in
+	sed -e 's,@WT_USER\@,$(WT_USER),g' -e 's,@WT_GROUP\@,$(WT_GROUP),g' $< > $@
+
+$(objdir)/%.o: trackerd/%.c
+	@test -d $(@D) || mkdir -p $(@D)
+	$(COMPILE) -I$(<D) -c $< -o $@
+
+$(objdir)/%.d: trackerd/%.c
+	@test -d $(@D) || mkdir -p $(@D)
+	($(DEPEND) $< | sed 's,$*.o,$(@D)/&,g'; echo "$@: $<") > $@
+
+install: all install-man install-trackerd
+
+install-only: install-man install-trackerd
+
+install-trackerd:
+	@if [ -e $(installdir)/trackerd ]; then \
+		touch .update; \
+	fi
+
+	$(INSTALL) -m 755 -o $(WT_USER) -g $(WT_GROUP) -d $(installdir)/
+	$(INSTALL) -m 755 -o $(WT_USER) -g $(WT_GROUP) -d $(installdir)/etc/
+	$(INSTALL) -m 755 -o $(WT_USER) -g $(WT_GROUP) -d $(installdir)/tmp/
+
+	if [ ! -f $(installdir)/banlist ]; then \
+		$(INSTALL) -m 644 -o $(WT_USER) -g $(WT_GROUP) run/banlist $(installdir)/; \
+	fi
+
+	if [ ! -f $(installdir)/categories ]; then \
+		$(INSTALL) -m 644 -o $(WT_USER) -g $(WT_GROUP) run/categories $(installdir)/; \
+	fi
+
+	if [ ! -f $(installdir)/etc/trackerd.conf ]; then \
+		$(INSTALL) -m 644 -o $(WT_USER) -g $(WT_GROUP) run/etc/trackerd.conf $(installdir)/etc/; \
+	fi
+	
+	$(INSTALL) -m 755 -o $(WT_USER) -g $(WT_GROUP) run/trackerd $(installdir)/
+	$(INSTALL) -m 755 -o $(WT_USER) -g $(WT_GROUP) run/trackerdctl $(installdir)/
+
+	if [ -f /etc/resolv.conf ]; then \
+		$(INSTALL) -m 644 -o $(WT_USER) -g $(WT_GROUP) /etc/resolv.conf $(installdir)/etc/; \
+	fi
+
+	@if [ -f .update ]; then \
+		echo ""; \
+		echo "Update complete!"; \
+		echo ""; \
+		echo "You should now run:"; \
+		echo "    $(installdir)/trackerdctl restart"; \
+		echo "to restart a running tracker."; \
+	else \
+		if [ ! -f $(installdir)/etc/certificate.pem ]; then \
+			$(installdir)/trackerdctl certificate.pem; \
+		fi; \
+		\
+		echo ""; \
+		echo "Installation complete!"; \
+		echo ""; \
+		echo "Remember to edit $(installdir)/etc/trackerd.conf if you want to make any changes before starting the tracker."; \
+		echo ""; \
+		echo "When you are done, run:"; \
+		echo "    $(installdir)/trackerdctl start"; \
+		echo "to start the tracker."; \
+	fi
+	
+	@rm -f .update
+
+install-man:
+	$(INSTALL) -m 755 -o root -g bin -d $(mandir)/man1/
+	$(INSTALL) -m 755 -o root -g bin -d $(mandir)/man5/
+	$(INSTALL) -m 755 -o root -g bin -d $(mandir)/man8/
+
+	$(INSTALL) -m 644 -o root -g bin man/trackerdctl.1 $(mandir)/man1/
+	$(INSTALL) -m 644 -o root -g bin man/trackerd.conf.5 $(mandir)/man5/
+	$(INSTALL) -m 644 -o root -g bin man/trackerd.8 $(mandir)/man8/
+
+dist:
+	rm -rf wired-tracker-$(WT_VERSION)
+	rm -f wired-tracker-$(WT_VERSION).tar.gz
+	mkdir wired-tracker-$(WT_VERSION)
+
+	@for i in $(DISTFILES); do \
+		if [ -e $$i ]; then \
+			echo cp -LRp $$i wired-tracker-$(WT_VERSION)/$$i; \
+			cp -LRp $$i wired-tracker-$(WT_VERSION)/$$i; \
+		fi \
+	done
+	
+	$(SHELL) -ec "cd wired-tracker-$(WT_VERSION) && WT_MAINTAINER=0 $(MAKE) -e distclean scmclean"
+
+	tar -czf wired-tracker-$(WT_VERSION).tar.gz wired-tracker-$(WT_VERSION)
+	rm -rf wired-tracker-$(WT_VERSION)
+
+clean: clean-recursive
+	rm -f $(objdir)/*.o
+	rm -rf autom4te.cache
+
+distclean: clean distclean-recursive
+	rm -rf $(objdir)
+	rm -f Makefile config.h config.log config.status
+	rm -f wired-tracker-$(WT_VERSION).tar.gz
+
+scmclean:
+	find . -name .DS_Store -print0 | xargs -0 rm -f
+	find . -name CVS -print0 | xargs -0 rm -rf
+	find . -name .svn -print0 | xargs -0 rm -rf
+
+ifeq ($(WT_MAINTAINER), 1)
+-include $(TRACKERDOBJECTS:.o=.d)
+endif

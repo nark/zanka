@@ -1,0 +1,76 @@
+{
+    IBClasses = (
+        {
+            CLASS = FHApplicationController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_goMenu" = NSMenu; 
+                "_spreadRightToLeftMenuItem" = NSMenuItem; 
+                "_toggleStatusBarMenuItem" = NSMenuItem; 
+                "_viewMenu" = NSMenu; 
+            }; 
+            SUPERCLASS = WIObject; 
+        }, 
+        {CLASS = FHBrowserView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            CLASS = FHImageView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_scrollView" = NSScrollView; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = FHTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageScrollView" = NSScrollView; "_imageView" = FHImageView; }; 
+            SUPERCLASS = WITableView; 
+        }, 
+        {
+            ACTIONS = {
+                cancelSheet = id; 
+                go = id; 
+                moveToTrash = id; 
+                open = id; 
+                openParent = id; 
+                openSpotlight = id; 
+                openURL = id; 
+                reload = id; 
+                revealInFinder = id; 
+                rotateLeft = id; 
+                rotateRight = id; 
+                setAsDesktopBackground = id; 
+                slideshow = id; 
+                spreadMode = id; 
+                spreadRightToLeft = id; 
+                submitSheet = id; 
+                toggleStatusBar = id; 
+                zoomMode = id; 
+                zoomToFit = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {orderFrontReleaseNotesWindow = id; }; 
+            CLASS = WIApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_releaseNotesTextView" = NSTextView; "_releaseNotesWindow" = NSWindow; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {CLASS = WIObject; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WISplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

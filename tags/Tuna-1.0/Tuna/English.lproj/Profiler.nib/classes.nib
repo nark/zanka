@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancel = id; launch = id; set = id; }; 
+            CLASS = TNProfilerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_argumentsComboBox" = NSComboBox; 
+                "_launchButton" = NSButton; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_scriptComboBox" = NSComboBox; 
+                "_setButton" = NSButton; 
+            }; 
+            SUPERCLASS = ZAWindowController; 
+        }, 
+        {
+            CLASS = ZAWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

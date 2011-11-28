@@ -1,0 +1,106 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                changeKanaType = id; 
+                changeMode = id; 
+                changeRomanisationSystem = id; 
+                clickKana = id; 
+                linesOK = id; 
+                linesSelectAll = id; 
+                openLines = id; 
+                writeKana = id; 
+            }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                buttonsKana = NSMatrix; 
+                fieldKana = NSTextField; 
+                imageKana = NSImageView; 
+                itemHepburn = NSMenuItem; 
+                itemHiragana = NSMenuItem; 
+                itemKatakana = NSMenuItem; 
+                itemKunreiSiki = NSMenuItem; 
+                itemLearningMode = NSMenuItem; 
+                itemMixed = NSMenuItem; 
+                itemNihonSiki = NSMenuItem; 
+                itemQuizMode = NSMenuItem; 
+                kanaDi = NSButtonCell; 
+                kanaDu = NSButtonCell; 
+                kanaHu = NSButtonCell; 
+                kanaSi = NSButtonCell; 
+                kanaTi = NSButtonCell; 
+                kanaTu = NSButtonCell; 
+                kanaZi = NSButtonCell; 
+                linesA = NSButton; 
+                linesBa = NSButton; 
+                linesDa = NSButton; 
+                linesGa = NSButton; 
+                linesHa = NSButton; 
+                linesKa = NSButton; 
+                linesMa = NSButton; 
+                linesNa = NSButton; 
+                linesPa = NSButton; 
+                linesRa = NSButton; 
+                linesSa = NSButton; 
+                linesTa = NSButton; 
+                linesWa = NSButton; 
+                linesYa = NSButton; 
+                linesZa = NSButton; 
+                menuSettings = NSMenu; 
+                sessionOutlet = Session; 
+                textAnswer = NSTextField; 
+                textCorrect = NSTextField; 
+                textPercent = NSTextField; 
+                textScore = NSTextField; 
+                windowLines = NSWindow; 
+                windowTutor = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NukuView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controllerOutlet = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                enterKana = id; 
+                enterTime = id; 
+                newSession = id; 
+                print = id; 
+                start = id; 
+                stepKana = id; 
+                stepTime = id; 
+                switchType = id; 
+            }; 
+            CLASS = Session; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                boxAwait = NSButton; 
+                boxLock = NSButton; 
+                controllerOutlet = Controller; 
+                fieldKana = NSTextField; 
+                fieldTime = NSTextField; 
+                reportAnswered = NSTextField; 
+                reportComment = NSTextView; 
+                reportCorrect = NSTextField; 
+                reportIncorrect = NSTextField; 
+                reportMissed = NSTextField; 
+                reportPercent = NSTextField; 
+                reportTime = NSTextField; 
+                selectSession = NSPopUpButton; 
+                stepperKana = NSStepper; 
+                stepperTime = NSStepper; 
+                viewPrint = NSView; 
+                viewText = NSTextView; 
+                windowReport = NSWindow; 
+                windowSession = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

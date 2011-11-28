@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Generate new key
+if [ ! -f /Library/Wired/etc/certificate.pem ]; then
+	/Library/Wired/trackerdctl certificate
+fi
+
+# Touch log file
+touch /Library/Trackerd/trackerd.log
+
+exit 0

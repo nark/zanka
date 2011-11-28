@@ -1,0 +1,54 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                back = id; 
+                cancelFolder = id; 
+                createFolder = id; 
+                delete = id; 
+                download = id; 
+                forward = id; 
+                info = id; 
+                newFolder = id; 
+                preview = id; 
+                reload = id; 
+                upload = id; 
+            }; 
+            CLASS = WCFiles; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_backButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_downloadButton" = NSButton; 
+                "_filesTableView" = NSTableView; 
+                "_forwardButton" = NSButton; 
+                "_infoButton" = NSButton; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_newFolderButton" = NSButton; 
+                "_newFolderPanel" = NSPanel; 
+                "_newFolderTextField" = NSTextField; 
+                "_previewButton" = NSButton; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadButton" = NSButton; 
+                "_sizeTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+                "_uploadButton" = NSButton; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCFilesTableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WCTypeAheadTableView; 
+        }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTypeAheadTableView; LANGUAGE = ObjC; SUPERCLASS = WCTableView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

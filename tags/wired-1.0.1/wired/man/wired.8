@@ -1,0 +1,208 @@
+.\"	wired.8
+.\"
+.\" Copyright (c) 2003-2004 Axel Andersson
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, and the entire permission notice in its entirety,
+.\"    including the disclaimer of warranties.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+.\" AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+.\" MARCUS D. WATTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+.\" BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+.\" OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+.\" ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+.\" TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+.\" USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd Feb 24, 2004
+.Dt WIRED 8
+.Os
+.Sh NAME
+.Nm wired
+.Nd Wired server
+.Sh SYNOPSIS
+.Nm wired
+.Op Fl Dllhtuv
+.Op Fl d Ar server_root
+.Op Fl f Ar config_file
+.Op Fl s Ar syslog_facility
+.Sh DESCRIPTION
+.Nm wired
+is the Wired server program, implementing the Wired chat and file transfer protocol. It is designed to run as a standalone server. On startup,
+.Nm wired
+will read the specified configuration file, bind to the specified ports and listen for connections. It is recommended that
+.Xr wiredctl 1
+is used to control the starting and stopping of 
+.Nm wired .
+.Pp
+.Nm wired
+also includes a very limited implementation of the Hotline protocol to provide support for platforms where there as of yet does not exist a Wired client. The implementation is, as of now, limited to chat only, but may be expanded in the future.
+.Pp
+The options are as follows:
+.Pp
+.Bl -tag -width Ds
+.It Fl D
+Enable debug mode.
+.Nm wired
+will remain in the foreground, and log messages will echo to standard error.
+.It Fl d Ar server_root
+Specify the root path.
+.Nm wired
+will attempt to locate its required files under this directory, and
+.Xr chroot 2
+to it unless
+.Fl u
+is specified.
+.It Fl f Ar config_file
+Specify the path of the configuration file, relative to
+.Va server_root .
+The default is
+.Pa etc/wired.conf .
+.It Fl h
+Display a brief help message and exit.
+.It Fl l
+Increase the log level. Without it, logging is limited to connects and disconnect. Used once, file transfers are also logged. Used twice, also logs user operations such as kicks, account edits, etc.
+.It Fl s Ar syslog_facility
+Specifiy the syslog facility to use for logging. See
+.Xr syslog.conf 5
+for information on possible values. The default is
+.Va daemon .
+.It Fl t
+Run a configuration syntax test and exit.
+.It Fl u
+By default
+.Nm wired
+will
+.Xr chroot 2
+to the
+.Va server_root
+path. This flag disables this behaviour.
+.Pp
+As a result of the default secure behaviour,
+.Nm wired
+cannot access any objects outside
+.Va server_root
+- this security measure is taken in case
+.Nm wired
+is compromised.
+.It Fl v
+Display version information and exit.
+.El
+.Sh CONFIGURATION FILE
+.Nm wired
+reads configuration data from
+.Va config_file .
+The file format and configuration options are described in
+.Xr wired.conf 5 .
+.Sh FILES
+The locations of these files can be configured in
+.Va config_file ,
+this list describes the default locations. All files are contained within the
+.Va server_root
+path.
+.Bl -tag -width Ds
+.It Pa etc/wired.conf
+Configuration data for
+.Nm wired .
+The file format and configuration options are described in
+.Xr wired.conf 5 .
+.It Pa etc/certificate.pem
+The OpenSSL certificate as described in
+.Xr req 1 .
+.It Pa banlist
+A newline separated list of banned IPs. Subnet notation (192.168.0.0/16 or 192.168.0.0/255.255.0.0) and wildcards (192.168.*.*) are recognized.
+.It Pa files/
+A directory containing all files that are publically available to connected users.
+.It Pa groups
+A newline separated list of groups. Each line consists of colon separated fields with the following meanings:
+.Pp
+.Dl name
+.Dl can get user info
+.Dl can broadcast
+.Dl can post news
+.Dl can clear news
+.Dl can download
+.Dl can upload
+.Dl can upload anywhere
+.Dl can create folders
+.Dl can move files
+.Dl can delete files
+.Dl can view drop boxes
+.Dl can create accounts
+.Dl can edit accounts
+.Dl can delete accounts
+.Dl can elevate privileges
+.Dl can kick users
+.Dl can ban users
+.Dl cannot be kicked
+.Dl download speed limit
+.Dl upload speed limit
+.Pp
+.It Pa news
+The news that are publically available to connected users. This file is a series of fields, separated by an ASCII file separator, character with the following meanings:
+.Pp
+.Dl name
+.Dl timestamp
+.Dl content
+.Pp
+Each such record is separated by an ASCII group separator character.
+.It Pa status
+The status for the daemon. It is used by
+.Xr wiredctl 8
+and others to display some statistics. The file is a series of space separated numbers with the following meanings:
+.Pp
+.Dl time of startup
+.Dl number of online users
+.Dl total number of users
+.Dl number of active downloads
+.Dl total number of downloads
+.Dl number of active uploads
+.Dl total number of uploads
+.Dl number of bytes downloaded
+.Dl number of bytes uploaded
+.Pp
+.It Pa users
+A newline separated list of users. Each line consists of colon separated fields with the following meanings:
+.Pp
+.Dl name
+.Dl password
+.Dl group
+.Dl can get user info
+.Dl can broadcast
+.Dl can post news
+.Dl can clear news
+.Dl can download
+.Dl can upload
+.Dl can upload anywhere
+.Dl can create folders
+.Dl can move files
+.Dl can delete files
+.Dl can view drop boxes
+.Dl can create accounts
+.Dl can edit accounts
+.Dl can delete accounts
+.Dl can elevate privileges
+.Dl can kick users
+.Dl can ban users
+.Dl cannot be kicked
+.Dl download speed limit
+.Dl upload speed limit
+.Pp
+.El
+.Sh AUTHORS
+.Nm wired
+and the Wired protocol were developed by Axel Andersson.
+.Sh SEE ALSO
+.Xr wiredctl 1 ,
+.Xr wired.conf 5 ,
+.Xr hl2wired 1

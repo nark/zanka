@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A50335AD0864C98900CE6911 /* Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A50335B40864C9AC00CE6911 /* Build configuration list for PBXAggregateTarget "Package" */;
+			buildPhases = (
+				A50335AC0864C98900CE6911 /* Run Script (Package) */,
+			);
+			dependencies = (
+				A5FEE3F40B78819D00199A37 /* PBXTargetDependency */,
+			);
+			name = Package;
+			productName = "Wired Server";
+		};
+		A5D97284078E387200CD982E /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A5BE6CFA0864B5A000DA5C89 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				A5D97283078E387200CD982E /* Run Script (Zip) */,
+			);
+			dependencies = (
+				A50335E50864CC6600CE6911 /* PBXTargetDependency */,
+			);
+			name = Distribution;
+			productName = Packaging;
+		};
+		A5FEE3C40B7880BC00199A37 /* trackerd */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A5FEE3CE0B7880DD00199A37 /* Build configuration list for PBXAggregateTarget "trackerd" */;
+			buildPhases = (
+				A5FEE3C30B7880BC00199A37 /* Run Script (trackerd) */,
+			);
+			dependencies = (
+			);
+			name = trackerd;
+			productName = trackerd;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		A50335E40864CC6600CE6911 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50335AD0864C98900CE6911;
+			remoteInfo = "Wired Server";
+		};
+		A5FEE3F30B78819D00199A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5FEE3C40B7880BC00199A37;
+			remoteInfo = trackerd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77146D5B0F657F2F0040D190 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		77A9DE7A08695F35006BF5B0 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = Package/Resources/English.lproj/ReadMe.rtf; sourceTree = "<group>"; };
+		77A9DE7C08695F3F006BF5B0 /* English */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; name = English; path = Package/Resources/English.lproj/Description.plist; sourceTree = "<group>"; };
+		A50336990865AA5E00CE6911 /* postflight */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; name = postflight; path = Package/Resources/postflight; sourceTree = "<group>"; };
+		A503369A0865AA5E00CE6911 /* postupgrade */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; name = postupgrade; path = Package/Resources/postupgrade; sourceTree = "<group>"; };
+		A503369B0865AA5E00CE6911 /* postinstall */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; name = postinstall; path = Package/Resources/postinstall; sourceTree = "<group>"; };
+		A503369C0865AA5E00CE6911 /* preinstall */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; name = preinstall; path = Package/Resources/preinstall; sourceTree = "<group>"; };
+		A503369D0865AA5E00CE6911 /* preupgrade */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; name = preupgrade; path = Package/Resources/preupgrade; sourceTree = "<group>"; };
+		A58C4F2D0A38DA900018DF0C /* trackerd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = trackerd; sourceTree = "<group>"; };
+		A58C4FC50A38DAA30018DF0C /* trackerd.sh */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; path = trackerd.sh; sourceTree = "<group>"; };
+		A58C4FC60A38DAAE0018DF0C /* WiredTracker.xcconfig */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xcconfig; path = WiredTracker.xcconfig; sourceTree = "<group>"; };
+		A5D972E6078F017100CD982E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; name = Info.plist; path = Package/Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Wired Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A5BE6D190864B5E300DA5C89 /* Config */,
+				A5BE6D160864B5DD00DA5C89 /* Scripts */,
+				A5D972E3078F016100CD982E /* Package */,
+				A5D96C85078DD96400CD982E /* Subprojects */,
+			);
+			name = "Wired Preferences";
+			sourceTree = "<group>";
+		};
+		77A9DE2908695DAD006BF5B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77A9DE7B08695F3F006BF5B0 /* Description.plist */,
+				A50336990865AA5E00CE6911 /* postflight */,
+				A503369B0865AA5E00CE6911 /* postinstall */,
+				A503369A0865AA5E00CE6911 /* postupgrade */,
+				A503369C0865AA5E00CE6911 /* preinstall */,
+				A503369D0865AA5E00CE6911 /* preupgrade */,
+				77A9DE7908695F35006BF5B0 /* ReadMe.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A5BE6D160864B5DD00DA5C89 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				77146D5B0F657F2F0040D190 /* install.sh */,
+				A58C4FC50A38DAA30018DF0C /* trackerd.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		A5BE6D190864B5E300DA5C89 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A58C4FC60A38DAAE0018DF0C /* WiredTracker.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		A5D96C85078DD96400CD982E /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				A58C4F2D0A38DA900018DF0C /* trackerd */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		A5D972E3078F016100CD982E /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				A5D972E6078F017100CD982E /* Info.plist */,
+				77A9DE2908695DAD006BF5B0 /* Resources */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = A5BE6CFF0864B5A000DA5C89 /* Build configuration list for PBXProject "WiredTracker" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				"",
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Wired Preferences */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5FEE3C40B7880BC00199A37 /* trackerd */,
+				A50335AD0864C98900CE6911 /* Package */,
+				A5D97284078E387200CD982E /* Distribution */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A50335AC0864C98900CE6911 /* Run Script (Package) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Package)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sudo rm -rf \"$PROJECT_TEMP_DIR/Package\"\nmkdir -p \"$PROJECT_TEMP_DIR/Package\"\n\ncp -Rp Package/* \"$PROJECT_TEMP_DIR/Package\" || exit 1\n\nsh install.sh || exit 1\n\nfind \"$PROJECT_TEMP_DIR/Package\" -name .svn -print0 | xargs -0 sudo rm -rf\n\nrm -rf \"$BUILT_PRODUCTS_DIR/WiredTracker.pkg\"\n/Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker -build -v -ds -p \"$BUILT_PRODUCTS_DIR/WiredTracker.pkg\" -f \"$PROJECT_TEMP_DIR/Package/Contents\" -r \"$PROJECT_TEMP_DIR/Package/Resources\" -i \"$PROJECT_TEMP_DIR/Package/Info.plist\" -d \"$PROJECT_TEMP_DIR/Package/Resources/English.lproj/Description.plist\" || exit 1\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D97283078E387200CD982E /* Run Script (Zip) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Zip)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Zip\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$BUILD_DIR/WiredTracker.zip\"\nzip -ry \"$BUILD_DIR/WiredTracker.zip\" \"WiredTracker.pkg\" || exit 1";
+			showEnvVarsInLog = 0;
+		};
+		A5FEE3C30B7880BC00199A37 /* Run Script (trackerd) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (trackerd)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build trackerd\nsh trackerd.sh \"$PROJECT_TEMP_DIR/trackerd\" \"$PROJECT_TEMP_DIR/Package/Contents\" || exit 1\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A50335E50864CC6600CE6911 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50335AD0864C98900CE6911 /* Package */;
+			targetProxy = A50335E40864CC6600CE6911 /* PBXContainerItemProxy */;
+		};
+		A5FEE3F40B78819D00199A37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5FEE3C40B7880BC00199A37 /* trackerd */;
+			targetProxy = A5FEE3F30B78819D00199A37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77A9DE7908695F35006BF5B0 /* ReadMe.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A9DE7A08695F35006BF5B0 /* English */,
+			);
+			name = ReadMe.rtf;
+			sourceTree = "<group>";
+		};
+		77A9DE7B08695F3F006BF5B0 /* Description.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A9DE7C08695F3F006BF5B0 /* English */,
+			);
+			name = Description.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77437A170A371CD300588CD7 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Package;
+			};
+			name = Test/Universal;
+		};
+		77437A190A371CD300588CD7 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Test/Universal;
+		};
+		77437A1A0A371CD300588CD7 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A58C4FC60A38DAAE0018DF0C /* WiredTracker.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION = 4.0;
+			};
+			name = Test/Universal;
+		};
+		A50335B50864C9AC00CE6911 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Package;
+			};
+			name = Debug/Native;
+		};
+		A50335B70864C9AC00CE6911 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Package;
+			};
+			name = Release/Universal;
+		};
+		A5BE6CFB0864B5A000DA5C89 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug/Native;
+		};
+		A5BE6CFD0864B5A000DA5C89 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Release/Universal;
+		};
+		A5BE6D000864B5A000DA5C89 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A58C4FC60A38DAAE0018DF0C /* WiredTracker.xcconfig */;
+			buildSettings = {
+				GCC_VERSION = 4.0;
+			};
+			name = Debug/Native;
+		};
+		A5BE6D020864B5A000DA5C89 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A58C4FC60A38DAAE0018DF0C /* WiredTracker.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION = 4.0;
+			};
+			name = Release/Universal;
+		};
+		A5FEE3CF0B7880DD00199A37 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = trackerd;
+			};
+			name = Debug/Native;
+		};
+		A5FEE3D10B7880DD00199A37 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = trackerd;
+			};
+			name = Test/Universal;
+		};
+		A5FEE3D20B7880DD00199A37 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = trackerd;
+			};
+			name = Release/Universal;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A50335B40864C9AC00CE6911 /* Build configuration list for PBXAggregateTarget "Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50335B50864C9AC00CE6911 /* Debug/Native */,
+				77437A170A371CD300588CD7 /* Test/Universal */,
+				A50335B70864C9AC00CE6911 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A5BE6CFA0864B5A000DA5C89 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BE6CFB0864B5A000DA5C89 /* Debug/Native */,
+				77437A190A371CD300588CD7 /* Test/Universal */,
+				A5BE6CFD0864B5A000DA5C89 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A5BE6CFF0864B5A000DA5C89 /* Build configuration list for PBXProject "WiredTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BE6D000864B5A000DA5C89 /* Debug/Native */,
+				77437A1A0A371CD300588CD7 /* Test/Universal */,
+				A5BE6D020864B5A000DA5C89 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A5FEE3CE0B7880DD00199A37 /* Build configuration list for PBXAggregateTarget "trackerd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FEE3CF0B7880DD00199A37 /* Debug/Native */,
+				A5FEE3D10B7880DD00199A37 /* Test/Universal */,
+				A5FEE3D20B7880DD00199A37 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {ignore = id; info = id; sendPrivateMessage = id; unignore = id; }; 
+            CLASS = WCChat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_chatInputScrollView" = NSScrollView; 
+                "_chatInputTextView" = NSTextView; 
+                "_chatOutputScrollView" = NSScrollView; 
+                "_chatOutputTextView" = WCTextView; 
+                "_chatSplitView" = WCSplitView; 
+                "_chatView" = NSView; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_ignoreMenuItem" = NSMenuItem; 
+                "_infoButton" = NSButton; 
+                "_nickTableColumn" = NSTableColumn; 
+                "_privateMessageButton" = NSButton; 
+                "_sendPrivateMessageMenuItem" = NSMenuItem; 
+                "_setTopicPanel" = NSPanel; 
+                "_setTopicTextView" = NSTextView; 
+                "_topicDateTextField" = NSTextField; 
+                "_topicNickTextField" = NSTextField; 
+                "_topicTextField" = NSTextField; 
+                "_userListMenu" = NSMenu; 
+                "_userListSplitView" = WCSplitView; 
+                "_userListTableView" = WCTableView; 
+                "_userListView" = NSView; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            ACTIONS = {ban = id; kick = id; startPrivateChat = id; }; 
+            CLASS = WCPublicChat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_banButton" = NSButton; 
+                "_banMenuItem" = NSMenuItem; 
+                "_banMessagePanel" = NSPanel; 
+                "_banMessageTextField" = NSTextField; 
+                "_kickButton" = NSButton; 
+                "_kickMenuItem" = NSMenuItem; 
+                "_kickMessagePanel" = NSPanel; 
+                "_kickMessageTextField" = NSTextField; 
+                "_privateChatButton" = NSButton; 
+                "_startPrivateChatMenuItem" = NSMenuItem; 
+            }; 
+            SUPERCLASS = WCChat; 
+        }, 
+        {CLASS = WCSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

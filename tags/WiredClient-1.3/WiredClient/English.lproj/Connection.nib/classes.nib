@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {connect = id; }; 
+            CLASS = WCServerConnection; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addressTextField" = NSTextField; 
+                "_loginTextField" = NSTextField; 
+                "_passwordTextField" = NSSecureTextField; 
+                "_progressIndicator" = NSProgressIndicator; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

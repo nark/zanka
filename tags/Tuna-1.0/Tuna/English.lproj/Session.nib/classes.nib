@@ -1,0 +1,49 @@
+{
+    IBClasses = (
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {
+                colorByPackage = id; 
+                hideWeight = id; 
+                hideWeightPercent = id; 
+                statsDisplayMode = id; 
+            }; 
+            CLASS = TNSessionController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_dataMiningTextField" = NSTextField; 
+                "_frequencyTextField" = NSTextField; 
+                "_infoPanel" = NSPanel; 
+                "_packageTableColumn" = NSTableColumn; 
+                "_selfTableColumn" = NSTableColumn; 
+                "_subTableColumn" = NSTableColumn; 
+                "_systemTimeTextField" = NSTextField; 
+                "_totalTableColumn" = NSTableColumn; 
+                "_treeOutlineView" = ZAOutlineView; 
+                "_userTimeTextField" = NSTextField; 
+                "_versionTextField" = NSTextField; 
+                "_wallclockTimeTextField" = NSTextField; 
+                "_weightTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = ZAWindowController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = ZAOutlineView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSOutlineView; 
+        }, 
+        {
+            CLASS = ZAWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

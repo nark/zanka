@@ -1,0 +1,9 @@
+svn_path=WiredServer
+
+xcodebuild=1
+
+tarball=WiredServer.zip
+distname=WiredServer-%X.zip
+releaseball=wiredserver-latest.zip
+
+readme=Package/Resources/English.lproj/ReadMe.rtf

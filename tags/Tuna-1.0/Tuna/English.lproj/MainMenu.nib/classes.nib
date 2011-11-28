@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                focusPackage = id; 
+                focusSub = id; 
+                getInfo = id; 
+                removeCallstackWithSub = id; 
+                restore = id; 
+                restoreAll = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {manual = id; newDocument = id; releaseNotes = id; tutorial = id; }; 
+            CLASS = TNMainController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_releaseNotesTextView" = NSTextView; "_releaseNotesWindow" = NSWindow; }; 
+            SUPERCLASS = ZAObject; 
+        }, 
+        {CLASS = ZAObject; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

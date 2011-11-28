@@ -1,0 +1,157 @@
+.\" wired.conf.5
+.\"
+.\" Copyright (c) 2003-2004 Axel Andersson
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, and the entire permission notice in its entirety,
+.\"    including the disclaimer of warranties.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+.\" AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+.\" MARCUS D. WATTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+.\" BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+.\" OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+.\" ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+.\" TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+.\" USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd July 27, 2004
+.Dt WIRED.CONF 5
+.Os
+.Sh NAME
+.Nm wired.conf
+.Nd
+.Xr wired 8
+configuration file
+.Sh DESCRIPTION
+.Nm wired.conf
+is the
+.Xr wired 8
+configuration file. It consists of keywords and arguments in a
+.Sq key=value
+format, separated by newlines. Lines starting with
+.Sq #
+are ignored.
+.Pp
+Paths are interpreted as absolute if they begin with a
+.Sq / ,
+otherwise they are relative to the server root. Boolean values should be either
+.Sq yes
+or
+.Sq no .
+.Pp
+The possible keywords and their meanings are as follows:
+.Bl -tag -width
+.It Va address
+Specific address to bind to.
+.It Va ban time
+Number of seconds a temporary ban lasts.
+.It Va bandwidth
+Available bandwidth in bytes/sec to send to the tracker.
+.It Va banlist
+Path to the banlist file. Its format is described in
+.Xr wired 8 .
+.It Va category
+The tracker category to register as.
+.It Va certificate
+Path to the OpenSSL certificate PEM file. See
+.Xr req 1
+for more information. If no certificate is specified, only anonymous ciphers will be used.
+.It Va client downloads
+Maximum number of downloads per client.
+.It Va client uploads
+Maximum number of uploads per client.
+.It Va control cipher
+The OpenSSL cipher list to use for the control connection. See
+.Xr ciphers 1
+for more information on its format.
+.It Va description
+A short description of the server.
+.It Va files
+Path to the files directory.
+.It Va group
+Name or group id of the group that
+.Xr wired 8
+should operate as.
+.It Va groups
+Path to the groups file. Its format is described in
+.Xr wired 8 .
+.It Va idle time
+Number of seconds after which to mark inactive clients as idle.
+.It Va ignore dot
+Whether to ignore files beginning with
+.Sq .
+in file listings.
+.It Va ignore expression
+A regular expression per
+.Xr re_format 7
+of patterns to ignore in file listings.
+.It Va ignore invisible
+Whether to ignore Mac OS invisibles in file listings.
+.It Va index
+Path to the index file. If it is defined,
+.Nm wired
+will generate an index of all files.
+.It Va index time
+Number of seconds to wait between re-indexing the files. Without it, no automatic re-indexing takes place.
+.It Va name
+Name of the server.
+.It Va news
+Path to the news file.
+.It Va news limit
+Number of news entries to keep around. If the number of entries in the server news exceeds
+.Va news limit ,
+when a new post is made, the last entry is deleted.
+.It Va pid
+Path to the file in which to place the process id of the running
+.Xr wired 8
+daemon.
+.It Va port
+Port number to bind to.
+.It Va register
+Whether to register with the tracker.
+.It Va search method
+Method to use for file searches, can be either "live" for live searches, or "index" for indexed searches.
+.It Va status
+Path to the file in which to place the current status. Its file format is described in
+.Xr wired 8 .
+.It Va total downloads
+Maximum number of downloads across all clients.
+.It Va total download speed
+Maximum speed of downloads in bytes/sec.
+.It Va total uploads
+Maximum number of uploads across all clients.
+.It Va total upload speed
+Maximum speed of upload in bytes/sec.
+.It Va transfer cipher
+The OpenSSL cipher list to use for the control connection. See
+.Xr ciphers 1
+for more information on its format.
+.It Va url
+The server's URL to send to the tracker.
+.It Va user
+Name or user id of the user that
+.Xr wired 8
+should operate as.
+.It Va users
+Path to the users file. Its format is described in
+.Xr wired 8 .
+.It Va zeroconf
+Whether to enable Zeroconf service publication to allow clients to automically find the server.
+.El
+.Sh AUTHORS
+.Nm wired
+and the Wired protocol were developed by Axel Andersson.
+.Sh SEE ALSO
+.Xr wired 8 ,
+.Xr wiredctl 1 ,
+.Xr hl2wired 1

@@ -1,0 +1,38 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {remove = id; revealInFinder = id; start = id; stop = id; }; 
+            CLASS = WCTransfers; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_iconTableColumn" = NSTableColumn; 
+                "_infoTableColumn" = NSTableColumn; 
+                "_removeButton" = NSButton; 
+                "_revealInFinderButton" = NSButton; 
+                "_startButton" = NSButton; 
+                "_stopButton" = NSButton; 
+                "_transfersTableView" = WITableView; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

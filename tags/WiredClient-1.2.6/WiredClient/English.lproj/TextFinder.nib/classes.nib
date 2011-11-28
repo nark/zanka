@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {ignoreCase = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {next = id; previous = id; }; 
+            CLASS = WCTextFinder; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_findTextField" = NSTextField; }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,9 @@
+svn_path=WiredTracker
+
+xcodebuild=1
+
+tarball=WiredTracker.zip
+distname=WiredTracker-%X.zip
+releaseball=wiredtracker-latest.zip
+
+readme=Package/Resources/English.lproj/ReadMe.rtf

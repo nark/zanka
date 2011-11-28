@@ -1,0 +1,54 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {create = id; edit = id; group = id; selectAll = id; type = id; }; 
+            CLASS = WCAccountEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_banUsersButton" = NSButton; 
+                "_broadcastButton" = NSButton; 
+                "_cannotBeKickedButton" = NSButton; 
+                "_clearNewsButton" = NSButton; 
+                "_createAccountsButton" = NSButton; 
+                "_createFoldersButton" = NSButton; 
+                "_deleteAccountsButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_downloadButton" = NSButton; 
+                "_downloadSpeedTextField" = NSTextField; 
+                "_editAccountsButton" = NSButton; 
+                "_elevatePrivilegesButton" = NSButton; 
+                "_getUserInfoButton" = NSButton; 
+                "_groupMenuItem" = NSMenuItem; 
+                "_groupPopUpButton" = NSPopUpButton; 
+                "_kickUsersButton" = NSButton; 
+                "_moveButton" = NSButton; 
+                "_nameTextField" = NSTextField; 
+                "_noneMenuItem" = NSMenuItem; 
+                "_okButton" = NSButton; 
+                "_passwordTextField" = NSSecureTextField; 
+                "_postNewsButton" = NSButton; 
+                "_selectAllButton" = NSButton; 
+                "_setTopicButton" = NSButton; 
+                "_typePopUpButton" = NSPopUpButton; 
+                "_uploadAnywhereButton" = NSButton; 
+                "_uploadButton" = NSButton; 
+                "_uploadSpeedTextField" = NSTextField; 
+                "_userMenuItem" = NSMenuItem; 
+                "_viewDropBoxButton" = NSButton; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,59 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {
+                back = id; 
+                delete = id; 
+                down = id; 
+                download = id; 
+                forward = id; 
+                info = id; 
+                newFolder = id; 
+                preview = id; 
+                reload = id; 
+                up = id; 
+                upload = id; 
+            }; 
+            CLASS = WCFiles; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_backButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_deleteMenuItem" = NSMenuItem; 
+                "_downloadButton" = NSButton; 
+                "_downloadMenuItem" = NSMenuItem; 
+                "_filesScrollView" = NSScrollView; 
+                "_filesTableView" = WCTableView; 
+                "_forwardButton" = NSButton; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_infoButton" = NSButton; 
+                "_newFolderButton" = NSButton; 
+                "_newFolderPanel" = NSPanel; 
+                "_newFolderTextField" = NSTextField; 
+                "_previewButton" = NSButton; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_reloadButton" = NSButton; 
+                "_statusTextField" = NSTextField; 
+                "_titleBarMenu" = NSMenu; 
+                "_uploadButton" = NSButton; 
+                "_viewOptionsPanel" = NSPanel; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

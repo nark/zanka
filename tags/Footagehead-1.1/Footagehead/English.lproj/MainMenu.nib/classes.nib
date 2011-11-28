@@ -1,0 +1,49 @@
+{
+    IBClasses = (
+        {CLASS = FHBrowserView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {
+                cancelSheet = id; 
+                delete = id; 
+                open = id; 
+                openMenu = id; 
+                openParent = id; 
+                openURL = id; 
+                reload = id; 
+                revealInFinder = id; 
+                slideshow = id; 
+                slideshowButtons = id; 
+                submitSheet = id; 
+            }; 
+            CLASS = FHController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_browserScrollView" = NSScrollView; 
+                "_browserView" = FHBrowserView; 
+                "_fullscreenImageView" = FHImageView; 
+                "_fullscreenPanel" = NSPanel; 
+                "_imageScrollView" = NSScrollView; 
+                "_imageView" = NSImageView; 
+                "_leftStatusTextField" = NSTextField; 
+                "_menu" = NSPopUpButton; 
+                "_moveToTrashButton" = NSButton; 
+                "_openURLExtractMatrix" = NSMatrix; 
+                "_openURLPanel" = NSPanel; 
+                "_openURLTextView" = NSTextView; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_revealInFinderButton" = NSButton; 
+                "_rightStatusTextField" = NSTextField; 
+                "_screenAutoSwitchButton" = NSButton; 
+                "_screenAutoSwitchTextField" = NSTextField; 
+                "_screenPanel" = NSPanel; 
+                "_screenPopUpButton" = NSPopUpButton; 
+                "_splitView" = FHSplitView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FHImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = FHSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

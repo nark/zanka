@@ -1,0 +1,9 @@
+svn_path=CPUMonitor
+
+xcodebuild=1
+xcode_version=3.0
+
+tarball=CPUMonitor.zip
+distname=CPUMonitor-%X.zip
+
+readme=English.lproj/ReleaseNotes.rtf

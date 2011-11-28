@@ -1,0 +1,49 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {
+                accounts = id; 
+                addBookmark = id; 
+                broadcast = id; 
+                chat = id; 
+                console = id; 
+                disconnect = id; 
+                files = id; 
+                messages = id; 
+                news = id; 
+                postNews = id; 
+                reconnect = id; 
+                search = id; 
+                serverInfo = id; 
+                transfers = id; 
+            }; 
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = WCPreview; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_htmlView" = WebView; 
+                "_htmlWindow" = NSWindow; 
+                "_imageView" = NSImageView; 
+                "_imageWindow" = NSWindow; 
+                "_pdfView" = WIPDFView; 
+                "_pdfWindow" = NSWindow; 
+                "_textView" = NSTextView; 
+                "_textWindow" = NSWindow; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WIPDFView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

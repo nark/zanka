@@ -1,0 +1,92 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {
+                editAccount = id; 
+                fileFormat = id; 
+                getInfo = id; 
+                ignore = id; 
+                saveChat = id; 
+                sendPrivateMessage = id; 
+                setTopic = id; 
+                unignore = id; 
+            }; 
+            CLASS = WCChat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_chatInputScrollView" = NSScrollView; 
+                "_chatInputTextView" = NSTextView; 
+                "_chatOutputScrollView" = NSScrollView; 
+                "_chatOutputTextView" = WITextView; 
+                "_chatSplitView" = WISplitView; 
+                "_chatView" = NSView; 
+                "_getInfoMenuItem" = NSMenuItem; 
+                "_iconTableColumn" = NSTableColumn; 
+                "_ignoreMenuItem" = NSMenuItem; 
+                "_infoButton" = NSButton; 
+                "_nickTableColumn" = NSTableColumn; 
+                "_privateMessageButton" = NSButton; 
+                "_saveChatFileFormatPopUpButton" = NSPopUpButton; 
+                "_saveChatPlainTextEncodingPopUpButton" = NSPopUpButton; 
+                "_saveChatView" = NSView; 
+                "_sendPrivateMessageMenuItem" = NSMenuItem; 
+                "_setTopicPanel" = NSPanel; 
+                "_setTopicTextView" = NSTextView; 
+                "_topicNickTextField" = NSTextField; 
+                "_topicTextField" = NSTextField; 
+                "_userListMenu" = NSMenu; 
+                "_userListSplitView" = WISplitView; 
+                "_userListTableView" = WITableView; 
+                "_userListView" = NSView; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WCChatTextView; LANGUAGE = ObjC; SUPERCLASS = WITextView; }, 
+        {CLASS = WCChatWindow; LANGUAGE = ObjC; SUPERCLASS = WIWindow; }, 
+        {
+            ACTIONS = {
+                accounts = id; 
+                addBookmark = id; 
+                broadcast = id; 
+                chat = id; 
+                console = id; 
+                disconnect = id; 
+                files = id; 
+                messages = id; 
+                news = id; 
+                postNews = id; 
+                reconnect = id; 
+                search = id; 
+                serverInfo = id; 
+                transfers = id; 
+            }; 
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {CLASS = WCPrivateChat; LANGUAGE = ObjC; SUPERCLASS = WCChat; }, 
+        {CLASS = WISplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = WITextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {CLASS = WIWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

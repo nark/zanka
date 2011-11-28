@@ -1,0 +1,1939 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		779C736A0973BE5500D173B8 /* libwired */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 779C73A10973BE9600D173B8 /* Build configuration list for PBXAggregateTarget "libwired" */;
+			buildPhases = (
+				779C73690973BE5500D173B8 /* Run Script (libwired) */,
+				77795EF4097D361D00241C13 /* CopyFiles */,
+			);
+			buildSettings = {
+				PRODUCT_NAME = libwired;
+			};
+			dependencies = (
+			);
+			name = libwired;
+			productName = libwired;
+		};
+		77FFC0F7075E1014008ED58A /* Localization */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 773966BD0857539700058AF5 /* Build configuration list for PBXAggregateTarget "Localization" */;
+			buildPhases = (
+				77FFC0F6075E1014008ED58A /* Run Script (Localize) */,
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Localization;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = Localization;
+			productName = Localization;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		776627E90795354B00F691E2 /* WISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 776627E70795354B00F691E2 /* WISettings.m */; };
+		776627EA0795354B00F691E2 /* WISettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 776627E80795354B00F691E2 /* WISettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77724D30097D47490003B608 /* WIThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 77724D2E097D47490003B608 /* WIThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77724D31097D47490003B608 /* WIThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 77724D2F097D47490003B608 /* WIThread.m */; };
+		7772565C097E70640003B608 /* WIError.h in Headers */ = {isa = PBXBuildFile; fileRef = 7772565A097E70640003B608 /* WIError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7772565D097E70640003B608 /* WIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7772565B097E70640003B608 /* WIError.m */; };
+		77725682097E720A0003B608 /* NSError-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 77725680097E720A0003B608 /* NSError-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77725683097E720A0003B608 /* NSError-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77725681097E720A0003B608 /* NSError-WIAdditions.m */; };
+		77795C1E097D24B400241C13 /* WIAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 77795C1C097D24B400241C13 /* WIAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77795C1F097D24B400241C13 /* WIAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 77795C1D097D24B400241C13 /* WIAddress.m */; };
+		77795CCC097D2C1D00241C13 /* WISocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 77795CCA097D2C1D00241C13 /* WISocket.m */; };
+		77795CCD097D2C1D00241C13 /* WISocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 77795CCB097D2C1D00241C13 /* WISocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		777C493D07981CDD00D1D429 /* NSWorkspace-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 777C493B07981CDD00D1D429 /* NSWorkspace-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		777C493E07981CDD00D1D429 /* NSWorkspace-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 777C493C07981CDD00D1D429 /* NSWorkspace-WIAdditions.m */; };
+		778E7D3F096AC58500258FE6 /* NSTabView-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 778E7D3D096AC58500258FE6 /* NSTabView-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		778E7D40096AC58500258FE6 /* NSTabView-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 778E7D3E096AC58500258FE6 /* NSTabView-WIAdditions.m */; };
+		77B7BC9C0973BFCE009367B0 /* libwired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 779C73C80973BF7100D173B8 /* libwired.a */; };
+		77B7C4AC0973FF5E009367B0 /* NSApplication-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B7C4AA0973FF5E009367B0 /* NSApplication-WIAdditions.m */; };
+		77B7C4AD0973FF5E009367B0 /* NSApplication-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B7C4AB0973FF5E009367B0 /* NSApplication-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77CDAED8083B3781003BE654 /* ReleaseNotes.nib in Resources */ = {isa = PBXBuildFile; fileRef = 77CDAED6083B3781003BE654 /* ReleaseNotes.nib */; };
+		77D5170C0984F4AD0057D51F /* NSMenu-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D5170A0984F4AD0057D51F /* NSMenu-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77D5170D0984F4AD0057D51F /* NSMenu-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5170B0984F4AD0057D51F /* NSMenu-WIAdditions.m */; };
+		77FFC0FF075E121A008ED58A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77FFC0FD075E121A008ED58A /* Localizable.strings */; };
+		77FFC164075E178D008ED58A /* WIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 77FFC162075E178D008ED58A /* WIObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77FFC165075E178D008ED58A /* WIObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FFC163075E178D008ED58A /* WIObject.m */; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		A544C02F0758DE18008446CF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A544C02E0758DE18008446CF /* Carbon.framework */; };
+		A544C0440758DE5B008446CF /* WISortDescending.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A544C0420758DE5B008446CF /* WISortDescending.tiff */; };
+		A544C0450758DE5B008446CF /* WISortAscending.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A544C0430758DE5B008446CF /* WISortAscending.tiff */; };
+		A544C0960758DEEE008446CF /* NSDate-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0640758DEEE008446CF /* NSDate-WIAdditions.m */; };
+		A544C0970758DEEF008446CF /* NSNumber-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0650758DEEE008446CF /* NSNumber-WIAdditions.m */; };
+		A544C0990758DEEF008446CF /* NSDictionary-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0670758DEEE008446CF /* NSDictionary-WIAdditions.m */; };
+		A544C09B0758DEEF008446CF /* NSFileManager-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0690758DEEE008446CF /* NSFileManager-WIAdditions.m */; };
+		A544C09C0758DEEF008446CF /* NSTextField-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C06A0758DEEE008446CF /* NSTextField-WIAdditions.m */; };
+		A544C09D0758DEEF008446CF /* NSSound-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C06B0758DEEE008446CF /* NSSound-WIAdditions.m */; };
+		A544C0A00758DEEF008446CF /* NSEvent-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C06E0758DEEE008446CF /* NSEvent-WIAdditions.m */; };
+		A544C0A30758DEEF008446CF /* NSScanner-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0710758DEEE008446CF /* NSScanner-WIAdditions.m */; };
+		A544C0A40758DEEF008446CF /* NSNotificationCenter-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0720758DEEE008446CF /* NSNotificationCenter-WIAdditions.m */; };
+		A544C0A70758DEEF008446CF /* NSToolbarItem-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0750758DEEE008446CF /* NSToolbarItem-WIAdditions.m */; };
+		A544C0A90758DEEF008446CF /* NSImage-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0770758DEEE008446CF /* NSImage-WIAdditions.m */; };
+		A544C0AF0758DEEF008446CF /* NSString-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C07D0758DEEE008446CF /* NSString-WIAdditions.m */; };
+		A544C0B20758DEEF008446CF /* NSWindowController-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0800758DEEE008446CF /* NSWindowController-WIAdditions.m */; };
+		A544C0B30758DEEF008446CF /* NSFont-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0810758DEEE008446CF /* NSFont-WIAdditions.m */; };
+		A544C0B50758DEEF008446CF /* NSObject-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0830758DEEE008446CF /* NSObject-WIAdditions.m */; };
+		A544C0B70758DEEF008446CF /* NSThread-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0850758DEEE008446CF /* NSThread-WIAdditions.m */; };
+		A544C0B80758DEEF008446CF /* NSInvocation-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0860758DEEE008446CF /* NSInvocation-WIAdditions.m */; };
+		A544C0B90758DEEF008446CF /* NSTextView-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0870758DEEE008446CF /* NSTextView-WIAdditions.m */; };
+		A544C0BE0758DEEF008446CF /* NSArray-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C08C0758DEEE008446CF /* NSArray-WIAdditions.m */; };
+		A544C0BF0758DEEF008446CF /* NSColor-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C08D0758DEEE008446CF /* NSColor-WIAdditions.m */; };
+		A544C0C20758DEEF008446CF /* NSData-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0900758DEEE008446CF /* NSData-WIAdditions.m */; };
+		A544C0C30758DEEF008446CF /* NSNetService-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0910758DEEE008446CF /* NSNetService-WIAdditions.m */; };
+		A544C0C40758DEEF008446CF /* NSPopUpButton-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0920758DEEE008446CF /* NSPopUpButton-WIAdditions.m */; };
+		A544C0C50758DEEF008446CF /* NSWindow-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0930758DEEE008446CF /* NSWindow-WIAdditions.m */; };
+		A544C0C60758DEEF008446CF /* NSCursor-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C0940758DEEE008446CF /* NSCursor-WIAdditions.m */; };
+		A544C13E0758DFA9008446CF /* WISplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1200758DFA9008446CF /* WISplitView.m */; };
+		A544C1400758DFA9008446CF /* WIPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1220758DFA9008446CF /* WIPDFView.m */; };
+		A544C1420758DFA9008446CF /* WIOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1240758DFA9008446CF /* WIOutlineView.m */; };
+		A544C1440758DFA9008446CF /* WIMultiImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1260758DFA9008446CF /* WIMultiImageCell.m */; };
+		A544C1460758DFA9008446CF /* WIMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1280758DFA9008446CF /* WIMatrix.m */; };
+		A544C1480758DFA9008446CF /* WIIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C12A0758DFA9008446CF /* WIIconCell.m */; };
+		A544C14C0758DFA9008446CF /* WIColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C12E0758DFA9008446CF /* WIColorCell.m */; };
+		A544C14F0758DFA9008446CF /* WIWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1310758DFA9008446CF /* WIWindow.m */; };
+		A544C1510758DFA9008446CF /* WITableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1330758DFA9008446CF /* WITableViewManager.m */; };
+		A544C1530758DFA9008446CF /* WITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1350758DFA9008446CF /* WITableView.m */; };
+		A544C1550758DFA9008446CF /* WITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1370758DFA9008446CF /* WITextView.m */; };
+		A544C1560758DFA9008446CF /* WITextFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1380758DFA9008446CF /* WITextFilter.m */; };
+		A544C1570758DFA9008446CF /* WIURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C1390758DFA9008446CF /* WIURL.m */; };
+		A544C15F0758DFB4008446CF /* WiredAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C15E0758DFB4008446CF /* WiredAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1D90758E190008446CF /* NSWindow-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0660758DEEE008446CF /* NSWindow-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DA0758E190008446CF /* NSInvocation-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0680758DEEE008446CF /* NSInvocation-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DB0758E190008446CF /* NSToolbarItem-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C06C0758DEEE008446CF /* NSToolbarItem-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DC0758E190008446CF /* NSNumber-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C06D0758DEEE008446CF /* NSNumber-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DD0758E190008446CF /* NSTextView-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C06F0758DEEE008446CF /* NSTextView-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DE0758E190008446CF /* NSScanner-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0700758DEEE008446CF /* NSScanner-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1DF0758E190008446CF /* NSNotificationCenter-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0730758DEEE008446CF /* NSNotificationCenter-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E00758E190008446CF /* NSDate-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0740758DEEE008446CF /* NSDate-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E10758E190008446CF /* NSImage-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0760758DEEE008446CF /* NSImage-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E20758E190008446CF /* NSNetService-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0780758DEEE008446CF /* NSNetService-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E30758E190008446CF /* NSFileManager-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0790758DEEE008446CF /* NSFileManager-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E40758E190008446CF /* NSObject-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C07A0758DEEE008446CF /* NSObject-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E50758E190008446CF /* NSCursor-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C07B0758DEEE008446CF /* NSCursor-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E60758E190008446CF /* NSData-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C07C0758DEEE008446CF /* NSData-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E70758E190008446CF /* NSFont-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C07E0758DEEE008446CF /* NSFont-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E80758E190008446CF /* NSTextField-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C07F0758DEEE008446CF /* NSTextField-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1E90758E190008446CF /* NSThread-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0820758DEEE008446CF /* NSThread-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1EA0758E190008446CF /* NSString-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0840758DEEE008446CF /* NSString-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1EB0758E190008446CF /* NSDictionary-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0880758DEEE008446CF /* NSDictionary-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1EC0758E190008446CF /* NSColor-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0890758DEEE008446CF /* NSColor-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1ED0758E190008446CF /* NSArray-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C08A0758DEEE008446CF /* NSArray-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1EE0758E190008446CF /* NSSound-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C08B0758DEEE008446CF /* NSSound-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1EF0758E190008446CF /* NSWindowController-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C08E0758DEEE008446CF /* NSWindowController-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1F00758E190008446CF /* NSEvent-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C08F0758DEEE008446CF /* NSEvent-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C1F10758E190008446CF /* NSPopUpButton-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C0950758DEEE008446CF /* NSPopUpButton-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2340758E1EE008446CF /* WIURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C11C0758DFA9008446CF /* WIURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2350758E1EE008446CF /* WITextFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C11D0758DFA9008446CF /* WITextFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2360758E1EE008446CF /* WIColorCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C11E0758DFA9008446CF /* WIColorCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2370758E1EE008446CF /* WITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C11F0758DFA9008446CF /* WITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2380758E1EE008446CF /* WISplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1210758DFA9008446CF /* WISplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2390758E1EE008446CF /* WIPDFView.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1230758DFA9008446CF /* WIPDFView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C23A0758E1EE008446CF /* WIOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1250758DFA9008446CF /* WIOutlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C23B0758E1EE008446CF /* WIMultiImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1270758DFA9008446CF /* WIMultiImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C23C0758E1EE008446CF /* WIMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1290758DFA9008446CF /* WIMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C23D0758E1EE008446CF /* WIIconCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C12B0758DFA9008446CF /* WIIconCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C23F0758E1EE008446CF /* WIWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1300758DFA9008446CF /* WIWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2400758E1EE008446CF /* WIWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1320758DFA9008446CF /* WIWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C2420758E1EE008446CF /* WITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1360758DFA9008446CF /* WITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C27D0758E2ED008446CF /* WIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C27B0758E2ED008446CF /* WIMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544C76B0758F039008446CF /* WITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C76A0758F039008446CF /* WITypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A544D2CB075942DB008446CF /* WITableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C1340758DFA9008446CF /* WITableViewManager.h */; };
+		A54D381707628E4300227EBE /* WIFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = A54D381607628E4300227EBE /* WIFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A54D382E07628EE200227EBE /* WIAutoreleasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = A54D382C07628EE200227EBE /* WIAutoreleasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A54D382F07628EE200227EBE /* WIAutoreleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A54D382D07628EE200227EBE /* WIAutoreleasePool.m */; };
+		A54D3E86076337FE00227EBE /* WIFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A54D3E85076337FE00227EBE /* WIFunctions.m */; };
+		A553B5D707AAF56E005EE3E5 /* WITestStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B45B07A97C4900BD6812 /* WITestStopwatch.m */; };
+		A553B5D807AAF56E005EE3E5 /* WITestStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B48C07A97FBA00BD6812 /* WITestStorage.m */; };
+		A553B5D907AAF56E005EE3E5 /* WITestConformance.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B4B007A9830C00BD6812 /* WITestConformance.m */; };
+		A553B5DE07AAF56E005EE3E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		A553B5DF07AAF56E005EE3E5 /* WiredAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */; };
+		A553B5F707AAF5FC005EE3E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A553B5F407AAF5FC005EE3E5 /* main.m */; };
+		A56288F2097ED2C500F34C4C /* wired in Headers */ = {isa = PBXBuildFile; fileRef = A56288F1097ED2BD00F34C4C /* wired */; settings = {ATTRIBUTES = (Public, ); }; };
+		A56B9EFB075B865F00B3B6AA /* WIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A56B9EF9075B865F00B3B6AA /* WIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A56B9EFC075B865F00B3B6AA /* WIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B9EFA075B865F00B3B6AA /* WIApplication.m */; };
+		A5782BE3097C40470016261E /* WISearchField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5782BE1097C40470016261E /* WISearchField.h */; };
+		A5782BE4097C40470016261E /* WISearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = A5782BE2097C40470016261E /* WISearchField.m */; };
+		A57FDFC607C8257A00AC49F2 /* WIReadWriteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = A57FDFC407C8257A00AC49F2 /* WIReadWriteLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57FDFC707C8257A00AC49F2 /* WIReadWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FDFC507C8257A00AC49F2 /* WIReadWriteLock.m */; };
+		A57FE28507C8D9AD00AC49F2 /* WITableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = A57FE28307C8D9AD00AC49F2 /* WITableHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57FE28607C8D9AD00AC49F2 /* WITableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FE28407C8D9AD00AC49F2 /* WITableHeaderView.m */; };
+		A5983831096C894500EC0FC4 /* WIProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = A598382F096C894500EC0FC4 /* WIProgressIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5983832096C894500EC0FC4 /* WIProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A5983830096C894500EC0FC4 /* WIProgressIndicator.m */; };
+		A5983839096C89DD00EC0FC4 /* NSView-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5983837096C89DD00EC0FC4 /* NSView-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A598383A096C89DD00EC0FC4 /* NSView-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5983838096C89DD00EC0FC4 /* NSView-WIAdditions.m */; };
+		A5A47499097ED32A00B8F204 /* WIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A544C12F0758DFA9008446CF /* WIWindowController.m */; };
+		A5B452960880BD95003B1DA1 /* WIEventQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B452940880BD95003B1DA1 /* WIEventQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5B452970880BD95003B1DA1 /* WIEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B452950880BD95003B1DA1 /* WIEventQueue.m */; };
+		A5D96CB1078DDA1800CD982E /* WINotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D96CAD078DDA1800CD982E /* WINotificationCenter.m */; };
+		A5D96CB2078DDA1800CD982E /* WINotification.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D96CAE078DDA1800CD982E /* WINotification.h */; settings = {ATTRIBUTES = (); }; };
+		A5D96CB3078DDA1800CD982E /* WINotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D96CAF078DDA1800CD982E /* WINotification.m */; };
+		A5D96CB4078DDA1800CD982E /* WINotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D96CB0078DDA1800CD982E /* WINotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5D96CD4078DDB8A00CD982E /* WIGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D96CD2078DDB8A00CD982E /* WIGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5D96CD5078DDB8A00CD982E /* WIGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D96CD3078DDB8A00CD982E /* WIGraphView.m */; };
+		A5E4B33207A9752E00BD6812 /* NSImage-Badge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A5E4B32F07A9752E00BD6812 /* NSImage-Badge.tiff */; };
+		A5E4B33307A9752E00BD6812 /* NSImage-Baadge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A5E4B33007A9752E00BD6812 /* NSImage-Baadge.tiff */; };
+		A5E4B33407A9752E00BD6812 /* NSImage-Baaadge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A5E4B33107A9752E00BD6812 /* NSImage-Baaadge.tiff */; };
+		A5E4B3F307A97A7500BD6812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B3EA07A97A5500BD6812 /* main.m */; };
+		A5E4B3F507A97A8000BD6812 /* WiredAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */; };
+		A5E4B43E07A97B5900BD6812 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		A5E4B45D07A97C4900BD6812 /* WITestStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B45B07A97C4900BD6812 /* WITestStopwatch.m */; };
+		A5E4B48E07A97FBA00BD6812 /* WITestStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B48C07A97FBA00BD6812 /* WITestStorage.m */; };
+		A5E4B4B207A9830C00BD6812 /* WITestConformance.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B4B007A9830C00BD6812 /* WITestConformance.m */; };
+		A5E4B54A07A98AEE00BD6812 /* WITestStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B45B07A97C4900BD6812 /* WITestStopwatch.m */; };
+		A5E4B54B07A98AEE00BD6812 /* WITestStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B48C07A97FBA00BD6812 /* WITestStorage.m */; };
+		A5E4B54C07A98AEE00BD6812 /* WITestConformance.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B4B007A9830C00BD6812 /* WITestConformance.m */; };
+		A5E4B55007A98AEE00BD6812 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		A5E4B55107A98AEE00BD6812 /* WiredAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */; };
+		A5E4B56C07A98B4600BD6812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4B56907A98B4600BD6812 /* main.m */; };
+		A5E7C97E0847991E00F1E98C /* NSCursor-OpenHandCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A5E7C97C0847991E00F1E98C /* NSCursor-OpenHandCursor.tiff */; };
+		A5E7C97F0847991E00F1E98C /* NSCursor-ClosedHandCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A5E7C97D0847991E00F1E98C /* NSCursor-ClosedHandCursor.tiff */; };
+		A5EA54AC075FC0AD0025514A /* NSTableView-WIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EA54AA075FC0AD0025514A /* NSTableView-WIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EA54AD075FC0AD0025514A /* NSTableView-WIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA54AB075FC0AD0025514A /* NSTableView-WIAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA440018CDF011CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "-DDEVELOPMENT";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA450018CDF011CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				OTHER_CFLAGS = "-DDEPLOYMENT";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		77B7BCA50973BFF3009367B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 779C736A0973BE5500D173B8;
+			remoteInfo = libwired;
+		};
+		A5E4B48607A97E2200BD6812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "Wired Additions";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77795EF4097D361D00241C13 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = WiredAdditions.xcconfig; sourceTree = "<group>"; };
+		776627E70795354B00F691E2 /* WISettings.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WISettings.m; sourceTree = "<group>"; };
+		776627E80795354B00F691E2 /* WISettings.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WISettings.h; sourceTree = "<group>"; };
+		77724D2E097D47490003B608 /* WIThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThread.h; sourceTree = "<group>"; };
+		77724D2F097D47490003B608 /* WIThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThread.m; sourceTree = "<group>"; };
+		7772565A097E70640003B608 /* WIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIError.h; sourceTree = "<group>"; };
+		7772565B097E70640003B608 /* WIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIError.m; sourceTree = "<group>"; };
+		77725680097E720A0003B608 /* NSError-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError-WIAdditions.h"; sourceTree = "<group>"; };
+		77725681097E720A0003B608 /* NSError-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError-WIAdditions.m"; sourceTree = "<group>"; };
+		77795C1C097D24B400241C13 /* WIAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIAddress.h; sourceTree = "<group>"; };
+		77795C1D097D24B400241C13 /* WIAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIAddress.m; sourceTree = "<group>"; };
+		77795CCA097D2C1D00241C13 /* WISocket.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WISocket.m; sourceTree = "<group>"; };
+		77795CCB097D2C1D00241C13 /* WISocket.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WISocket.h; sourceTree = "<group>"; };
+		777C493B07981CDD00D1D429 /* NSWorkspace-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace-WIAdditions.h"; sourceTree = "<group>"; };
+		777C493C07981CDD00D1D429 /* NSWorkspace-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace-WIAdditions.m"; sourceTree = "<group>"; };
+		778E7D3D096AC58500258FE6 /* NSTabView-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSTabView-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		778E7D3E096AC58500258FE6 /* NSTabView-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSTabView-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		779C73C80973BF7100D173B8 /* libwired.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwired.a; path = libwired/run/lib/libwired.a; sourceTree = SOURCE_ROOT; };
+		77A153BD08B0A5B400FC27ED /* localize.sh */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; path = localize.sh; sourceTree = "<group>"; };
+		77B7C1E70973E9CA009367B0 /* libwired.sh */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.script.sh; path = libwired.sh; sourceTree = "<group>"; };
+		77B7C4AA0973FF5E009367B0 /* NSApplication-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSApplication-WIAdditions.m"; sourceTree = "<group>"; };
+		77B7C4AB0973FF5E009367B0 /* NSApplication-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSApplication-WIAdditions.h"; sourceTree = "<group>"; };
+		77CDAED7083B3781003BE654 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ReleaseNotes.nib; sourceTree = "<group>"; };
+		77D5170A0984F4AD0057D51F /* NSMenu-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu-WIAdditions.h"; sourceTree = "<group>"; };
+		77D5170B0984F4AD0057D51F /* NSMenu-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenu-WIAdditions.m"; sourceTree = "<group>"; };
+		77DD0C2B097527B0002C0601 /* libwired */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libwired; sourceTree = "<group>"; };
+		77FFC0FE075E121A008ED58A /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		77FFC162075E178D008ED58A /* WIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIObject.h; sourceTree = "<group>"; };
+		77FFC163075E178D008ED58A /* WIObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIObject.m; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A544C02E0758DE18008446CF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		A544C0420758DE5B008446CF /* WISortDescending.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WISortDescending.tiff; sourceTree = SOURCE_ROOT; };
+		A544C0430758DE5B008446CF /* WISortAscending.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WISortAscending.tiff; sourceTree = SOURCE_ROOT; };
+		A544C04C0758DE69008446CF /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = SOURCE_ROOT; };
+		A544C0640758DEEE008446CF /* NSDate-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSDate-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0650758DEEE008446CF /* NSNumber-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSNumber-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0660758DEEE008446CF /* NSWindow-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSWindow-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0670758DEEE008446CF /* NSDictionary-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0680758DEEE008446CF /* NSInvocation-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSInvocation-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0690758DEEE008446CF /* NSFileManager-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C06A0758DEEE008446CF /* NSTextField-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSTextField-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C06B0758DEEE008446CF /* NSSound-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSSound-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C06C0758DEEE008446CF /* NSToolbarItem-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSToolbarItem-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C06D0758DEEE008446CF /* NSNumber-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSNumber-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C06E0758DEEE008446CF /* NSEvent-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSEvent-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C06F0758DEEE008446CF /* NSTextView-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSTextView-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0700758DEEE008446CF /* NSScanner-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSScanner-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0710758DEEE008446CF /* NSScanner-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSScanner-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0720758DEEE008446CF /* NSNotificationCenter-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0730758DEEE008446CF /* NSNotificationCenter-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0740758DEEE008446CF /* NSDate-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSDate-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0750758DEEE008446CF /* NSToolbarItem-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSToolbarItem-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0760758DEEE008446CF /* NSImage-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSImage-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0770758DEEE008446CF /* NSImage-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSImage-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0780758DEEE008446CF /* NSNetService-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSNetService-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0790758DEEE008446CF /* NSFileManager-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSFileManager-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C07A0758DEEE008446CF /* NSObject-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSObject-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C07B0758DEEE008446CF /* NSCursor-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSCursor-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C07C0758DEEE008446CF /* NSData-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSData-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C07D0758DEEE008446CF /* NSString-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSString-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C07E0758DEEE008446CF /* NSFont-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSFont-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C07F0758DEEE008446CF /* NSTextField-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSTextField-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0800758DEEE008446CF /* NSWindowController-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSWindowController-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0810758DEEE008446CF /* NSFont-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSFont-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0820758DEEE008446CF /* NSThread-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSThread-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0830758DEEE008446CF /* NSObject-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSObject-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0840758DEEE008446CF /* NSString-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSString-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0850758DEEE008446CF /* NSThread-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSThread-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0860758DEEE008446CF /* NSInvocation-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0870758DEEE008446CF /* NSTextView-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSTextView-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0880758DEEE008446CF /* NSDictionary-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0890758DEEE008446CF /* NSColor-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSColor-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C08A0758DEEE008446CF /* NSArray-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSArray-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C08B0758DEEE008446CF /* NSSound-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSSound-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C08C0758DEEE008446CF /* NSArray-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSArray-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C08D0758DEEE008446CF /* NSColor-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSColor-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C08E0758DEEE008446CF /* NSWindowController-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSWindowController-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C08F0758DEEE008446CF /* NSEvent-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSEvent-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C0900758DEEE008446CF /* NSData-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSData-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0910758DEEE008446CF /* NSNetService-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSNetService-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0920758DEEE008446CF /* NSPopUpButton-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSPopUpButton-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0930758DEEE008446CF /* NSWindow-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSWindow-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0940758DEEE008446CF /* NSCursor-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = "NSCursor-WIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		A544C0950758DEEE008446CF /* NSPopUpButton-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = "NSPopUpButton-WIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		A544C11C0758DFA9008446CF /* WIURL.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIURL.h; sourceTree = SOURCE_ROOT; };
+		A544C11D0758DFA9008446CF /* WITextFilter.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WITextFilter.h; sourceTree = SOURCE_ROOT; };
+		A544C11E0758DFA9008446CF /* WIColorCell.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIColorCell.h; sourceTree = SOURCE_ROOT; };
+		A544C11F0758DFA9008446CF /* WITableView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WITableView.h; sourceTree = SOURCE_ROOT; };
+		A544C1200758DFA9008446CF /* WISplitView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WISplitView.m; sourceTree = SOURCE_ROOT; };
+		A544C1210758DFA9008446CF /* WISplitView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WISplitView.h; sourceTree = SOURCE_ROOT; };
+		A544C1220758DFA9008446CF /* WIPDFView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIPDFView.m; sourceTree = SOURCE_ROOT; };
+		A544C1230758DFA9008446CF /* WIPDFView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIPDFView.h; sourceTree = SOURCE_ROOT; };
+		A544C1240758DFA9008446CF /* WIOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIOutlineView.m; sourceTree = SOURCE_ROOT; };
+		A544C1250758DFA9008446CF /* WIOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIOutlineView.h; sourceTree = SOURCE_ROOT; };
+		A544C1260758DFA9008446CF /* WIMultiImageCell.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIMultiImageCell.m; sourceTree = SOURCE_ROOT; };
+		A544C1270758DFA9008446CF /* WIMultiImageCell.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIMultiImageCell.h; sourceTree = SOURCE_ROOT; };
+		A544C1280758DFA9008446CF /* WIMatrix.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIMatrix.m; sourceTree = SOURCE_ROOT; };
+		A544C1290758DFA9008446CF /* WIMatrix.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIMatrix.h; sourceTree = SOURCE_ROOT; };
+		A544C12A0758DFA9008446CF /* WIIconCell.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIIconCell.m; sourceTree = SOURCE_ROOT; };
+		A544C12B0758DFA9008446CF /* WIIconCell.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIIconCell.h; sourceTree = SOURCE_ROOT; };
+		A544C12E0758DFA9008446CF /* WIColorCell.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIColorCell.m; sourceTree = SOURCE_ROOT; };
+		A544C12F0758DFA9008446CF /* WIWindowController.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIWindowController.m; sourceTree = SOURCE_ROOT; };
+		A544C1300758DFA9008446CF /* WIWindowController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIWindowController.h; sourceTree = SOURCE_ROOT; };
+		A544C1310758DFA9008446CF /* WIWindow.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIWindow.m; sourceTree = SOURCE_ROOT; };
+		A544C1320758DFA9008446CF /* WIWindow.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIWindow.h; sourceTree = SOURCE_ROOT; };
+		A544C1330758DFA9008446CF /* WITableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WITableViewManager.m; sourceTree = SOURCE_ROOT; };
+		A544C1340758DFA9008446CF /* WITableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WITableViewManager.h; sourceTree = SOURCE_ROOT; };
+		A544C1350758DFA9008446CF /* WITableView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WITableView.m; sourceTree = SOURCE_ROOT; };
+		A544C1360758DFA9008446CF /* WITextView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WITextView.h; sourceTree = SOURCE_ROOT; };
+		A544C1370758DFA9008446CF /* WITextView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WITextView.m; sourceTree = SOURCE_ROOT; };
+		A544C1380758DFA9008446CF /* WITextFilter.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WITextFilter.m; sourceTree = SOURCE_ROOT; };
+		A544C1390758DFA9008446CF /* WIURL.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIURL.m; sourceTree = SOURCE_ROOT; };
+		A544C15E0758DFB4008446CF /* WiredAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WiredAdditions.h; sourceTree = SOURCE_ROOT; };
+		A544C27B0758E2ED008446CF /* WIMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIMacros.h; sourceTree = "<group>"; };
+		A544C76A0758F039008446CF /* WITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITypes.h; sourceTree = "<group>"; };
+		A54D381607628E4300227EBE /* WIFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFunctions.h; sourceTree = "<group>"; };
+		A54D382C07628EE200227EBE /* WIAutoreleasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIAutoreleasePool.h; sourceTree = "<group>"; };
+		A54D382D07628EE200227EBE /* WIAutoreleasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIAutoreleasePool.m; sourceTree = "<group>"; };
+		A54D3E85076337FE00227EBE /* WIFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIFunctions.m; sourceTree = "<group>"; };
+		A553B5E007AAF56E005EE3E5 /* WINotificationCenter Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WINotificationCenter Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A553B5F407AAF5FC005EE3E5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tests/WINotificationCenter/main.m; sourceTree = "<group>"; };
+		A553B5F507AAF5FC005EE3E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xml; name = Info.plist; path = Tests/WINotificationCenter/Info.plist; sourceTree = "<group>"; };
+		A553B5F607AAF5FC005EE3E5 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Tests/WINotificationCenter/prefix.pch; sourceTree = "<group>"; };
+		A56288F1097ED2BD00F34C4C /* wired */ = {isa = PBXFileReference; lastKnownFileType = folder; name = wired; path = libwired/run/include/wired; sourceTree = "<group>"; };
+		A56B9EF9075B865F00B3B6AA /* WIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIApplication.h; sourceTree = "<group>"; };
+		A56B9EFA075B865F00B3B6AA /* WIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIApplication.m; sourceTree = "<group>"; };
+		A5782BE1097C40470016261E /* WISearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WISearchField.h; sourceTree = "<group>"; };
+		A5782BE2097C40470016261E /* WISearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISearchField.m; sourceTree = "<group>"; };
+		A57FDFC407C8257A00AC49F2 /* WIReadWriteLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIReadWriteLock.h; sourceTree = "<group>"; };
+		A57FDFC507C8257A00AC49F2 /* WIReadWriteLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIReadWriteLock.m; sourceTree = "<group>"; };
+		A57FE28307C8D9AD00AC49F2 /* WITableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITableHeaderView.h; sourceTree = "<group>"; };
+		A57FE28407C8D9AD00AC49F2 /* WITableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITableHeaderView.m; sourceTree = "<group>"; };
+		A598382F096C894500EC0FC4 /* WIProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIProgressIndicator.h; sourceTree = "<group>"; };
+		A5983830096C894500EC0FC4 /* WIProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIProgressIndicator.m; sourceTree = "<group>"; };
+		A5983837096C89DD00EC0FC4 /* NSView-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView-WIAdditions.h"; sourceTree = "<group>"; };
+		A5983838096C89DD00EC0FC4 /* NSView-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView-WIAdditions.m"; sourceTree = "<group>"; };
+		A5B452940880BD95003B1DA1 /* WIEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEventQueue.h; sourceTree = "<group>"; };
+		A5B452950880BD95003B1DA1 /* WIEventQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIEventQueue.m; sourceTree = "<group>"; };
+		A5D96CAD078DDA1800CD982E /* WINotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WINotificationCenter.m; sourceTree = SOURCE_ROOT; };
+		A5D96CAE078DDA1800CD982E /* WINotification.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WINotification.h; sourceTree = SOURCE_ROOT; };
+		A5D96CAF078DDA1800CD982E /* WINotification.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WINotification.m; sourceTree = SOURCE_ROOT; };
+		A5D96CB0078DDA1800CD982E /* WINotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WINotificationCenter.h; sourceTree = SOURCE_ROOT; };
+		A5D96CD2078DDB8A00CD982E /* WIGraphView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = WIGraphView.h; sourceTree = SOURCE_ROOT; };
+		A5D96CD3078DDB8A00CD982E /* WIGraphView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = WIGraphView.m; sourceTree = SOURCE_ROOT; };
+		A5E4B32F07A9752E00BD6812 /* NSImage-Badge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Badge.tiff"; sourceTree = "<group>"; };
+		A5E4B33007A9752E00BD6812 /* NSImage-Baadge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Baadge.tiff"; sourceTree = "<group>"; };
+		A5E4B33107A9752E00BD6812 /* NSImage-Baaadge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Baaadge.tiff"; sourceTree = "<group>"; };
+		A5E4B39E07A9797200BD6812 /* WIAutoreleasePool Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIAutoreleasePool Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E4B3E407A97A4900BD6812 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xml; name = Info.plist; path = Tests/WIAutoreleasePool/Info.plist; sourceTree = "<group>"; };
+		A5E4B3EA07A97A5500BD6812 /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tests/WIAutoreleasePool/main.m; sourceTree = "<group>"; };
+		A5E4B43707A97AF100BD6812 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Tests/WIAutoreleasePool/prefix.pch; sourceTree = "<group>"; };
+		A5E4B45B07A97C4900BD6812 /* WITestStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = WITestStopwatch.m; path = Tests/WITestStopwatch.m; sourceTree = "<group>"; };
+		A5E4B45C07A97C4900BD6812 /* WITestStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = WITestStopwatch.h; path = Tests/WITestStopwatch.h; sourceTree = "<group>"; };
+		A5E4B48B07A97FBA00BD6812 /* WITestStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WITestStorage.h; path = Tests/WITestStorage.h; sourceTree = "<group>"; };
+		A5E4B48C07A97FBA00BD6812 /* WITestStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WITestStorage.m; path = Tests/WITestStorage.m; sourceTree = "<group>"; };
+		A5E4B4AF07A9830C00BD6812 /* WITestConformance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WITestConformance.h; path = Tests/WITestConformance.h; sourceTree = "<group>"; };
+		A5E4B4B007A9830C00BD6812 /* WITestConformance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WITestConformance.m; path = Tests/WITestConformance.m; sourceTree = "<group>"; };
+		A5E4B55207A98AEE00BD6812 /* WIObject Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIObject Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E4B56907A98B4600BD6812 /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tests/WIObject/main.m; sourceTree = "<group>"; };
+		A5E4B56A07A98B4600BD6812 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xml; name = Info.plist; path = Tests/WIObject/Info.plist; sourceTree = "<group>"; };
+		A5E4B56B07A98B4600BD6812 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Tests/WIObject/prefix.pch; sourceTree = "<group>"; };
+		A5E7C97C0847991E00F1E98C /* NSCursor-OpenHandCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSCursor-OpenHandCursor.tiff"; sourceTree = "<group>"; };
+		A5E7C97D0847991E00F1E98C /* NSCursor-ClosedHandCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSCursor-ClosedHandCursor.tiff"; sourceTree = "<group>"; };
+		A5EA54AA075FC0AD0025514A /* NSTableView-WIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView-WIAdditions.h"; sourceTree = "<group>"; };
+		A5EA54AB075FC0AD0025514A /* NSTableView-WIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView-WIAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				A544C02F0758DE18008446CF /* Carbon.framework in Frameworks */,
+				77B7BC9C0973BFCE009367B0 /* libwired.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A553B5DD07AAF56E005EE3E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A553B5DE07AAF56E005EE3E5 /* Cocoa.framework in Frameworks */,
+				A553B5DF07AAF56E005EE3E5 /* WiredAdditions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E4B39C07A9797100BD6812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E4B43E07A97B5900BD6812 /* Cocoa.framework in Frameworks */,
+				A5E4B3F507A97A8000BD6812 /* WiredAdditions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E4B54F07A98AEE00BD6812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E4B55007A98AEE00BD6812 /* Cocoa.framework in Frameworks */,
+				A5E4B55107A98AEE00BD6812 /* WiredAdditions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */,
+				779C73C80973BF7100D173B8 /* libwired.a */,
+				A5E4B39E07A9797200BD6812 /* WIAutoreleasePool Test.app */,
+				A5E4B55207A98AEE00BD6812 /* WIObject Test.app */,
+				A553B5E007AAF56E005EE3E5 /* WINotificationCenter Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* WiredAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				A544C15E0758DFB4008446CF /* WiredAdditions.h */,
+				A57FDFA707C8245500AC49F2 /* Classes */,
+				08FB77AEFE84172EC02AAC07 /* Cocoa Subclasses */,
+				A544C0540758DE8B008446CF /* Cocoa Additions */,
+				A544C2750758E2B1008446CF /* Utilities */,
+				32C88DFF0371C24200C91783 /* Sources */,
+				A5E4B3E007A97A2700BD6812 /* Tests */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				773966D8085753BC00058AF5 /* Config */,
+				77A153BB08B0A59500FC27ED /* Scripts */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				77DD0C290975279E002C0601 /* Subprojects */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = WiredAdditions;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				77FFC0FD075E121A008ED58A /* Localizable.strings */,
+				77CDAED6083B3781003BE654 /* ReleaseNotes.nib */,
+				A5E7C97D0847991E00F1E98C /* NSCursor-ClosedHandCursor.tiff */,
+				A5E7C97C0847991E00F1E98C /* NSCursor-OpenHandCursor.tiff */,
+				A5E4B33107A9752E00BD6812 /* NSImage-Baaadge.tiff */,
+				A5E4B33007A9752E00BD6812 /* NSImage-Baadge.tiff */,
+				A5E4B32F07A9752E00BD6812 /* NSImage-Badge.tiff */,
+				A544C0430758DE5B008446CF /* WISortAscending.tiff */,
+				A544C0420758DE5B008446CF /* WISortDescending.tiff */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Cocoa Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				A544C0550758DE94008446CF /* AppKit */,
+				A544C0560758DE99008446CF /* Foundation */,
+			);
+			name = "Cocoa Subclasses";
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				A544C02E0758DE18008446CF /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A544C04C0758DE69008446CF /* prefix.pch */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		773966D8085753BC00058AF5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		77396C0D0858A33A00058AF5 /* Locks */ = {
+			isa = PBXGroup;
+			children = (
+				A57FDFC507C8257A00AC49F2 /* WIReadWriteLock.m */,
+				A57FDFC407C8257A00AC49F2 /* WIReadWriteLock.h */,
+			);
+			name = Locks;
+			sourceTree = "<group>";
+		};
+		77795C1B097D248800241C13 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				77795C1D097D24B400241C13 /* WIAddress.m */,
+				77795C1C097D24B400241C13 /* WIAddress.h */,
+				77795CCA097D2C1D00241C13 /* WISocket.m */,
+				77795CCB097D2C1D00241C13 /* WISocket.h */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		77A153BB08B0A59500FC27ED /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				77B7C1E70973E9CA009367B0 /* libwired.sh */,
+				77A153BD08B0A5B400FC27ED /* localize.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		77DD0C290975279E002C0601 /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				77DD0C2B097527B0002C0601 /* libwired */,
+				A56288F1097ED2BD00F34C4C /* wired */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		A544C0540758DE8B008446CF /* Cocoa Additions */ = {
+			isa = PBXGroup;
+			children = (
+				A544C0580758DEA3008446CF /* AppKit */,
+				A544C0570758DE9F008446CF /* Foundation */,
+			);
+			name = "Cocoa Additions";
+			sourceTree = "<group>";
+		};
+		A544C0550758DE94008446CF /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				A57FE25707C8D85F00AC49F2 /* NSTableView */,
+				A544C1280758DFA9008446CF /* WIMatrix.m */,
+				A544C1290758DFA9008446CF /* WIMatrix.h */,
+				A5983830096C894500EC0FC4 /* WIProgressIndicator.m */,
+				A598382F096C894500EC0FC4 /* WIProgressIndicator.h */,
+				A5782BE2097C40470016261E /* WISearchField.m */,
+				A5782BE1097C40470016261E /* WISearchField.h */,
+				A544C1200758DFA9008446CF /* WISplitView.m */,
+				A544C1210758DFA9008446CF /* WISplitView.h */,
+				A544C1370758DFA9008446CF /* WITextView.m */,
+				A544C1360758DFA9008446CF /* WITextView.h */,
+				A544C1310758DFA9008446CF /* WIWindow.m */,
+				A544C1320758DFA9008446CF /* WIWindow.h */,
+				A544C12F0758DFA9008446CF /* WIWindowController.m */,
+				A544C1300758DFA9008446CF /* WIWindowController.h */,
+			);
+			name = AppKit;
+			sourceTree = "<group>";
+		};
+		A544C0560758DE99008446CF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A56B9EFA075B865F00B3B6AA /* WIApplication.m */,
+				A56B9EF9075B865F00B3B6AA /* WIApplication.h */,
+				A54D382D07628EE200227EBE /* WIAutoreleasePool.m */,
+				A54D382C07628EE200227EBE /* WIAutoreleasePool.h */,
+				7772565B097E70640003B608 /* WIError.m */,
+				7772565A097E70640003B608 /* WIError.h */,
+				A5D96CAF078DDA1800CD982E /* WINotification.m */,
+				A5D96CAE078DDA1800CD982E /* WINotification.h */,
+				A5D96CAD078DDA1800CD982E /* WINotificationCenter.m */,
+				A5D96CB0078DDA1800CD982E /* WINotificationCenter.h */,
+				77FFC163075E178D008ED58A /* WIObject.m */,
+				77FFC162075E178D008ED58A /* WIObject.h */,
+				77724D2F097D47490003B608 /* WIThread.m */,
+				77724D2E097D47490003B608 /* WIThread.h */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		A544C0570758DE9F008446CF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				77B7C4AA0973FF5E009367B0 /* NSApplication-WIAdditions.m */,
+				77B7C4AB0973FF5E009367B0 /* NSApplication-WIAdditions.h */,
+				A544C08C0758DEEE008446CF /* NSArray-WIAdditions.m */,
+				A544C08A0758DEEE008446CF /* NSArray-WIAdditions.h */,
+				A544C0900758DEEE008446CF /* NSData-WIAdditions.m */,
+				A544C07C0758DEEE008446CF /* NSData-WIAdditions.h */,
+				A544C0640758DEEE008446CF /* NSDate-WIAdditions.m */,
+				A544C0740758DEEE008446CF /* NSDate-WIAdditions.h */,
+				A544C0670758DEEE008446CF /* NSDictionary-WIAdditions.m */,
+				A544C0880758DEEE008446CF /* NSDictionary-WIAdditions.h */,
+				77725681097E720A0003B608 /* NSError-WIAdditions.m */,
+				77725680097E720A0003B608 /* NSError-WIAdditions.h */,
+				A544C06E0758DEEE008446CF /* NSEvent-WIAdditions.m */,
+				A544C08F0758DEEE008446CF /* NSEvent-WIAdditions.h */,
+				A544C0690758DEEE008446CF /* NSFileManager-WIAdditions.m */,
+				A544C0790758DEEE008446CF /* NSFileManager-WIAdditions.h */,
+				A544C0860758DEEE008446CF /* NSInvocation-WIAdditions.m */,
+				A544C0680758DEEE008446CF /* NSInvocation-WIAdditions.h */,
+				A544C0910758DEEE008446CF /* NSNetService-WIAdditions.m */,
+				A544C0780758DEEE008446CF /* NSNetService-WIAdditions.h */,
+				A544C0720758DEEE008446CF /* NSNotificationCenter-WIAdditions.m */,
+				A544C0730758DEEE008446CF /* NSNotificationCenter-WIAdditions.h */,
+				A544C0650758DEEE008446CF /* NSNumber-WIAdditions.m */,
+				A544C06D0758DEEE008446CF /* NSNumber-WIAdditions.h */,
+				A544C0830758DEEE008446CF /* NSObject-WIAdditions.m */,
+				A544C07A0758DEEE008446CF /* NSObject-WIAdditions.h */,
+				A544C0710758DEEE008446CF /* NSScanner-WIAdditions.m */,
+				A544C0700758DEEE008446CF /* NSScanner-WIAdditions.h */,
+				A544C07D0758DEEE008446CF /* NSString-WIAdditions.m */,
+				A544C0840758DEEE008446CF /* NSString-WIAdditions.h */,
+				A544C0850758DEEE008446CF /* NSThread-WIAdditions.m */,
+				A544C0820758DEEE008446CF /* NSThread-WIAdditions.h */,
+				777C493C07981CDD00D1D429 /* NSWorkspace-WIAdditions.m */,
+				777C493B07981CDD00D1D429 /* NSWorkspace-WIAdditions.h */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		A544C0580758DEA3008446CF /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				A544C08D0758DEEE008446CF /* NSColor-WIAdditions.m */,
+				A544C0890758DEEE008446CF /* NSColor-WIAdditions.h */,
+				A544C0940758DEEE008446CF /* NSCursor-WIAdditions.m */,
+				A544C07B0758DEEE008446CF /* NSCursor-WIAdditions.h */,
+				A544C0810758DEEE008446CF /* NSFont-WIAdditions.m */,
+				A544C07E0758DEEE008446CF /* NSFont-WIAdditions.h */,
+				A544C0770758DEEE008446CF /* NSImage-WIAdditions.m */,
+				A544C0760758DEEE008446CF /* NSImage-WIAdditions.h */,
+				77D5170B0984F4AD0057D51F /* NSMenu-WIAdditions.m */,
+				77D5170A0984F4AD0057D51F /* NSMenu-WIAdditions.h */,
+				A544C0920758DEEE008446CF /* NSPopUpButton-WIAdditions.m */,
+				A544C0950758DEEE008446CF /* NSPopUpButton-WIAdditions.h */,
+				A544C06B0758DEEE008446CF /* NSSound-WIAdditions.m */,
+				A544C08B0758DEEE008446CF /* NSSound-WIAdditions.h */,
+				A5EA54AB075FC0AD0025514A /* NSTableView-WIAdditions.m */,
+				A5EA54AA075FC0AD0025514A /* NSTableView-WIAdditions.h */,
+				778E7D3E096AC58500258FE6 /* NSTabView-WIAdditions.m */,
+				778E7D3D096AC58500258FE6 /* NSTabView-WIAdditions.h */,
+				A544C06A0758DEEE008446CF /* NSTextField-WIAdditions.m */,
+				A544C07F0758DEEE008446CF /* NSTextField-WIAdditions.h */,
+				A544C0870758DEEE008446CF /* NSTextView-WIAdditions.m */,
+				A544C06F0758DEEE008446CF /* NSTextView-WIAdditions.h */,
+				A544C0750758DEEE008446CF /* NSToolbarItem-WIAdditions.m */,
+				A544C06C0758DEEE008446CF /* NSToolbarItem-WIAdditions.h */,
+				A5983838096C89DD00EC0FC4 /* NSView-WIAdditions.m */,
+				A5983837096C89DD00EC0FC4 /* NSView-WIAdditions.h */,
+				A544C0930758DEEE008446CF /* NSWindow-WIAdditions.m */,
+				A544C0660758DEEE008446CF /* NSWindow-WIAdditions.h */,
+				A544C0800758DEEE008446CF /* NSWindowController-WIAdditions.m */,
+				A544C08E0758DEEE008446CF /* NSWindowController-WIAdditions.h */,
+			);
+			name = AppKit;
+			sourceTree = "<group>";
+		};
+		A544C2750758E2B1008446CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A54D3E85076337FE00227EBE /* WIFunctions.m */,
+				A54D381607628E4300227EBE /* WIFunctions.h */,
+				A544C27B0758E2ED008446CF /* WIMacros.h */,
+				A544C76A0758F039008446CF /* WITypes.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A553B5E507AAF5D2005EE3E5 /* WINotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				A553B5F507AAF5FC005EE3E5 /* Info.plist */,
+				A553B5F407AAF5FC005EE3E5 /* main.m */,
+				A553B5F607AAF5FC005EE3E5 /* prefix.pch */,
+			);
+			name = WINotificationCenter;
+			sourceTree = "<group>";
+		};
+		A57FDFA707C8245500AC49F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A57FDFC307C8255600AC49F2 /* Cells */,
+				A57FDFC207C8250800AC49F2 /* Data */,
+				77396C0D0858A33A00058AF5 /* Locks */,
+				77795C1B097D248800241C13 /* Net */,
+				A57FDFC107C824C100AC49F2 /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A57FDFC107C824C100AC49F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5D96CD3078DDB8A00CD982E /* WIGraphView.m */,
+				A5D96CD2078DDB8A00CD982E /* WIGraphView.h */,
+				A544C1220758DFA9008446CF /* WIPDFView.m */,
+				A544C1230758DFA9008446CF /* WIPDFView.h */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A57FDFC207C8250800AC49F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A5B452950880BD95003B1DA1 /* WIEventQueue.m */,
+				A5B452940880BD95003B1DA1 /* WIEventQueue.h */,
+				776627E70795354B00F691E2 /* WISettings.m */,
+				776627E80795354B00F691E2 /* WISettings.h */,
+				A544C1380758DFA9008446CF /* WITextFilter.m */,
+				A544C11D0758DFA9008446CF /* WITextFilter.h */,
+				A544C1390758DFA9008446CF /* WIURL.m */,
+				A544C11C0758DFA9008446CF /* WIURL.h */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		A57FDFC307C8255600AC49F2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A544C12E0758DFA9008446CF /* WIColorCell.m */,
+				A544C11E0758DFA9008446CF /* WIColorCell.h */,
+				A544C12A0758DFA9008446CF /* WIIconCell.m */,
+				A544C12B0758DFA9008446CF /* WIIconCell.h */,
+				A544C1260758DFA9008446CF /* WIMultiImageCell.m */,
+				A544C1270758DFA9008446CF /* WIMultiImageCell.h */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A57FE25707C8D85F00AC49F2 /* NSTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A544C1240758DFA9008446CF /* WIOutlineView.m */,
+				A544C1250758DFA9008446CF /* WIOutlineView.h */,
+				A57FE28407C8D9AD00AC49F2 /* WITableHeaderView.m */,
+				A57FE28307C8D9AD00AC49F2 /* WITableHeaderView.h */,
+				A544C1350758DFA9008446CF /* WITableView.m */,
+				A544C11F0758DFA9008446CF /* WITableView.h */,
+				A544C1330758DFA9008446CF /* WITableViewManager.m */,
+				A544C1340758DFA9008446CF /* WITableViewManager.h */,
+			);
+			name = NSTableView;
+			sourceTree = "<group>";
+		};
+		A5E4B3E007A97A2700BD6812 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A5E4B4B007A9830C00BD6812 /* WITestConformance.m */,
+				A5E4B4AF07A9830C00BD6812 /* WITestConformance.h */,
+				A5E4B45B07A97C4900BD6812 /* WITestStopwatch.m */,
+				A5E4B45C07A97C4900BD6812 /* WITestStopwatch.h */,
+				A5E4B48C07A97FBA00BD6812 /* WITestStorage.m */,
+				A5E4B48B07A97FBA00BD6812 /* WITestStorage.h */,
+				A5E4B3E107A97A3900BD6812 /* WIAutoreleasePool */,
+				A553B5E507AAF5D2005EE3E5 /* WINotificationCenter */,
+				A5E4B56307A98B2500BD6812 /* WIObject */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		A5E4B3E107A97A3900BD6812 /* WIAutoreleasePool */ = {
+			isa = PBXGroup;
+			children = (
+				A5E4B3E407A97A4900BD6812 /* Info.plist */,
+				A5E4B3EA07A97A5500BD6812 /* main.m */,
+				A5E4B43707A97AF100BD6812 /* prefix.pch */,
+			);
+			name = WIAutoreleasePool;
+			sourceTree = "<group>";
+		};
+		A5E4B56307A98B2500BD6812 /* WIObject */ = {
+			isa = PBXGroup;
+			children = (
+				A5E4B56A07A98B4600BD6812 /* Info.plist */,
+				A5E4B56907A98B4600BD6812 /* main.m */,
+				A5E4B56B07A98B4600BD6812 /* prefix.pch */,
+			);
+			name = WIObject;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56288F2097ED2C500F34C4C /* wired in Headers */,
+				A544C15F0758DFB4008446CF /* WiredAdditions.h in Headers */,
+				77B7C4AD0973FF5E009367B0 /* NSApplication-WIAdditions.h in Headers */,
+				A544C1ED0758E190008446CF /* NSArray-WIAdditions.h in Headers */,
+				A544C1EC0758E190008446CF /* NSColor-WIAdditions.h in Headers */,
+				A544C1E50758E190008446CF /* NSCursor-WIAdditions.h in Headers */,
+				A544C1E60758E190008446CF /* NSData-WIAdditions.h in Headers */,
+				A544C1E00758E190008446CF /* NSDate-WIAdditions.h in Headers */,
+				A544C1EB0758E190008446CF /* NSDictionary-WIAdditions.h in Headers */,
+				77725682097E720A0003B608 /* NSError-WIAdditions.h in Headers */,
+				A544C1F00758E190008446CF /* NSEvent-WIAdditions.h in Headers */,
+				A544C1E30758E190008446CF /* NSFileManager-WIAdditions.h in Headers */,
+				A544C1E70758E190008446CF /* NSFont-WIAdditions.h in Headers */,
+				A544C1E10758E190008446CF /* NSImage-WIAdditions.h in Headers */,
+				A544C1DA0758E190008446CF /* NSInvocation-WIAdditions.h in Headers */,
+				77D5170C0984F4AD0057D51F /* NSMenu-WIAdditions.h in Headers */,
+				A544C1E20758E190008446CF /* NSNetService-WIAdditions.h in Headers */,
+				A544C1DF0758E190008446CF /* NSNotificationCenter-WIAdditions.h in Headers */,
+				A544C1DC0758E190008446CF /* NSNumber-WIAdditions.h in Headers */,
+				A544C1E40758E190008446CF /* NSObject-WIAdditions.h in Headers */,
+				A544C1F10758E190008446CF /* NSPopUpButton-WIAdditions.h in Headers */,
+				A544C1DE0758E190008446CF /* NSScanner-WIAdditions.h in Headers */,
+				A544C1EE0758E190008446CF /* NSSound-WIAdditions.h in Headers */,
+				A544C1EA0758E190008446CF /* NSString-WIAdditions.h in Headers */,
+				A5EA54AC075FC0AD0025514A /* NSTableView-WIAdditions.h in Headers */,
+				778E7D3F096AC58500258FE6 /* NSTabView-WIAdditions.h in Headers */,
+				A544C1E80758E190008446CF /* NSTextField-WIAdditions.h in Headers */,
+				A544C1DD0758E190008446CF /* NSTextView-WIAdditions.h in Headers */,
+				A544C1E90758E190008446CF /* NSThread-WIAdditions.h in Headers */,
+				A544C1DB0758E190008446CF /* NSToolbarItem-WIAdditions.h in Headers */,
+				A5983839096C89DD00EC0FC4 /* NSView-WIAdditions.h in Headers */,
+				A544C1D90758E190008446CF /* NSWindow-WIAdditions.h in Headers */,
+				A544C1EF0758E190008446CF /* NSWindowController-WIAdditions.h in Headers */,
+				777C493D07981CDD00D1D429 /* NSWorkspace-WIAdditions.h in Headers */,
+				77795C1E097D24B400241C13 /* WIAddress.h in Headers */,
+				A56B9EFB075B865F00B3B6AA /* WIApplication.h in Headers */,
+				A54D382E07628EE200227EBE /* WIAutoreleasePool.h in Headers */,
+				A544C2360758E1EE008446CF /* WIColorCell.h in Headers */,
+				7772565C097E70640003B608 /* WIError.h in Headers */,
+				A5B452960880BD95003B1DA1 /* WIEventQueue.h in Headers */,
+				A54D381707628E4300227EBE /* WIFunctions.h in Headers */,
+				A5D96CD4078DDB8A00CD982E /* WIGraphView.h in Headers */,
+				A544C23D0758E1EE008446CF /* WIIconCell.h in Headers */,
+				A544C27D0758E2ED008446CF /* WIMacros.h in Headers */,
+				A544C23C0758E1EE008446CF /* WIMatrix.h in Headers */,
+				A544C23B0758E1EE008446CF /* WIMultiImageCell.h in Headers */,
+				A5D96CB2078DDA1800CD982E /* WINotification.h in Headers */,
+				A5D96CB4078DDA1800CD982E /* WINotificationCenter.h in Headers */,
+				77FFC164075E178D008ED58A /* WIObject.h in Headers */,
+				A544C23A0758E1EE008446CF /* WIOutlineView.h in Headers */,
+				A544C2390758E1EE008446CF /* WIPDFView.h in Headers */,
+				A5983831096C894500EC0FC4 /* WIProgressIndicator.h in Headers */,
+				A57FDFC607C8257A00AC49F2 /* WIReadWriteLock.h in Headers */,
+				A5782BE3097C40470016261E /* WISearchField.h in Headers */,
+				776627EA0795354B00F691E2 /* WISettings.h in Headers */,
+				77795CCD097D2C1D00241C13 /* WISocket.h in Headers */,
+				A544C2380758E1EE008446CF /* WISplitView.h in Headers */,
+				A57FE28507C8D9AD00AC49F2 /* WITableHeaderView.h in Headers */,
+				A544D2CB075942DB008446CF /* WITableViewManager.h in Headers */,
+				A544C2370758E1EE008446CF /* WITableView.h in Headers */,
+				A544C2350758E1EE008446CF /* WITextFilter.h in Headers */,
+				A544C2420758E1EE008446CF /* WITextView.h in Headers */,
+				77724D30097D47490003B608 /* WIThread.h in Headers */,
+				A544C76B0758F039008446CF /* WITypes.h in Headers */,
+				A544C2340758E1EE008446CF /* WIURL.h in Headers */,
+				A544C2400758E1EE008446CF /* WIWindow.h in Headers */,
+				A544C23F0758E1EE008446CF /* WIWindowController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* Wired Additions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773966B90857539700058AF5 /* Build configuration list for PBXNativeTarget "Wired Additions" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = WiredAdditions;
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+				77B7BCA60973BFF3009367B0 /* PBXTargetDependency */,
+			);
+			name = "Wired Additions";
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = WiredAdditions;
+			productReference = 8DC2EF5B0486A6940098B216 /* WiredAdditions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A553B5D407AAF56E005EE3E5 /* WINotificationCenter Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773966C50857539700058AF5 /* Build configuration list for PBXNativeTarget "WINotificationCenter Test" */;
+			buildPhases = (
+				A553B5D607AAF56E005EE3E5 /* Sources */,
+				A553B5DD07AAF56E005EE3E5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = build;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WINotificationCenter/prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/WINotificationCenter/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PRODUCT_NAME = "WINotificationCenter Test";
+			};
+			dependencies = (
+				A553B5D507AAF56E005EE3E5 /* PBXTargetDependency */,
+			);
+			name = "WINotificationCenter Test";
+			productName = "WIAutoreleasePool Test";
+			productReference = A553B5E007AAF56E005EE3E5 /* WINotificationCenter Test.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>WIAutoreleasePool Test</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.WIAutoreleasePool_Test</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		A5E4B39D07A9797100BD6812 /* WIAutoreleasePool Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773966C10857539700058AF5 /* Build configuration list for PBXNativeTarget "WIAutoreleasePool Test" */;
+			buildPhases = (
+				A5E4B39B07A9797100BD6812 /* Sources */,
+				A5E4B39C07A9797100BD6812 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = build;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIAutoreleasePool/prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/WIAutoreleasePool/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PRODUCT_NAME = "WIAutoreleasePool Test";
+			};
+			dependencies = (
+				A5E4B48707A97E2200BD6812 /* PBXTargetDependency */,
+			);
+			name = "WIAutoreleasePool Test";
+			productName = "WIAutoreleasePool Test";
+			productReference = A5E4B39E07A9797200BD6812 /* WIAutoreleasePool Test.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>WIAutoreleasePool Test</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.WIAutoreleasePool_Test</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		A5E4B54607A98AEE00BD6812 /* WIObject Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773966C90857539700058AF5 /* Build configuration list for PBXNativeTarget "WIObject Test" */;
+			buildPhases = (
+				A5E4B54807A98AEE00BD6812 /* Sources */,
+				A5E4B54F07A98AEE00BD6812 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = build;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIObject/prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/WIObject/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PRODUCT_NAME = "WIObject Test";
+			};
+			dependencies = (
+				A5E4B54707A98AEE00BD6812 /* PBXTargetDependency */,
+			);
+			name = "WIObject Test";
+			productName = "WIAutoreleasePool Test";
+			productReference = A5E4B55207A98AEE00BD6812 /* WIObject Test.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>WIAutoreleasePool Test</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.WIAutoreleasePool_Test</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 773966CD0857539700058AF5 /* Build configuration list for PBXProject "WiredAdditions" */;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			buildStyles = (
+				014CEA440018CDF011CA2923 /* Development */,
+				014CEA450018CDF011CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* WiredAdditions */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* Wired Additions */,
+				779C736A0973BE5500D173B8 /* libwired */,
+				77FFC0F7075E1014008ED58A /* Localization */,
+				A5E4B39D07A9797100BD6812 /* WIAutoreleasePool Test */,
+				A553B5D407AAF56E005EE3E5 /* WINotificationCenter Test */,
+				A5E4B54607A98AEE00BD6812 /* WIObject Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				77FFC0FF075E121A008ED58A /* Localizable.strings in Resources */,
+				77CDAED8083B3781003BE654 /* ReleaseNotes.nib in Resources */,
+				A5E7C97F0847991E00F1E98C /* NSCursor-ClosedHandCursor.tiff in Resources */,
+				A5E7C97E0847991E00F1E98C /* NSCursor-OpenHandCursor.tiff in Resources */,
+				A5E4B33207A9752E00BD6812 /* NSImage-Badge.tiff in Resources */,
+				A5E4B33307A9752E00BD6812 /* NSImage-Baadge.tiff in Resources */,
+				A5E4B33407A9752E00BD6812 /* NSImage-Baaadge.tiff in Resources */,
+				A544C0450758DE5B008446CF /* WISortAscending.tiff in Resources */,
+				A544C0440758DE5B008446CF /* WISortDescending.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		779C73690973BE5500D173B8 /* Run Script (libwired) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (libwired)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build libwired\nsh libwired.sh || exit 1\n";
+		};
+		77FFC0F6075E1014008ED58A /* Run Script (Localize) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Localize)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Localize\nsh localize.sh . || exit 1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B7C4AC0973FF5E009367B0 /* NSApplication-WIAdditions.m in Sources */,
+				A544C0BE0758DEEF008446CF /* NSArray-WIAdditions.m in Sources */,
+				A544C0BF0758DEEF008446CF /* NSColor-WIAdditions.m in Sources */,
+				A544C0C60758DEEF008446CF /* NSCursor-WIAdditions.m in Sources */,
+				A544C0C20758DEEF008446CF /* NSData-WIAdditions.m in Sources */,
+				A544C0960758DEEE008446CF /* NSDate-WIAdditions.m in Sources */,
+				A544C0990758DEEF008446CF /* NSDictionary-WIAdditions.m in Sources */,
+				77725683097E720A0003B608 /* NSError-WIAdditions.m in Sources */,
+				A544C0A00758DEEF008446CF /* NSEvent-WIAdditions.m in Sources */,
+				A544C09B0758DEEF008446CF /* NSFileManager-WIAdditions.m in Sources */,
+				A544C0B30758DEEF008446CF /* NSFont-WIAdditions.m in Sources */,
+				A544C0A90758DEEF008446CF /* NSImage-WIAdditions.m in Sources */,
+				A544C0B80758DEEF008446CF /* NSInvocation-WIAdditions.m in Sources */,
+				77D5170D0984F4AD0057D51F /* NSMenu-WIAdditions.m in Sources */,
+				A544C0C30758DEEF008446CF /* NSNetService-WIAdditions.m in Sources */,
+				A544C0A40758DEEF008446CF /* NSNotificationCenter-WIAdditions.m in Sources */,
+				A544C0970758DEEF008446CF /* NSNumber-WIAdditions.m in Sources */,
+				A544C0B50758DEEF008446CF /* NSObject-WIAdditions.m in Sources */,
+				A544C0C40758DEEF008446CF /* NSPopUpButton-WIAdditions.m in Sources */,
+				A544C09D0758DEEF008446CF /* NSSound-WIAdditions.m in Sources */,
+				A544C0A30758DEEF008446CF /* NSScanner-WIAdditions.m in Sources */,
+				A544C0AF0758DEEF008446CF /* NSString-WIAdditions.m in Sources */,
+				A5EA54AD075FC0AD0025514A /* NSTableView-WIAdditions.m in Sources */,
+				778E7D40096AC58500258FE6 /* NSTabView-WIAdditions.m in Sources */,
+				A544C09C0758DEEF008446CF /* NSTextField-WIAdditions.m in Sources */,
+				A544C0B90758DEEF008446CF /* NSTextView-WIAdditions.m in Sources */,
+				A544C0B70758DEEF008446CF /* NSThread-WIAdditions.m in Sources */,
+				A544C0A70758DEEF008446CF /* NSToolbarItem-WIAdditions.m in Sources */,
+				A598383A096C89DD00EC0FC4 /* NSView-WIAdditions.m in Sources */,
+				A544C0C50758DEEF008446CF /* NSWindow-WIAdditions.m in Sources */,
+				A544C0B20758DEEF008446CF /* NSWindowController-WIAdditions.m in Sources */,
+				777C493E07981CDD00D1D429 /* NSWorkspace-WIAdditions.m in Sources */,
+				77795C1F097D24B400241C13 /* WIAddress.m in Sources */,
+				A56B9EFC075B865F00B3B6AA /* WIApplication.m in Sources */,
+				A54D382F07628EE200227EBE /* WIAutoreleasePool.m in Sources */,
+				A544C14C0758DFA9008446CF /* WIColorCell.m in Sources */,
+				7772565D097E70640003B608 /* WIError.m in Sources */,
+				A5B452970880BD95003B1DA1 /* WIEventQueue.m in Sources */,
+				A54D3E86076337FE00227EBE /* WIFunctions.m in Sources */,
+				A5D96CD5078DDB8A00CD982E /* WIGraphView.m in Sources */,
+				A544C1480758DFA9008446CF /* WIIconCell.m in Sources */,
+				A544C1460758DFA9008446CF /* WIMatrix.m in Sources */,
+				A544C1440758DFA9008446CF /* WIMultiImageCell.m in Sources */,
+				A5D96CB3078DDA1800CD982E /* WINotification.m in Sources */,
+				A5D96CB1078DDA1800CD982E /* WINotificationCenter.m in Sources */,
+				77FFC165075E178D008ED58A /* WIObject.m in Sources */,
+				A544C1420758DFA9008446CF /* WIOutlineView.m in Sources */,
+				A544C1400758DFA9008446CF /* WIPDFView.m in Sources */,
+				A5983832096C894500EC0FC4 /* WIProgressIndicator.m in Sources */,
+				A57FDFC707C8257A00AC49F2 /* WIReadWriteLock.m in Sources */,
+				A5782BE4097C40470016261E /* WISearchField.m in Sources */,
+				776627E90795354B00F691E2 /* WISettings.m in Sources */,
+				77795CCC097D2C1D00241C13 /* WISocket.m in Sources */,
+				A544C13E0758DFA9008446CF /* WISplitView.m in Sources */,
+				A57FE28607C8D9AD00AC49F2 /* WITableHeaderView.m in Sources */,
+				A544C1530758DFA9008446CF /* WITableView.m in Sources */,
+				A544C1510758DFA9008446CF /* WITableViewManager.m in Sources */,
+				A544C1550758DFA9008446CF /* WITextView.m in Sources */,
+				A544C1560758DFA9008446CF /* WITextFilter.m in Sources */,
+				77724D31097D47490003B608 /* WIThread.m in Sources */,
+				A544C1570758DFA9008446CF /* WIURL.m in Sources */,
+				A544C14F0758DFA9008446CF /* WIWindow.m in Sources */,
+				A5A47499097ED32A00B8F204 /* WIWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A553B5D607AAF56E005EE3E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A553B5D707AAF56E005EE3E5 /* WITestStopwatch.m in Sources */,
+				A553B5D807AAF56E005EE3E5 /* WITestStorage.m in Sources */,
+				A553B5D907AAF56E005EE3E5 /* WITestConformance.m in Sources */,
+				A553B5F707AAF5FC005EE3E5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E4B39B07A9797100BD6812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E4B3F307A97A7500BD6812 /* main.m in Sources */,
+				A5E4B45D07A97C4900BD6812 /* WITestStopwatch.m in Sources */,
+				A5E4B48E07A97FBA00BD6812 /* WITestStorage.m in Sources */,
+				A5E4B4B207A9830C00BD6812 /* WITestConformance.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E4B54807A98AEE00BD6812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E4B54A07A98AEE00BD6812 /* WITestStopwatch.m in Sources */,
+				A5E4B54B07A98AEE00BD6812 /* WITestStorage.m in Sources */,
+				A5E4B54C07A98AEE00BD6812 /* WITestConformance.m in Sources */,
+				A5E4B56C07A98B4600BD6812 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77B7BCA60973BFF3009367B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 779C736A0973BE5500D173B8 /* libwired */;
+			targetProxy = 77B7BCA50973BFF3009367B0 /* PBXContainerItemProxy */;
+		};
+		A553B5D507AAF56E005EE3E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* Wired Additions */;
+			targetProxy = A5E4B48607A97E2200BD6812 /* PBXContainerItemProxy */;
+		};
+		A5E4B48707A97E2200BD6812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* Wired Additions */;
+			targetProxy = A5E4B48607A97E2200BD6812 /* PBXContainerItemProxy */;
+		};
+		A5E4B54707A98AEE00BD6812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* Wired Additions */;
+			targetProxy = A5E4B48607A97E2200BD6812 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77CDAED6083B3781003BE654 /* ReleaseNotes.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77CDAED7083B3781003BE654 /* English */,
+			);
+			name = ReleaseNotes.nib;
+			sourceTree = "<group>";
+		};
+		77FFC0FD075E121A008ED58A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77FFC0FE075E121A008ED58A /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		773966BA0857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = WiredAdditions;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = "Debug (Native)";
+		};
+		773966BB0857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = WiredAdditions;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = "Test (Native)";
+		};
+		773966BC0857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = WiredAdditions;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = "Release (Universal)";
+		};
+		773966BE0857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "-DDEVELOPMENT";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Localization;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = "Debug (Native)";
+		};
+		773966BF0857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Localization;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = "Test (Native)";
+		};
+		773966C00857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Localization;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = "Release (Universal)";
+		};
+		773966C20857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIAutoreleasePool/prefix.pch;
+				INFOPLIST_FILE = Tests/WIAutoreleasePool/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIAutoreleasePool Test";
+			};
+			name = "Debug (Native)";
+		};
+		773966C30857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIAutoreleasePool/prefix.pch;
+				INFOPLIST_FILE = Tests/WIAutoreleasePool/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIAutoreleasePool Test";
+			};
+			name = "Test (Native)";
+		};
+		773966C40857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIAutoreleasePool/prefix.pch;
+				INFOPLIST_FILE = Tests/WIAutoreleasePool/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIAutoreleasePool Test";
+			};
+			name = "Release (Universal)";
+		};
+		773966C60857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WINotificationCenter/prefix.pch;
+				INFOPLIST_FILE = Tests/WINotificationCenter/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WINotificationCenter Test";
+			};
+			name = "Debug (Native)";
+		};
+		773966C70857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WINotificationCenter/prefix.pch;
+				INFOPLIST_FILE = Tests/WINotificationCenter/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WINotificationCenter Test";
+			};
+			name = "Test (Native)";
+		};
+		773966C80857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WINotificationCenter/prefix.pch;
+				INFOPLIST_FILE = Tests/WINotificationCenter/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WINotificationCenter Test";
+			};
+			name = "Release (Universal)";
+		};
+		773966CA0857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIObject/prefix.pch;
+				INFOPLIST_FILE = Tests/WIObject/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIObject Test";
+			};
+			name = "Debug (Native)";
+		};
+		773966CB0857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIObject/prefix.pch;
+				INFOPLIST_FILE = Tests/WIObject/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIObject Test";
+			};
+			name = "Test (Native)";
+		};
+		773966CC0857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIObject/prefix.pch;
+				INFOPLIST_FILE = Tests/WIObject/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIObject Test";
+			};
+			name = "Release (Universal)";
+		};
+		773966CE0857539700058AF5 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				ZERO_LINK = YES;
+			};
+			name = "Debug (Native)";
+		};
+		773966CF0857539700058AF5 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = TEST;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = "Test (Native)";
+		};
+		773966D00857539700058AF5 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = "Release (Universal)";
+		};
+		779C73A20973BE9600D173B8 /* Debug (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = libwired;
+			};
+			name = "Debug (Native)";
+		};
+		779C73A30973BE9600D173B8 /* Test (Native) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = libwired;
+			};
+			name = "Test (Native)";
+		};
+		779C73A40973BE9600D173B8 /* Release (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = libwired;
+			};
+			name = "Release (Universal)";
+		};
+		A5DB47C2098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = libwired;
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C3098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/libwired/run/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = WiredAdditions;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C4098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Localization;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C5098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIAutoreleasePool/prefix.pch;
+				INFOPLIST_FILE = Tests/WIAutoreleasePool/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIAutoreleasePool Test";
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C6098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WINotificationCenter/prefix.pch;
+				INFOPLIST_FILE = Tests/WINotificationCenter/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WINotificationCenter Test";
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C7098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/WIObject/prefix.pch;
+				INFOPLIST_FILE = Tests/WIObject/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "WIObject Test";
+			};
+			name = "Test (Universal)";
+		};
+		A5DB47C8098BBABE0073564C /* Test (Universal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773966DB085753DC00058AF5 /* WiredAdditions.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = TEST;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = "Test (Universal)";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		773966B90857539700058AF5 /* Build configuration list for PBXNativeTarget "Wired Additions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966BA0857539700058AF5 /* Debug (Native) */,
+				773966BB0857539700058AF5 /* Test (Native) */,
+				A5DB47C3098BBABE0073564C /* Test (Universal) */,
+				773966BC0857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		773966BD0857539700058AF5 /* Build configuration list for PBXAggregateTarget "Localization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966BE0857539700058AF5 /* Debug (Native) */,
+				773966BF0857539700058AF5 /* Test (Native) */,
+				A5DB47C4098BBABE0073564C /* Test (Universal) */,
+				773966C00857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		773966C10857539700058AF5 /* Build configuration list for PBXNativeTarget "WIAutoreleasePool Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966C20857539700058AF5 /* Debug (Native) */,
+				773966C30857539700058AF5 /* Test (Native) */,
+				A5DB47C5098BBABE0073564C /* Test (Universal) */,
+				773966C40857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		773966C50857539700058AF5 /* Build configuration list for PBXNativeTarget "WINotificationCenter Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966C60857539700058AF5 /* Debug (Native) */,
+				773966C70857539700058AF5 /* Test (Native) */,
+				A5DB47C6098BBABE0073564C /* Test (Universal) */,
+				773966C80857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		773966C90857539700058AF5 /* Build configuration list for PBXNativeTarget "WIObject Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966CA0857539700058AF5 /* Debug (Native) */,
+				773966CB0857539700058AF5 /* Test (Native) */,
+				A5DB47C7098BBABE0073564C /* Test (Universal) */,
+				773966CC0857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		773966CD0857539700058AF5 /* Build configuration list for PBXProject "WiredAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773966CE0857539700058AF5 /* Debug (Native) */,
+				773966CF0857539700058AF5 /* Test (Native) */,
+				A5DB47C8098BBABE0073564C /* Test (Universal) */,
+				773966D00857539700058AF5 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+		779C73A10973BE9600D173B8 /* Build configuration list for PBXAggregateTarget "libwired" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779C73A20973BE9600D173B8 /* Debug (Native) */,
+				779C73A30973BE9600D173B8 /* Test (Native) */,
+				A5DB47C2098BBABE0073564C /* Test (Universal) */,
+				779C73A40973BE9600D173B8 /* Release (Universal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Test (Native)";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

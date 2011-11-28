@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = WIObject; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                cancelSheet = id; 
+                copy = id; 
+                flagsChanged = id; 
+                showViewOptions = id; 
+                submitSheet = id; 
+            }; 
+            CLASS = WITableViewManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_showColumnPrototypeButton" = NSButton; "_viewOptionsPanel" = NSPanel; }; 
+            SUPERCLASS = WIObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

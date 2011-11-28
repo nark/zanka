@@ -1,0 +1,12 @@
+svn_path=WiredServer
+svn_branch=P7
+
+xcodebuild=1
+
+tarball=WiredServer.zip
+distname=WiredServer-2.0-%X.zip
+distribute_url=svn.zankasoftware.com:/home/sites/zankasoftware.com/nightly/wired-2.0
+releaseball=wiredserver-latest.zip
+
+readme=English.lproj/ReleaseNotes.rtf
+appcasts=nightly=wiredserverp7-nightly.xml

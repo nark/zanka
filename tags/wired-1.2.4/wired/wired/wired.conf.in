@@ -1,0 +1,176 @@
+# wired.conf
+
+### SERVER ############################################################
+
+# Server name
+# (default "Wired Server")
+name = Wired Server
+
+# Server description
+# (default "Wired Server")
+description = Wired Server
+
+# Bind to a specific address
+# (no default)
+#address = localhost
+
+# Port to use for communication
+# (default 2000)
+port = 2000
+
+# User to switch to after launch
+# (default "@WD_USER@")
+user = @WD_USER@
+
+# Group to switch to after launch
+# (default "@WD_GROUP@")
+group = @WD_GROUP@
+
+# Number of seconds of non-activity after which to mark clients as idle 
+# (default 600)
+idle time = 600
+
+# Number of seconds a temporary ban lasts
+# (default 1800)
+ban time = 1800
+
+# Number of entries of news entries to keep, comment out to disable
+# (no default)
+#news limit = 100
+
+# Cipher list to pass to OpenSSL, see ciphers(1) for information
+# on its format
+# The control cipher refers to the control connection, over which
+# commands, chat, news, messages are sent
+# (default "ALL:NULL:!MD5:@STRENGTH")
+control cipher = ALL:NULL:!MD5:@STRENGTH
+transfer cipher = ALL:NULL:!MD5:@STRENGTH
+
+# Enable Zeroconf service publication to let clients with a Zeroconf
+# implementation (Apple's Rendezvous, for example) find this server
+# without entering the IP address
+# (default "yes")
+zeroconf = yes
+
+
+### FILES #############################################################
+
+# Path to the files directory
+# (default "files")
+files = files
+
+# Path to the files index, comment out to disable index
+# (no default)
+#index = files.index
+
+# Number of seconds to wait between re-indexing, comment out to disable
+# automatic re-indexing
+# (no default)
+#index time = 3600
+
+# Search method to use, can be
+#     "live"     search live
+#     "index"    search using the file index
+# (default "live")
+search method = live
+
+# Show files beginning with a dot in file listings
+# (default "no")
+show dot files = no
+
+# Show files marked invisible by Mac OS
+# (default "no")
+show invisible files = no
+
+# Ignore matching regular expression in file listings
+# (no default)
+#ignore expression = /(foo|bar)/i
+
+
+### TRACKER ###########################################################
+
+# Register with the tracker?
+# (default "no")
+register = no
+
+# Tracker to register on
+# (default "wired.zankasoftware.com")
+tracker = wired.zankasoftware.com
+
+# URL to register as
+# (no default)
+#url = wired://127.0.0.1/
+
+# Category to register as
+# (no default)
+#category = Chat
+
+# Available bandwidth in bytes/sec
+# (no default)
+#bandwidth = 64000
+
+
+### TRANSFERS #########################################################
+
+# Maximum number of concurrent downloads
+# (default 10)
+total downloads = 10
+
+# Maximum number of concurrent uploads
+# (default 10)
+total uploads = 10
+
+# Maximum number of downloads per client
+# (default 1)
+client downloads = 1
+
+# Maximum number of uploads per client
+# (default 1)
+client uploads = 1
+
+# Maximum bandwidth used for downloads in bytes/sec
+# (no default)
+#total download speed = 100000
+
+# Maximum bandwidth used for downloads in bytes/sec
+# (no default)
+#total upload speed = 50000
+
+
+### PATHS #############################################################
+
+# Paths that do not begin with a / are taken to be relative the root
+# path (-d flag).
+
+# Path to the pid file, comment out for no pid file
+# (default "wired.pid")
+pid = wired.pid
+
+# Path to the status file, comment out for no status file
+# (default "wired.status")
+status = wired.status
+
+# Path to the users file
+# (default "users")
+users = users
+
+# Path to the groups file
+# (default "groups")
+groups = groups
+
+# Path to the news file
+# (default "news")
+news = news
+
+# Path to the ban list file, comment out to disable the ban list
+# (default "banlist")
+banlist = banlist
+
+# Path to the OpenSSL certificate PEM file
+# If no certificate is specified, only anonymous ciphers will be used
+# (default "etc/certificate.pem")
+certificate = etc/certificate.pem
+
+# Path to an image to use as a banner
+# (no default)
+#banner = banner.png

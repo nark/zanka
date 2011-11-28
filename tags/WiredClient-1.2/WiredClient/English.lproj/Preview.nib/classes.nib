@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WCDragScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }, 
+        {CLASS = WCPDFView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            CLASS = WCPreview; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_imageView" = NSImageView; 
+                "_imageWindow" = NSWindow; 
+                "_pdfView" = WCPDFView; 
+                "_pdfWindow" = NSWindow; 
+                "_textView" = NSTextView; 
+                "_textWindow" = NSWindow; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

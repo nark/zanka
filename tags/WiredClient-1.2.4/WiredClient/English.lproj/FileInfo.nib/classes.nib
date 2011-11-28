@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCFileInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_checksumTextField" = NSTextField; 
+                "_checksumTitleTextField" = NSTextField; 
+                "_commentTextField" = NSTextField; 
+                "_commentTitleTextField" = NSTextField; 
+                "_createdTextField" = NSTextField; 
+                "_createdTitleTextField" = NSTextField; 
+                "_fileTextField" = NSTextField; 
+                "_iconImageView" = NSImageView; 
+                "_kindPopUpButton" = NSPopUpButton; 
+                "_kindTextField" = NSTextField; 
+                "_kindTitleTextField" = NSTextField; 
+                "_modifiedTextField" = NSTextField; 
+                "_modifiedTitleTextField" = NSTextField; 
+                "_sizeTextField" = NSTextField; 
+                "_sizeTitleTextField" = NSTextField; 
+                "_whereTextField" = NSTextField; 
+                "_whereTitleTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

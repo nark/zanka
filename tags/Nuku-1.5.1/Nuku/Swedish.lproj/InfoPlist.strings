@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Nuku";
+CFBundleShortVersionString = "Nuku version 1.5.1";
+CFBundleGetInfoString = "Nuku version 1.5.1, Copyright 2000-2003 Zanka Software.";
+NSHumanReadableCopyright = "Copyright 2000-2003 Zanka Software.";

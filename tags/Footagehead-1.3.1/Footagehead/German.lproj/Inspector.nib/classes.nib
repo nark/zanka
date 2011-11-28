@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = FHInspectorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_nameTextField" = NSTextField; "_valueTextField" = NSTextField; }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

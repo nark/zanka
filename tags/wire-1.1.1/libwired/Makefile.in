@@ -1,0 +1,169 @@
+# Makefile.in
+
+top_srcdir		= @top_srcdir@
+objdir			= @objdir@
+rundir			= @rundir@
+headerdir		= $(rundir)/include/wired
+
+WI_VERSION		= @WI_VERSION@
+WI_MAINTAINER	= @WI_MAINTAINER@
+
+DISTFILES		= LICENSE Makefile Makefile.in config.guess config.h.in \
+				  config.status config.sub configure configure.in install-sh libwired
+VPATH			= $(top_srcdir)/libwired:$(top_srcdir)/libwired/base:$(top_srcdir)/libwired/collections:$(top_srcdir)/libwired/data:$(top_srcdir)/libwired/file:$(top_srcdir)/libwired/net:$(top_srcdir)/libwired/thread:$(top_srcdir)/libwired/system
+
+LIBWIREDOBJECTS	= $(objdir)/libwired/wi-address.o \
+				  $(objdir)/libwired/wi-array.o \
+				  $(objdir)/libwired/wi-base.o \
+				  $(objdir)/libwired/wi-compat.o \
+				  $(objdir)/libwired/wi-data.o \
+				  $(objdir)/libwired/wi-date.o \
+				  $(objdir)/libwired/wi-enumerator.o \
+				  $(objdir)/libwired/wi-error.o \
+				  $(objdir)/libwired/wi-file.o \
+				  $(objdir)/libwired/wi-fts.o \
+				  $(objdir)/libwired/wi-hash.o \
+				  $(objdir)/libwired/wi-host.o \
+				  $(objdir)/libwired/wi-ip.o \
+				  $(objdir)/libwired/wi-list.o \
+				  $(objdir)/libwired/wi-lock.o \
+				  $(objdir)/libwired/wi-log.o \
+				  $(objdir)/libwired/wi-number.o \
+				  $(objdir)/libwired/wi-pool.o \
+				  $(objdir)/libwired/wi-process.o \
+				  $(objdir)/libwired/wi-regexp.o \
+				  $(objdir)/libwired/wi-runtime.o \
+				  $(objdir)/libwired/wi-set.o \
+				  $(objdir)/libwired/wi-settings.o \
+				  $(objdir)/libwired/wi-socket.o \
+				  $(objdir)/libwired/wi-string.o \
+				  $(objdir)/libwired/wi-system.o \
+				  $(objdir)/libwired/wi-terminal.o \
+				  $(objdir)/libwired/wi-thread.o \
+				  $(objdir)/libwired/wi-timer.o \
+				  $(objdir)/libwired/wi-url.o \
+				  $(objdir)/libwired/wi-uuid.o \
+				  $(objdir)/libwired/wi-version.o \
+				  $(objdir)/libwired/wi-wired.o
+HEADERS			= $(headerdir)/wi-address.h \
+				  $(headerdir)/wi-assert.h \
+				  $(headerdir)/wi-array.h \
+				  $(headerdir)/wi-base.h \
+				  $(headerdir)/wi-byteorder.h \
+				  $(headerdir)/wi-compat.h \
+				  $(headerdir)/wi-data.h \
+				  $(headerdir)/wi-date.h \
+				  $(headerdir)/wi-enumerator.h \
+				  $(headerdir)/wi-error.h \
+				  $(headerdir)/wi-file.h \
+				  $(headerdir)/wi-fts.h \
+				  $(headerdir)/wi-hash.h \
+				  $(headerdir)/wi-host.h \
+				  $(headerdir)/wi-ip.h \
+				  $(headerdir)/wi-list.h \
+				  $(headerdir)/wi-lock.h \
+				  $(headerdir)/wi-log.h \
+				  $(headerdir)/wi-macros.h \
+				  $(headerdir)/wi-number.h \
+				  $(headerdir)/wi-pool.h \
+				  $(headerdir)/wi-process.h \
+				  $(headerdir)/wi-regexp.h \
+				  $(headerdir)/wi-runtime.h \
+				  $(headerdir)/wi-set.h \
+				  $(headerdir)/wi-settings.h \
+				  $(headerdir)/wi-socket.h \
+				  $(headerdir)/wi-string.h \
+				  $(headerdir)/wi-system.h \
+				  $(headerdir)/wi-terminal.h \
+				  $(headerdir)/wi-thread.h \
+				  $(headerdir)/wi-timer.h \
+				  $(headerdir)/wi-url.h \
+				  $(headerdir)/wi-uuid.h \
+				  $(headerdir)/wi-version.h \
+				  $(headerdir)/wi-wired.h \
+				  $(headerdir)/wired.h
+			  
+DEFS			= @DEFS@
+CC				= @CC@
+CFLAGS			= @CFLAGS@
+CPPFLAGS		= @CPPFLAGS@
+LDFLAGS			= @LDFLAGS@
+INCLUDES		= -I$(top_srcdir) -I$(rundir)/include -I$(top_srcdir)/libwired/private
+
+COMPILE			= $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+PREPROCESS		= $(CC) -E $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+DEPEND			= $(CC) -MM $(INCLUDES)
+LINK			= $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ARCHIVE			= ar rcs $@
+
+ifeq ($(WI_MAINTAINER), 1)
+all: Makefile configure config.h.in $(rundir)/lib/libwired.a
+else
+all: $(rundir)/lib/libwired.a
+endif
+
+ifeq ($(WI_MAINTAINER), 1)
+Makefile: Makefile.in config.status
+	./config.status
+	
+configure: configure.in
+	autoconf
+
+config.h.in: configure.in
+	autoheader
+	touch $@
+	rm -f $@~
+endif
+	
+$(rundir)/lib/libwired.a: $(HEADERS) $(LIBWIREDOBJECTS)
+	@test -d $(@D) || mkdir -p $(@D)
+	$(ARCHIVE) $(LIBWIREDOBJECTS)
+
+$(objdir)/libwired/%.o: %.c
+	@test -d $(@D) || mkdir -p $(@D)
+	$(COMPILE) -I$(<D) -c $< -o $@
+
+$(objdir)/libwired/%.d: %.c
+	@test -d $(@D) || mkdir -p $(@D)
+	($(DEPEND) $< | sed 's,$*.o,$(@D)/&,g'; echo "$@: $<") > $@
+
+$(headerdir)/%.h: %.h
+	@test -d $(@D) || mkdir -p $(@D)
+	cp $< $@
+
+dist:
+	rm -rf libwired-$(WI_VERSION)
+	rm -f libwired-$(WI_VERSION).tar.gz
+	mkdir libwired-$(WI_VERSION)
+
+	@for i in $(DISTFILES); do \
+		if [ -e $$i ]; then \
+			echo cp -LRp $$i libwired-$(WI_VERSION)/$$i; \
+			cp -LRp $$i libwired-$(WI_VERSION)/$$i; \
+		fi \
+	done
+
+	$(SHELL) -ec "cd libwired-$(WI_VERSION) && WI_MAINTAINER=0 $(MAKE) -e distclean scmclean"
+
+	tar -czf libwired-$(WI_VERSION).tar.gz libwired-$(WI_VERSION)
+	rm -rf libwired-$(WI_VERSION)
+
+clean:
+	rm -f $(objdir)/*.o
+	rm -f $(headerdir)/*.h
+	rm -f $(rundir)/lib/libwired.a
+	rm -rf autom4te.cache
+
+distclean: clean
+	rm -rf $(objdir)
+	rm -f Makefile config.h config.log config.status config.cache
+	rm -f libwired-$(WI_VERSION).tar.gz
+
+scmclean:
+	find . -name .DS_Store -print0 | xargs -0 rm -f
+	find . -name CVS -print0 | xargs -0 rm -rf
+	find . -name .svn -print0 | xargs -0 rm -rf
+
+ifeq ($(WI_MAINTAINER), 1)
+-include $(LIBWIREDOBJECTS:.o=.d)
+endif

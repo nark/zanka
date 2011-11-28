@@ -1,0 +1,303 @@
+# Process this file with autoconf to produce a configure script
+AC_INIT([wire], [1.0.2], [axel@zankasoftware.com])
+AC_PREREQ([2.57])
+AC_CONFIG_SRCDIR([config.h.in])
+AC_CONFIG_HEADER([config.h])
+
+# Get host
+AC_CANONICAL_HOST
+
+# These are used in the source code
+AC_DEFINE([WR_PACKAGE_VERSION], ["AC_PACKAGE_VERSION"], [Application version])
+AC_DEFINE([WR_PROTOCOL_VERSION], ["1.1"], [Protocol version])
+AC_DEFINE([WR_BUGREPORT], ["AC_PACKAGE_BUGREPORT"], [Maintainer's email address])
+AC_DEFINE_UNQUOTED([WR_CPU], ["$host_cpu"], [Host CPU])
+
+# These are used in the Makefile
+AC_SUBST([WR_PACKAGE_VERSION], [AC_PACKAGE_VERSION])
+
+# These are used in configure.in
+AC_DEFUN([WR_MSG_LIB_ERROR], [
+	AC_MSG_ERROR([could not locate $1
+	
+If you installed $1 into a non-standard directory, please run:
+
+    env CPPFLAGS="-I/path/to/include" LDFLAGS="-L/path/to/lib" ./configure])
+])
+
+
+#######################################################################
+# Checks for compilers
+
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PROG_GCC_TRADITIONAL
+
+
+#######################################################################
+# Checks for flags
+
+# Check for warnings
+AC_MSG_CHECKING([whether to enable warnings])
+AC_ARG_ENABLE([warnings],
+	[  --enable-warnings       enable warnings]
+)
+
+if test -n "$enable_warnings"; then
+	AC_MSG_RESULT([yes])
+	CFLAGS="$CFLAGS -Wall"
+else
+	AC_MSG_RESULT([no])
+fi
+
+
+#######################################################################
+# Checks for programs
+
+AC_CHECK_PROG([MV], [mv], [mv])
+AC_CHECK_PROG([CP], [cp], [cp])
+AC_CHECK_PROG([RM], [rm], [rm])
+AC_CHECK_PROG([MKDIR], [mkdir], [mkdir])
+AC_CHECK_PROG([CHMOD], [chmod], [chmod])
+AC_CHECK_PROG([TAR], [tar], [tar])
+AC_CHECK_PROG([SED], [sed], [sed])
+AC_CHECK_PROG([CUT], [cut], [cut])
+AC_CHECK_PROG([FIND], [find], [find])
+AC_CHECK_PROG([XARGS], [xargs], [xargs])
+AC_CHECK_PROG([OPENSSL], [openssl], [openssl])
+
+
+#######################################################################
+# Checks for libraries
+
+# Check if we need /usr/local/{include,lib}/
+if test -d /usr/local/include; then
+	CFLAGS="$CFLAGS -I/usr/local/include"
+fi
+
+if test -d /usr/local/lib; then
+	LDFLAGS="$LDFLAGS -L/usr/local/lib"
+fi
+
+
+# Check if we need the math library
+AC_CHECK_FUNC([pow], [], [
+	AC_CHECK_LIB([m], [main], [
+		LIBS="$LIBS -lm"
+	])
+])
+
+
+# Check if we need the socket library
+AC_CHECK_FUNC(setsockopt, [], [
+	AC_CHECK_LIB([socket], [setsockopt], [
+		LIBS="$LIBS -lsocket"
+	])
+])
+
+
+# Check if we need the network services library
+AC_CHECK_FUNC([gethostent], [], [
+	AC_CHECK_LIB([nsl], [gethostent], [
+		LIBS="$LIBS -lnsl"
+	])
+])
+
+
+# Check if we need the resolve services library
+AC_CHECK_FUNC([inet_aton], [], [
+	AC_CHECK_LIB([resolv], [inet_aton], [
+		LIBS="$LIBS -lresolv"
+	])
+])
+
+
+# Check for the OpenSSL crypto library
+AC_CHECK_HEADERS([openssl/sha.h], [
+	AC_CHECK_LIB([crypto], [main], [
+		LIBS="$LIBS -lcrypto"
+	], [
+		WR_MSG_LIB_ERROR([OpenSSL])
+	])
+], [
+	WR_MSG_LIB_ERROR([OpenSSL])
+])
+
+
+# Check for the OpenSSL ssl library
+AC_CHECK_HEADERS([openssl/ssl.h], [
+	AC_CHECK_LIB([ssl], [main], [
+		LIBS="$LIBS -lssl"
+	], [
+		WR_MSG_LIB_ERROR([OpenSSL])
+	])
+], [
+	WR_MSG_LIB_ERROR([OpenSSL])
+])
+
+
+# Check for the iconv library
+AC_CHECK_HEADERS([iconv.h], [
+	AC_CHECK_LIB([iconv], [main], [
+		LIBS="$LIBS -liconv"
+	], [
+		AC_CHECK_FUNC([iconv], [], [
+			WR_MSG_LIB_ERROR([iconv])
+		])
+	])
+], [
+	WR_MSG_LIB_ERROR([iconv])
+])
+
+AC_MSG_CHECKING([if iconv understands Unicode])
+AC_TRY_RUN([
+	#include <iconv.h>
+	int main(void) {
+		iconv_t conv = iconv_open("UTF-8", "UTF-16");
+		if(conv == (iconv_t) -1)
+			return 1;
+		return 0;
+	}
+], [
+	AC_MSG_RESULT([yes])
+], [
+	AC_MSG_ERROR([no])
+])	
+
+
+# Check for the termcap library
+AC_CHECK_HEADERS([term.h], [
+	AC_CHECK_FUNC([tgoto], [], [
+		AC_CHECK_LIB([termcap], [tgoto], [
+			LIBS="$LIBS -ltermcap"
+		], [
+			AC_CHECK_LIB([ncurses], [tgoto], [
+				LIBS="$LIBS -lncurses"
+			], [
+				AC_CHECK_LIB([curses], [tgoto], [
+					LIBS="$LIBS -lcurses"
+				])
+			])
+		])
+	])
+])
+
+
+# Check for the readline library
+AC_CHECK_HEADERS([readline/readline.h], [
+	AC_CHECK_LIB([readline], [main], [
+		LIBS="$LIBS -lreadline"
+		
+		AC_MSG_CHECKING([for rl_completion_matches])
+		AC_TRY_RUN([
+			#include <stdio.h>
+			#include <readline/readline.h>
+			char * generator(const char *text, int state) {
+				return NULL;
+			}
+			int main(void) {
+				char **matches = rl_completion_matches("", generator);
+				
+				return 0;
+			}
+		], [
+			AC_DEFINE([HAVE_RL_COMPLETION_MATCHES], [1], [Define to 1 if you have the `rl_completion_matches' function, and to 0 otherwise.])
+			AC_MSG_RESULT([yes])
+			
+		], [
+			AC_MSG_RESULT([no])
+		])
+	], [
+		WR_MSG_LIB_ERROR([readline])
+	])
+], [
+	WR_MSG_LIB_ERROR([readline])
+])
+
+
+
+#######################################################################
+# Checks for header files
+
+AC_HEADER_STDC
+AC_HEADER_STDBOOL
+AC_HEADER_TIME
+AC_HEADER_DIRENT
+AC_CHECK_HEADERS([ \
+	arpa/inet.h \
+	fcntl.h \
+	limits.h \
+	netdb.h \
+	netinet/in.h \
+	stdlib.h \
+	string.h \
+	sys/ioctl.h \
+	sys/param.h \
+	sys/socket.h \
+	sys/time.h \
+	termcap.h \
+	termios.h \
+	unistd.h \
+])
+
+
+#######################################################################
+# Checks for typedefs, structures, and compiler characteristics
+
+AC_C_CONST
+AC_C_VOLATILE
+AC_STRUCT_TM
+AC_TYPE_SIGNAL
+AC_TYPE_SIZE_T
+AC_CHECK_DECLS([optreset])
+
+
+#######################################################################
+# Checks for library functions
+
+AC_FUNC_CLOSEDIR_VOID
+AC_FUNC_FSEEKO
+AC_FUNC_MALLOC
+AC_FUNC_MKTIME
+AC_FUNC_REALLOC
+AC_FUNC_SELECT_ARGTYPES
+AC_FUNC_STAT
+AC_FUNC_STRFTIME
+AC_FUNC_STRTOD
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS([ \
+	gethostbyname \
+	gettimeofday \
+	inet_ntoa \
+	memset \
+	mkdir \
+	realpath \
+	regcomp \
+	select \
+	socket \
+	strcasecmp \
+	strcasestr \
+	strchr \
+	strlcat \
+	strlcpy \
+	strdup \
+	strerror \
+	strncasecmp \
+	strrchr \
+	strsep \
+	strtol \
+	strtoul \
+	strtoull \
+	uname \
+	vasprintf \
+])
+
+
+#######################################################################
+# Output
+
+AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([wire/Makefile])
+
+AC_OUTPUT

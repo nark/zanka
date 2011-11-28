@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>a</key>
+	<string>a</string>
+	<key>i</key>
+	<string>i</string>
+	<key>u</key>
+	<string>u</string>
+	<key>e</key>
+	<string>e</string>
+	<key>o</key>
+	<string>o</string>
+
+	<key>ka</key>
+	<string>ka</string>
+	<key>ki</key>
+	<string>ki</string>
+	<key>ku</key>
+	<string>ku</string>
+	<key>ke</key>
+	<string>ke</string>
+	<key>ko</key>
+	<string>ko</string>
+
+	<key>ga</key>
+	<string>ga</string>
+	<key>gi</key>
+	<string>gi</string>
+	<key>gu</key>
+	<string>gu</string>
+	<key>ge</key>
+	<string>ge</string>
+	<key>go</key>
+	<string>go</string>
+
+	<key>sa</key>
+	<string>sa</string>
+	<key>si</key>
+	<string>shi</string>
+	<key>su</key>
+	<string>su</string>
+	<key>se</key>
+	<string>se</string>
+	<key>so</key>
+	<string>so</string>
+
+	<key>za</key>
+	<string>za</string>
+	<key>zi</key>
+	<string>ji</string>
+	<key>zu</key>
+	<string>zu</string>
+	<key>ze</key>
+	<string>ze</string>
+	<key>zo</key>
+	<string>zo</string>
+
+	<key>ta</key>
+	<string>ta</string>
+	<key>ti</key>
+	<string>chi</string>
+	<key>tu</key>
+	<string>tsu</string>
+	<key>te</key>
+	<string>te</string>
+	<key>to</key>
+	<string>to</string>
+
+	<key>da</key>
+	<string>da</string>
+	<key>di</key>
+	<string>ji</string>
+	<key>du</key>
+	<string>zu</string>
+	<key>de</key>
+	<string>de</string>
+	<key>do</key>
+	<string>do</string>
+
+	<key>na</key>
+	<string>na</string>
+	<key>ni</key>
+	<string>ni</string>
+	<key>nu</key>
+	<string>nu</string>
+	<key>ne</key>
+	<string>ne</string>
+	<key>no</key>
+	<string>no</string>
+
+	<key>ha</key>
+	<string>ha</string>
+	<key>hi</key>
+	<string>hi</string>
+	<key>hu</key>
+	<string>fu</string>
+	<key>he</key>
+	<string>he</string>
+	<key>ho</key>
+	<string>ho</string>
+
+	<key>ba</key>
+	<string>ba</string>
+	<key>bi</key>
+	<string>bi</string>
+	<key>bu</key>
+	<string>bu</string>
+	<key>be</key>
+	<string>be</string>
+	<key>bo</key>
+	<string>bo</string>
+
+	<key>pa</key>
+	<string>pa</string>
+	<key>pi</key>
+	<string>pi</string>
+	<key>pu</key>
+	<string>pu</string>
+	<key>pe</key>
+	<string>pe</string>
+	<key>po</key>
+	<string>po</string>
+
+	<key>ma</key>
+	<string>ma</string>
+	<key>mi</key>
+	<string>mi</string>
+	<key>mu</key>
+	<string>mu</string>
+	<key>me</key>
+	<string>me</string>
+	<key>mo</key>
+	<string>mo</string>
+
+	<key>ya</key>
+	<string>ya</string>
+	<key>yu</key>
+	<string>yu</string>
+	<key>yo</key>
+	<string>yo</string>
+
+	<key>ra</key>
+	<string>ra</string>
+	<key>ri</key>
+	<string>ri</string>
+	<key>ru</key>
+	<string>ru</string>
+	<key>re</key>
+	<string>re</string>
+	<key>ro</key>
+	<string>ro</string>
+
+	<key>wa</key>
+	<string>wa</string>
+	<key>n</key>
+	<string>n</string>
+	<key>wo</key>
+	<string>wo</string>
+</dict>
+</plist>

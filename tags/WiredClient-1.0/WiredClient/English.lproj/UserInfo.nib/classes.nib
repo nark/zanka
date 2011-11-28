@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCUserInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addressTextField" = NSTextField; 
+                "_addressTitleTextField" = NSTextField; 
+                "_cipherTextField" = NSTextField; 
+                "_cipherTitleTextField" = NSTextField; 
+                "_downloadsTitleTextField" = NSTextField; 
+                "_hostTextField" = NSTextField; 
+                "_hostTitleTextField" = NSTextField; 
+                "_iconImageView" = NSImageView; 
+                "_idleTimeTextField" = NSTextField; 
+                "_idleTimeTitleTextField" = NSTextField; 
+                "_loginTextField" = NSTextField; 
+                "_loginTimeTextField" = NSTextField; 
+                "_loginTimeTitleTextField" = NSTextField; 
+                "_loginTitleTextField" = NSTextField; 
+                "_nickTextField" = NSTextField; 
+                "_uploadsTitleTextField" = NSTextField; 
+                "_versionTextField" = NSTextField; 
+                "_versionTitleTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

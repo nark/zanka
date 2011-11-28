@@ -1,0 +1,10 @@
+svn_path=wire
+
+configure=1
+configure_flags=--enable-warnings
+
+tarball=wire-*.tar.gz
+distname=wire-%X.tar.gz
+releaseball=wire-latest.tar.gz
+
+readme=NEWS

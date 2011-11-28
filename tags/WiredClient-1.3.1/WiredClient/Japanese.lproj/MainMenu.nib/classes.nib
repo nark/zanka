@@ -1,0 +1,114 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                accounts = id; 
+                addBookmark = id; 
+                broadcast = id; 
+                chat = id; 
+                console = id; 
+                createFolder = id; 
+                deleteFiles = id; 
+                disconnect = id; 
+                files = id; 
+                getInfo = id; 
+                messages = id; 
+                newFolder = id; 
+                news = id; 
+                postNews = id; 
+                reconnect = id; 
+                reloadFiles = id; 
+                saveChat = id; 
+                search = id; 
+                serverInfo = id; 
+                setTopic = id; 
+                showViewOptions = id; 
+                transfers = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {myAction = id; }; 
+            CLASS = NSPanel; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = WCApplication; LANGUAGE = ObjC; SUPERCLASS = WIApplication; }, 
+        {
+            ACTIONS = {
+                about = id; 
+                bookmark = id; 
+                connect = id; 
+                hideConnection = id; 
+                makeLayoutDefault = id; 
+                manual = id; 
+                nextConnection = id; 
+                preferences = id; 
+                previousConnection = id; 
+                restoreAllLayoutsToDefault = id; 
+                restoreLayoutToDefault = id; 
+                showDock = id; 
+                showTrackers = id; 
+            }; 
+            CLASS = WCApplicationController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bookmarksMenu" = NSMenu; 
+                "_debugMenu" = NSMenu; 
+                "_deleteMenuItem" = NSMenuItem; 
+                "_disconnectMenuItem" = NSMenuItem; 
+                "_insertSmileyMenu" = NSMenu; 
+            }; 
+            SUPERCLASS = WIObject; 
+        }, 
+        {
+            ACTIONS = {
+                about = id; 
+                bookmark = id; 
+                connect = id; 
+                connectToServer = id; 
+                hideConnection = id; 
+                log = id; 
+                nextConnection = id; 
+                preferences = id; 
+                previousConnection = id; 
+                showDock = id; 
+                showTrackers = id; 
+            }; 
+            CLASS = WCMain; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bookmarksMenu" = NSMenu; 
+                "_debugMenu" = NSMenu; 
+                "_deleteMenuItem" = NSMenuItem; 
+                "_disconnectMenuItem" = NSMenuItem; 
+                "_exceptionPanel" = NSPanel; 
+                "_exceptionTextView" = NSTextView; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {orderFrontReleaseNotesWindow = id; }; 
+            CLASS = WIApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_releaseNotesTextView" = NSTextView; "_releaseNotesWindow" = NSWindow; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {CLASS = WIObject; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

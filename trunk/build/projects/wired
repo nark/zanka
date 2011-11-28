@@ -1,0 +1,10 @@
+svn_path=wired
+
+configure=1
+configure_flags=--enable-warnings
+
+tarball=wired-*.tar.gz
+distname=wired-%X.tar.gz
+releaseball=wired-latest.tar.gz
+
+readme=NEWS

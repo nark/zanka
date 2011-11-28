@@ -1,0 +1,12 @@
+svn_path=wired
+svn_branch=P7
+
+configure=1
+configure_flags=--enable-warnings
+
+tarball=wired-*.tar.gz
+distname=wired-2.0-%X.tar.gz
+distribute_url=svn.zankasoftware.com:/home/sites/zankasoftware.com/nightly/wired-2.0
+releaseball=wired-latest.tar.gz
+
+readme=NEWS

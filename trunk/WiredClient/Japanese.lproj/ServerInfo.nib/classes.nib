@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = WCServerInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bannerImageView" = NSImageView; 
+                "_certificateTextField" = NSTextField; 
+                "_certificateTitleTextField" = NSTextField; 
+                "_cipherTextField" = NSTextField; 
+                "_cipherTitleTextField" = NSTextField; 
+                "_descriptionTextField" = NSTextField; 
+                "_descriptionTitleTextField" = NSTextField; 
+                "_filesTextField" = NSTextField; 
+                "_filesTitleTextField" = NSTextField; 
+                "_nameTextField" = NSTextField; 
+                "_protocolTextField" = NSTextField; 
+                "_protocolTitleTextField" = NSTextField; 
+                "_sizeTextField" = NSTextField; 
+                "_sizeTitleTextField" = NSTextField; 
+                "_sslProtocolTextField" = NSTextField; 
+                "_sslProtocolTitleTextField" = NSTextField; 
+                "_uptimeTextField" = NSTextField; 
+                "_uptimeTitleTextField" = NSTextField; 
+                "_urlTextField" = NSTextField; 
+                "_urlTitleTextField" = NSTextField; 
+                "_versionTextField" = NSTextField; 
+                "_versionTitleTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

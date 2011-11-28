@@ -1,0 +1,10 @@
+svn_path=Spiral
+
+xcodebuild=1
+xcode_version=3.0
+
+tarball=Spiral.zip
+distname=Spiral-%X.zip
+
+readme=English.lproj/ReleaseNotes.rtf
+appcasts=nightly=spiral-nightly.xml

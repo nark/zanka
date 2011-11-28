@@ -1,0 +1,1062 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		77E09E3D0839EBE1002A4FE2 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A54D70B608636C4400441C97 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				77E09E3C0839EBE1002A4FE2 /* Run Script (Zip) */,
+			);
+			dependencies = (
+				77E09E460839EBED002A4FE2 /* PBXTargetDependency */,
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+		A5555100083668450044855A /* Localization */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A54D70B108636C4400441C97 /* Build configuration list for PBXAggregateTarget "Localization" */;
+			buildPhases = (
+				A55550FF083668450044855A /* Run Script (Localize) */,
+			);
+			dependencies = (
+			);
+			name = Localization;
+			productName = Localization;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		77ABD77E105AAC9000B24601 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77ABD77C105AAC9000B24601 /* MainMenu.xib */; };
+		77ABD782105AACB000B24601 /* Profiler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77ABD780105AACB000B24601 /* Profiler.xib */; };
+		77ABD786105AACBD00B24601 /* Session.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77ABD784105AACBD00B24601 /* Session.xib */; };
+		77CA668D106AFC9500A0463B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CA668C106AFC9500A0463B /* WebKit.framework */; };
+		77E09EDC0839F58F002A4FE2 /* ReleaseNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 77E09EDA0839F58F002A4FE2 /* ReleaseNotes.rtf */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A5092D120836B25E006646D1 /* Tuna.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5092D110836B25E006646D1 /* Tuna.icns */; };
+		A5092D180836B6C9006646D1 /* Document.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5092D170836B6C9006646D1 /* Document.icns */; };
+		A5220B4E0D62D603008CEB3E /* TunaKit.framework in Copy Files (Frameworks) */ = {isa = PBXBuildFile; fileRef = A5EAE6BF0D5969F60007C0A1 /* TunaKit.framework */; };
+		A5554EA5083633FF0044855A /* NSDocumentController-TNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5554EA3083633FF0044855A /* NSDocumentController-TNAdditions.m */; };
+		A555512D083668B30044855A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A555512B083668B30044855A /* Localizable.strings */; };
+		A57972670EBA53E600FF6E51 /* WiredFoundation.framework in Copy Files (Frameworks) */ = {isa = PBXBuildFile; fileRef = A57972000EBA529200FF6E51 /* WiredFoundation.framework */; };
+		A57972680EBA53E600FF6E51 /* WiredAppKit.framework in Copy Files (Frameworks) */ = {isa = PBXBuildFile; fileRef = A57972020EBA529200FF6E51 /* WiredAppKit.framework */; };
+		A57972C20EBA543500FF6E51 /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57972000EBA529200FF6E51 /* WiredFoundation.framework */; };
+		A57972C30EBA543500FF6E51 /* WiredAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57972020EBA529200FF6E51 /* WiredAppKit.framework */; };
+		A57F86320833EA9700DEFE69 /* TNDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A57F86300833EA9700DEFE69 /* TNDocument.m */; };
+		A57F87420833F60500DEFE69 /* TNProfilerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57F87400833F60500DEFE69 /* TNProfilerController.m */; };
+		A57F8977083541AC00DEFE69 /* TNSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A57F8975083541AC00DEFE69 /* TNSettings.m */; };
+		A59346A80CCEC021009A8245 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A59346A60CCEC021009A8245 /* Credits.rtf */; };
+		A5941CAF0832A37B0006A7D7 /* TNMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5941CAE0832A37B0006A7D7 /* TNMainController.m */; };
+		A5941D2A0832A7E20006A7D7 /* TNSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5941D290832A7E20006A7D7 /* TNSessionController.m */; };
+		A5EAE7DF0D596BFD0007C0A1 /* TNNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5941E0D0832B4E30006A7D7 /* TNNode.m */; };
+		A5EAE7E00D596BFD0007C0A1 /* TNParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A57F87DE0833FE4C00DEFE69 /* TNParser.m */; };
+		A5EAE7E10D596BFD0007C0A1 /* TNFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = A5941DEF0832B3510006A7D7 /* TNFunction.m */; };
+		A5EAE7E20D596BFD0007C0A1 /* TNTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A57F892E08353E1E00DEFE69 /* TNTree.m */; };
+		A5EAE7E30D596C050007C0A1 /* TNNode.h in Headers */ = {isa = PBXBuildFile; fileRef = A5941E0C0832B4E30006A7D7 /* TNNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EAE7E40D596C050007C0A1 /* TNParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A57F87DD0833FE4C00DEFE69 /* TNParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EAE7E50D596C050007C0A1 /* TNFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = A5941DEE0832B3500006A7D7 /* TNFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EAE7E60D596C050007C0A1 /* TNTree.h in Headers */ = {isa = PBXBuildFile; fileRef = A57F892D08353E1E00DEFE69 /* TNTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EAE7E90D596C360007C0A1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A5EAE8B10D596E910007C0A1 /* TunaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EAE6BF0D5969F60007C0A1 /* TunaKit.framework */; };
+		A5EAE9010D5970550007C0A1 /* TunaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EAE9000D5970540007C0A1 /* TunaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EAEA630D598B660007C0A1 /* TNPerlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EAEA5B0D598B660007C0A1 /* TNPerlTree.m */; };
+		A5EAEA640D598B660007C0A1 /* TNPerlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EAEA5E0D598B660007C0A1 /* TNPerlParser.m */; };
+		A5EAEA650D598B660007C0A1 /* TNPerlFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EAEA5F0D598B660007C0A1 /* TNPerlFunction.m */; };
+		A5EAEA660D598B660007C0A1 /* TNPerlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EAEA620D598B660007C0A1 /* TNPerlNode.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77E09E450839EBED002A4FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Tuna;
+		};
+		A57971FF0EBA529200FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7712BB320E5C1726001C4210;
+			remoteInfo = WiredFoundation;
+		};
+		A57972010EBA529200FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7712BC030E5C1964001C4210;
+			remoteInfo = WiredAppKit;
+		};
+		A57972030EBA529200FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 774897900CC8A63200E95A83;
+			remoteInfo = WiredNetworking;
+		};
+		A57972050EBA529200FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 773F65070E5DBDC1001A753B;
+			remoteInfo = StaticWiredFoundation;
+		};
+		A57972090EBA529200FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77DBEB930E62B97300B738D3;
+			remoteInfo = StaticWiredNetworking;
+		};
+		A579720D0EBA52C100FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7712BA960E5C1726001C4210;
+			remoteInfo = WiredFoundation;
+		};
+		A579720F0EBA52C100FF6E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7712BB670E5C1964001C4210;
+			remoteInfo = WiredAppKit;
+		};
+		A5B059860EBA5B7400DA90DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A5C23CFF0E9AC2AB00A81F49;
+			remoteInfo = libwired;
+		};
+		A5EAE8C30D596EC20007C0A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5EAE6BE0D5969F60007C0A1;
+			remoteInfo = TunaKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A57F85D80833E2A100DEFE69 /* Copy Files (Frameworks) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5220B4E0D62D603008CEB3E /* TunaKit.framework in Copy Files (Frameworks) */,
+				A57972670EBA53E600FF6E51 /* WiredFoundation.framework in Copy Files (Frameworks) */,
+				A57972680EBA53E600FF6E51 /* WiredAppKit.framework in Copy Files (Frameworks) */,
+			);
+			name = "Copy Files (Frameworks)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		77ABD77D105AAC9000B24601 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		77ABD781105AACB000B24601 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Profiler.xib; sourceTree = "<group>"; };
+		77ABD785105AACBD00B24601 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Session.xib; sourceTree = "<group>"; };
+		77CA668C106AFC9500A0463B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		77E09EDB0839F58F002A4FE2 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/ReleaseNotes.rtf; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Tuna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5092D110836B25E006646D1 /* Tuna.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Tuna.icns; sourceTree = "<group>"; };
+		A5092D170836B6C9006646D1 /* Document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Document.icns; sourceTree = "<group>"; };
+		A54D719208636D6B00441C97 /* Tuna.xcconfig */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xcconfig; path = Tuna.xcconfig; sourceTree = "<group>"; };
+		A5554EA2083633FF0044855A /* NSDocumentController-TNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocumentController-TNAdditions.h"; sourceTree = "<group>"; };
+		A5554EA3083633FF0044855A /* NSDocumentController-TNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocumentController-TNAdditions.m"; sourceTree = "<group>"; };
+		A555512C083668B30044855A /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiredAdditions.xcodeproj; path = WiredAdditions/WiredAdditions.xcodeproj; sourceTree = "<group>"; };
+		A57F862F0833EA9700DEFE69 /* TNDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDocument.h; sourceTree = "<group>"; };
+		A57F86300833EA9700DEFE69 /* TNDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDocument.m; sourceTree = "<group>"; };
+		A57F873F0833F60500DEFE69 /* TNProfilerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNProfilerController.h; sourceTree = "<group>"; };
+		A57F87400833F60500DEFE69 /* TNProfilerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNProfilerController.m; sourceTree = "<group>"; };
+		A57F87DD0833FE4C00DEFE69 /* TNParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNParser.h; path = TunaKit/TNParser.h; sourceTree = "<group>"; };
+		A57F87DE0833FE4C00DEFE69 /* TNParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNParser.m; path = TunaKit/TNParser.m; sourceTree = "<group>"; };
+		A57F892D08353E1E00DEFE69 /* TNTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNTree.h; path = TunaKit/TNTree.h; sourceTree = "<group>"; };
+		A57F892E08353E1E00DEFE69 /* TNTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNTree.m; path = TunaKit/TNTree.m; sourceTree = "<group>"; };
+		A57F8974083541AC00DEFE69 /* TNSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSettings.h; sourceTree = "<group>"; };
+		A57F8975083541AC00DEFE69 /* TNSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSettings.m; sourceTree = "<group>"; };
+		A59346A70CCEC021009A8245 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A5941CAD0832A37B0006A7D7 /* TNMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNMainController.h; sourceTree = "<group>"; };
+		A5941CAE0832A37B0006A7D7 /* TNMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNMainController.m; sourceTree = "<group>"; };
+		A5941D280832A7E20006A7D7 /* TNSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSessionController.h; sourceTree = "<group>"; };
+		A5941D290832A7E20006A7D7 /* TNSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSessionController.m; sourceTree = "<group>"; };
+		A5941DEE0832B3500006A7D7 /* TNFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNFunction.h; path = TunaKit/TNFunction.h; sourceTree = "<group>"; };
+		A5941DEF0832B3510006A7D7 /* TNFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNFunction.m; path = TunaKit/TNFunction.m; sourceTree = "<group>"; };
+		A5941E0C0832B4E30006A7D7 /* TNNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNNode.h; path = TunaKit/TNNode.h; sourceTree = "<group>"; };
+		A5941E0D0832B4E30006A7D7 /* TNNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNNode.m; path = TunaKit/TNNode.m; sourceTree = "<group>"; };
+		A5C48E060B870A7F007C7F1A /* WiredAdditions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WiredAdditions; sourceTree = "<group>"; };
+		A5EAE6BF0D5969F60007C0A1 /* TunaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TunaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5EAE73B0D596B5B0007C0A1 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = TunaKit/prefix.pch; sourceTree = "<group>"; };
+		A5EAE73C0D596B5B0007C0A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TunaKit/Info.plist; sourceTree = "<group>"; };
+		A5EAE73D0D596B5B0007C0A1 /* TunaKit.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = TunaKit.xcconfig; path = TunaKit/TunaKit.xcconfig; sourceTree = "<group>"; };
+		A5EAE9000D5970540007C0A1 /* TunaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TunaKit.h; path = TunaKit/TunaKit.h; sourceTree = "<group>"; };
+		A5EAEA5B0D598B660007C0A1 /* TNPerlTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNPerlTree.m; sourceTree = "<group>"; };
+		A5EAEA5C0D598B660007C0A1 /* TNPerlFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNPerlFunction.h; sourceTree = "<group>"; };
+		A5EAEA5D0D598B660007C0A1 /* TNPerlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNPerlParser.h; sourceTree = "<group>"; };
+		A5EAEA5E0D598B660007C0A1 /* TNPerlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNPerlParser.m; sourceTree = "<group>"; };
+		A5EAEA5F0D598B660007C0A1 /* TNPerlFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNPerlFunction.m; sourceTree = "<group>"; };
+		A5EAEA600D598B660007C0A1 /* TNPerlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNPerlNode.h; sourceTree = "<group>"; };
+		A5EAEA610D598B660007C0A1 /* TNPerlTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNPerlTree.h; sourceTree = "<group>"; };
+		A5EAEA620D598B660007C0A1 /* TNPerlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNPerlNode.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				A5EAE8B10D596E910007C0A1 /* TunaKit.framework in Frameworks */,
+				77CA668D106AFC9500A0463B /* WebKit.framework in Frameworks */,
+				A57972C20EBA543500FF6E51 /* WiredFoundation.framework in Frameworks */,
+				A57972C30EBA543500FF6E51 /* WiredAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EAE6BD0D5969F60007C0A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EAE7E90D596C360007C0A1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A57F87480833F69500DEFE69 /* Controllers */,
+				A5F911370D59CD0D00A93A77 /* Document */,
+				A57F87470833F67B00DEFE69 /* Perl Handler */,
+				A57F89730835419200DEFE69 /* Utility */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				77CA668C106AFC9500A0463B /* WebKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Tuna.app */,
+				A5EAE6BF0D5969F60007C0A1 /* TunaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Tuna */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAE7320D596AE10007C0A1 /* Tuna */,
+				A5EAE7330D596AF60007C0A1 /* TunaKit */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				A57F85B50833E16100DEFE69 /* Subprojects */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Tuna;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				32CA4F630368D1EE00C91783 /* prefix.pch */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				A555512B083668B30044855A /* Localizable.strings */,
+				A59346A60CCEC021009A8245 /* Credits.rtf */,
+				77E09EDA0839F58F002A4FE2 /* ReleaseNotes.rtf */,
+				A5092D170836B6C9006646D1 /* Document.icns */,
+				A5092D110836B25E006646D1 /* Tuna.icns */,
+				77ABD77C105AAC9000B24601 /* MainMenu.xib */,
+				77ABD780105AACB000B24601 /* Profiler.xib */,
+				77ABD784105AACBD00B24601 /* Session.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A54D719108636D5400441C97 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A54D719208636D6B00441C97 /* Tuna.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		A5555131083678EA0044855A /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				A5554EA3083633FF0044855A /* NSDocumentController-TNAdditions.m */,
+				A5554EA2083633FF0044855A /* NSDocumentController-TNAdditions.h */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		A57971F20EBA529100FF6E51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A57972000EBA529200FF6E51 /* WiredFoundation.framework */,
+				A57972020EBA529200FF6E51 /* WiredAppKit.framework */,
+				A57972040EBA529200FF6E51 /* WiredNetworking.framework */,
+				A57972060EBA529200FF6E51 /* libWiredFoundation.a */,
+				A579720A0EBA529200FF6E51 /* libWiredNetworking.a */,
+				A5B059870EBA5B7400DA90DD /* libwired.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A57F85B50833E16100DEFE69 /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */,
+				A5C48E060B870A7F007C7F1A /* WiredAdditions */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		A57F87470833F67B00DEFE69 /* Perl Handler */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAEA5F0D598B660007C0A1 /* TNPerlFunction.m */,
+				A5EAEA5C0D598B660007C0A1 /* TNPerlFunction.h */,
+				A5EAEA620D598B660007C0A1 /* TNPerlNode.m */,
+				A5EAEA600D598B660007C0A1 /* TNPerlNode.h */,
+				A5EAEA5E0D598B660007C0A1 /* TNPerlParser.m */,
+				A5EAEA5D0D598B660007C0A1 /* TNPerlParser.h */,
+				A5EAEA5B0D598B660007C0A1 /* TNPerlTree.m */,
+				A5EAEA610D598B660007C0A1 /* TNPerlTree.h */,
+			);
+			name = "Perl Handler";
+			sourceTree = "<group>";
+		};
+		A57F87480833F69500DEFE69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5941CAE0832A37B0006A7D7 /* TNMainController.m */,
+				A5941CAD0832A37B0006A7D7 /* TNMainController.h */,
+				A57F87400833F60500DEFE69 /* TNProfilerController.m */,
+				A57F873F0833F60500DEFE69 /* TNProfilerController.h */,
+				A5941D290832A7E20006A7D7 /* TNSessionController.m */,
+				A5941D280832A7E20006A7D7 /* TNSessionController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A57F89730835419200DEFE69 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A57F8975083541AC00DEFE69 /* TNSettings.m */,
+				A57F8974083541AC00DEFE69 /* TNSettings.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A5EAE7320D596AE10007C0A1 /* Tuna */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				A5555131083678EA0044855A /* Additions */,
+				29B97315FDCFA39411CA2CEA /* Sources */,
+				A54D719108636D5400441C97 /* Config */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+			);
+			name = Tuna;
+			sourceTree = "<group>";
+		};
+		A5EAE7330D596AF60007C0A1 /* TunaKit */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAE9000D5970540007C0A1 /* TunaKit.h */,
+				A5EAE7370D596B0F0007C0A1 /* Classes */,
+				A5EAE7380D596B190007C0A1 /* Other Sources */,
+				A5EAE7390D596B230007C0A1 /* Config */,
+				A5EAE73E0D596B630007C0A1 /* Resources */,
+			);
+			name = TunaKit;
+			sourceTree = "<group>";
+		};
+		A5EAE7370D596B0F0007C0A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5941DEF0832B3510006A7D7 /* TNFunction.m */,
+				A5941DEE0832B3500006A7D7 /* TNFunction.h */,
+				A5941E0D0832B4E30006A7D7 /* TNNode.m */,
+				A5941E0C0832B4E30006A7D7 /* TNNode.h */,
+				A57F87DE0833FE4C00DEFE69 /* TNParser.m */,
+				A57F87DD0833FE4C00DEFE69 /* TNParser.h */,
+				A57F892E08353E1E00DEFE69 /* TNTree.m */,
+				A57F892D08353E1E00DEFE69 /* TNTree.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A5EAE7380D596B190007C0A1 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAE73B0D596B5B0007C0A1 /* prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		A5EAE7390D596B230007C0A1 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAE73D0D596B5B0007C0A1 /* TunaKit.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		A5EAE73E0D596B630007C0A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5EAE73C0D596B5B0007C0A1 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A5F911370D59CD0D00A93A77 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				A57F86300833EA9700DEFE69 /* TNDocument.m */,
+				A57F862F0833EA9700DEFE69 /* TNDocument.h */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A5EAE6BA0D5969F60007C0A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EAE9010D5970550007C0A1 /* TunaKit.h in Headers */,
+				A5EAE7E50D596C050007C0A1 /* TNFunction.h in Headers */,
+				A5EAE7E30D596C050007C0A1 /* TNNode.h in Headers */,
+				A5EAE7E40D596C050007C0A1 /* TNParser.h in Headers */,
+				A5EAE7E60D596C050007C0A1 /* TNTree.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Tuna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54D70AC08636C4400441C97 /* Build configuration list for PBXNativeTarget "Tuna" */;
+			buildPhases = (
+				A57F85D80833E2A100DEFE69 /* Copy Files (Frameworks) */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				77E09F1A0839F78D002A4FE2 /* Run Script (Version) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5EAE8C40D596EC20007C0A1 /* PBXTargetDependency */,
+				A579720E0EBA52C100FF6E51 /* PBXTargetDependency */,
+				A57972100EBA52C100FF6E51 /* PBXTargetDependency */,
+			);
+			name = Tuna;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Tuna;
+			productReference = 8D1107320486CEB800E47090 /* Tuna.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5EAE6BE0D5969F60007C0A1 /* TunaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5EAE6C40D5969F60007C0A1 /* Build configuration list for PBXNativeTarget "TunaKit" */;
+			buildPhases = (
+				A5EAE6BA0D5969F60007C0A1 /* Headers */,
+				A5EAE6BB0D5969F60007C0A1 /* Resources */,
+				A5EAE6BC0D5969F60007C0A1 /* Sources */,
+				A5EAE6BD0D5969F60007C0A1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TunaKit;
+			productName = TunaKit;
+			productReference = A5EAE6BF0D5969F60007C0A1 /* TunaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = A54D70BB08636C4400441C97 /* Build configuration list for PBXProject "Tuna" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Tuna */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A57971F20EBA529100FF6E51 /* Products */;
+					ProjectRef = A57971F10EBA529100FF6E51 /* WiredAdditions.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Tuna */,
+				A5EAE6BE0D5969F60007C0A1 /* TunaKit */,
+				A5555100083668450044855A /* Localization */,
+				77E09E3D0839EBE1002A4FE2 /* Distribution */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A57972000EBA529200FF6E51 /* WiredFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiredFoundation.framework;
+			remoteRef = A57971FF0EBA529200FF6E51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A57972020EBA529200FF6E51 /* WiredAppKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiredAppKit.framework;
+			remoteRef = A57972010EBA529200FF6E51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A57972040EBA529200FF6E51 /* WiredNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiredNetworking.framework;
+			remoteRef = A57972030EBA529200FF6E51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A57972060EBA529200FF6E51 /* libWiredFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWiredFoundation.a;
+			remoteRef = A57972050EBA529200FF6E51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A579720A0EBA529200FF6E51 /* libWiredNetworking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWiredNetworking.a;
+			remoteRef = A57972090EBA529200FF6E51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5B059870EBA5B7400DA90DD /* libwired.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libwired.a;
+			remoteRef = A5B059860EBA5B7400DA90DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				A555512D083668B30044855A /* Localizable.strings in Resources */,
+				A59346A80CCEC021009A8245 /* Credits.rtf in Resources */,
+				77E09EDC0839F58F002A4FE2 /* ReleaseNotes.rtf in Resources */,
+				A5092D180836B6C9006646D1 /* Document.icns in Resources */,
+				A5092D120836B25E006646D1 /* Tuna.icns in Resources */,
+				77ABD77E105AAC9000B24601 /* MainMenu.xib in Resources */,
+				77ABD782105AACB000B24601 /* Profiler.xib in Resources */,
+				77ABD786105AACBD00B24601 /* Session.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EAE6BB0D5969F60007C0A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77E09E3C0839EBE1002A4FE2 /* Run Script (Zip) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Zip)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$BUILD_DIR/Tuna.zip\"\nzip -ry \"$BUILD_DIR/Tuna.zip\" \"Tuna.app\" || exit 1";
+			showEnvVarsInLog = 0;
+		};
+		77E09F1A0839F78D002A4FE2 /* Run Script (Version) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Version)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "perl WiredAdditions/version.pl\n";
+			showEnvVarsInLog = 0;
+		};
+		A55550FF083668450044855A /* Run Script (Localize) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Localize)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -f \"English.lproj/Localizable.strings\"\nfind . -name \"*.[mc]\" | xargs genstrings -s NSLS -q -o \"English.lproj\" -a\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				A5554EA5083633FF0044855A /* NSDocumentController-TNAdditions.m in Sources */,
+				A57F86320833EA9700DEFE69 /* TNDocument.m in Sources */,
+				A5941CAF0832A37B0006A7D7 /* TNMainController.m in Sources */,
+				A5EAEA650D598B660007C0A1 /* TNPerlFunction.m in Sources */,
+				A5EAEA660D598B660007C0A1 /* TNPerlNode.m in Sources */,
+				A5EAEA640D598B660007C0A1 /* TNPerlParser.m in Sources */,
+				A5EAEA630D598B660007C0A1 /* TNPerlTree.m in Sources */,
+				A57F87420833F60500DEFE69 /* TNProfilerController.m in Sources */,
+				A5941D2A0832A7E20006A7D7 /* TNSessionController.m in Sources */,
+				A57F8977083541AC00DEFE69 /* TNSettings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EAE6BC0D5969F60007C0A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EAE7E10D596BFD0007C0A1 /* TNFunction.m in Sources */,
+				A5EAE7DF0D596BFD0007C0A1 /* TNNode.m in Sources */,
+				A5EAE7E00D596BFD0007C0A1 /* TNParser.m in Sources */,
+				A5EAE7E20D596BFD0007C0A1 /* TNTree.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77E09E460839EBED002A4FE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Tuna */;
+			targetProxy = 77E09E450839EBED002A4FE2 /* PBXContainerItemProxy */;
+		};
+		A579720E0EBA52C100FF6E51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WiredFoundation;
+			targetProxy = A579720D0EBA52C100FF6E51 /* PBXContainerItemProxy */;
+		};
+		A57972100EBA52C100FF6E51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WiredAppKit;
+			targetProxy = A579720F0EBA52C100FF6E51 /* PBXContainerItemProxy */;
+		};
+		A5EAE8C40D596EC20007C0A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5EAE6BE0D5969F60007C0A1 /* TunaKit */;
+			targetProxy = A5EAE8C30D596EC20007C0A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77ABD77C105AAC9000B24601 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77ABD77D105AAC9000B24601 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		77ABD780105AACB000B24601 /* Profiler.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77ABD781105AACB000B24601 /* English */,
+			);
+			name = Profiler.xib;
+			sourceTree = "<group>";
+		};
+		77ABD784105AACBD00B24601 /* Session.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77ABD785105AACBD00B24601 /* English */,
+			);
+			name = Session.xib;
+			sourceTree = "<group>";
+		};
+		77E09EDA0839F58F002A4FE2 /* ReleaseNotes.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E09EDB0839F58F002A4FE2 /* English */,
+			);
+			name = ReleaseNotes.rtf;
+			sourceTree = "<group>";
+		};
+		A555512B083668B30044855A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A555512C083668B30044855A /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A59346A60CCEC021009A8245 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A59346A70CCEC021009A8245 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A54D70AD08636C4400441C97 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Tuna;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug/Native;
+		};
+		A54D70AE08636C4400441C97 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Tuna;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Test/Universal;
+		};
+		A54D70AF08636C4400441C97 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Tuna;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release/Universal;
+		};
+		A54D70B208636C4400441C97 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Localization;
+			};
+			name = Debug/Native;
+		};
+		A54D70B308636C4400441C97 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Localization;
+			};
+			name = Test/Universal;
+		};
+		A54D70B408636C4400441C97 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Localization;
+			};
+			name = Release/Universal;
+		};
+		A54D70B708636C4400441C97 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug/Native;
+		};
+		A54D70B808636C4400441C97 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Test/Universal;
+		};
+		A54D70B908636C4400441C97 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distribution;
+			};
+			name = Release/Universal;
+		};
+		A54D70BC08636C4400441C97 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54D719208636D6B00441C97 /* Tuna.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = 4.0;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc64]" = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc64]" = macosx10.5;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+			};
+			name = Debug/Native;
+		};
+		A54D70BD08636C4400441C97 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54D719208636D6B00441C97 /* Tuna.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = TEST;
+				GCC_VERSION = 4.0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc64]" = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc64]" = macosx10.5;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+			};
+			name = Test/Universal;
+		};
+		A54D70BE08636C4400441C97 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54D719208636D6B00441C97 /* Tuna.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_VERSION = 4.0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc64]" = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc64]" = macosx10.5;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+			};
+			name = Release/Universal;
+		};
+		A5EAE6C10D5969F60007C0A1 /* Debug/Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TunaKit/prefix.pch;
+				INFOPLIST_FILE = TunaKit/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = TunaKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug/Native;
+		};
+		A5EAE6C20D5969F60007C0A1 /* Test/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TunaKit/prefix.pch;
+				INFOPLIST_FILE = TunaKit/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = TunaKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Test/Universal;
+		};
+		A5EAE6C30D5969F60007C0A1 /* Release/Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TunaKit/prefix.pch;
+				INFOPLIST_FILE = TunaKit/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = TunaKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release/Universal;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A54D70AC08636C4400441C97 /* Build configuration list for PBXNativeTarget "Tuna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54D70AD08636C4400441C97 /* Debug/Native */,
+				A54D70AE08636C4400441C97 /* Test/Universal */,
+				A54D70AF08636C4400441C97 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A54D70B108636C4400441C97 /* Build configuration list for PBXAggregateTarget "Localization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54D70B208636C4400441C97 /* Debug/Native */,
+				A54D70B308636C4400441C97 /* Test/Universal */,
+				A54D70B408636C4400441C97 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A54D70B608636C4400441C97 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54D70B708636C4400441C97 /* Debug/Native */,
+				A54D70B808636C4400441C97 /* Test/Universal */,
+				A54D70B908636C4400441C97 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A54D70BB08636C4400441C97 /* Build configuration list for PBXProject "Tuna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54D70BC08636C4400441C97 /* Debug/Native */,
+				A54D70BD08636C4400441C97 /* Test/Universal */,
+				A54D70BE08636C4400441C97 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+		A5EAE6C40D5969F60007C0A1 /* Build configuration list for PBXNativeTarget "TunaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EAE6C10D5969F60007C0A1 /* Debug/Native */,
+				A5EAE6C20D5969F60007C0A1 /* Test/Universal */,
+				A5EAE6C30D5969F60007C0A1 /* Release/Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug/Native;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

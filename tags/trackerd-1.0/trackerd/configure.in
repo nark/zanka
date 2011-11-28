@@ -1,0 +1,397 @@
+# Process this file with autoconf to produce a configure script
+AC_INIT([trackerd], [1.0], [axel@zankasoftware.com])
+AC_PREREQ([2.57])
+AC_CONFIG_SRCDIR([config.h.in])
+AC_CONFIG_HEADER([config.h])
+
+# Get host
+AC_CANONICAL_HOST
+
+# These are used in the source code
+AC_DEFINE([WT_VERSION], ["AC_PACKAGE_VERSION"], [Application version])
+AC_DEFINE([WT_PROTOCOL_VERSION], ["1.0"], [Protocol version])
+AC_DEFINE([WT_BUGREPORT], ["AC_PACKAGE_BUGREPORT"], [Maintainer's email address])
+
+# These are used in the Makefile
+AC_SUBST([WT_VERSION], ["AC_PACKAGE_VERSION"])
+
+# These are used in configure.in
+AC_DEFUN([WT_MSG_LIB_ERROR], [
+	AC_MSG_ERROR([could not locate $1
+	
+If you installed $1 into a non-standard directory, please run:
+
+    env CPPFLAGS="-I/path/to/include" LDFLAGS="-L/path/to/lib" ./configure])
+])
+
+AC_DEFUN([WT_MSG_LIBWIRED_ERROR], [
+    AC_MSG_ERROR([could not locate libwired
+
+You need to download a version of libwired and place it in the same directory as this configure script])
+])
+
+
+#######################################################################
+# Checks for compilers
+
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+
+
+#######################################################################
+# configure flags
+
+# Check for some other user to use than "wired"
+AC_MSG_CHECKING([for user])
+AC_ARG_WITH([user], AC_HELP_STRING([--with-user=USER], [install files as USER [[wired]]]))
+
+if test -n "$with_user"; then
+	wt_user="$with_user"
+else
+	wt_user="wired"
+fi
+
+perl -e "exit(!defined(getpwnam('$wt_user')))"
+
+if test $? = 1; then
+	if test -n "$with_user"; then
+		AC_MSG_ERROR([no such user "$with_user", please set another --with-user])
+	else
+		wt_user=`perl -e 'print getlogin();'`
+	fi
+fi
+
+AC_MSG_RESULT([$wt_user])
+AC_DEFINE_UNQUOTED([WT_USER], ["$wt_user"], [User name])
+AC_SUBST([WT_USER], ["$wt_user"])
+
+
+# Check for some other group to use than "daemon"
+AC_MSG_CHECKING([for group])
+AC_ARG_WITH([group], AC_HELP_STRING([--with-group=GROUP], [install files as GROUP [[daemon]]]))
+
+if test -n "$with_group"; then
+	wt_group="$with_group"
+else
+	wt_group="daemon"
+fi
+
+perl -e "exit(!defined(getgrnam('$wt_group')))"
+
+if test $? = 1; then
+	if test -n "$with_group"; then
+		AC_MSG_ERROR([no such group "$with_group", please set another --with-group])
+	else
+		wt_group=`perl -e 'print ((getgrgid(((getpwnam(getlogin()))[[3]])))[[0]]);'`
+	fi
+fi
+
+AC_MSG_RESULT([$wt_group])
+AC_DEFINE_UNQUOTED([WT_GROUP], ["$wt_group"], [Group name])
+AC_SUBST([WT_GROUP], ["$wt_group"])
+
+
+# Check for warnings
+AC_MSG_CHECKING([for warning flags])
+AC_ARG_ENABLE([warnings], AC_HELP_STRING([--enable-warnings], [enable warnings]))
+
+AC_DEFUN([WT_WARNING_TRY], [
+	OLD_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS $1"
+
+	AC_COMPILE_IFELSE([
+		int main(void) {
+			return 0;
+		}
+	], [
+		WARNFLAGS="$WARNFLAGS $1"
+	], [
+		CFLAGS="$OLD_CFLAGS"
+	])
+])
+
+if test -n "$enable_warnings"; then
+	WT_WARNING_TRY([-W])
+	WT_WARNING_TRY([-Wall])
+	WT_WARNING_TRY([-Wno-unknown-pragmas])
+	WT_WARNING_TRY([-Wno-unused-parameter])
+	WT_WARNING_TRY([-Wsign-compare])
+	WT_WARNING_TRY([-Wstrict-prototypes])
+	WT_WARNING_TRY([-Wmissing-prototypes])
+	WT_WARNING_TRY([-Wmissing-declarations])
+	WT_WARNING_TRY([-Wredundant-decls])
+
+	AC_MSG_RESULT([$WARNFLAGS])
+else
+	AC_MSG_RESULT([none])
+fi
+
+
+# Check for fake prefix
+AC_ARG_WITH([fake_prefix], AC_HELP_STRING([--with-fake-prefix=FPREFIX], [install in FPREFIX but look like PREFIX [[PREFIX]]]))
+
+if test -n "$with_fake_prefix"; then
+	AC_SUBST([fake_prefix], ["$with_fake_prefix"])
+else
+	AC_SUBST([fake_prefix], ['${prefix}'])
+fi
+
+
+# Check for trackerd directory
+AC_ARG_WITH([trackerddir], AC_HELP_STRING([--with-trackerddir=DIR], [install tracker components in PREFIX/DIR [[wired]]]))
+
+if test -n "$with_trackerddir"; then
+	wt_trackerddir="$with_trackerddir"
+	AC_SUBST([trackerddir], ["$with_trackerddir"])
+else
+	wt_trackerddir="wired"
+	AC_SUBST([trackerddir], ['wired'])
+fi
+
+
+# Check for maintainer mode
+AC_ARG_ENABLE([maintainer_mode], AC_HELP_STRING([--enable-maintainer-mode], [enable maintainer mode]))
+
+if test -n "$enable_maintainer_mode"; then
+	AC_SUBST([WT_MAINTAINER], [1])
+else
+	AC_SUBST([WT_MAINTAINER], [0])
+fi
+
+
+#######################################################################
+# Checks for additional paths
+
+# Check if we need /usr/local/{include,lib}/
+if test -d /usr/local/include; then
+	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+fi
+
+if test -d /usr/local/lib; then
+	LDFLAGS="$LDFLAGS -L/usr/local/lib"
+fi
+
+
+# Check if we need /usr/local/ssl/{include,lib}/
+if test -d /usr/local/ssl/include; then
+	CPPFLAGS="$CPPFLAGS -I/usr/local/ssl/include"
+fi
+
+if test -d /usr/local/ssl/lib; then
+	LDFLAGS="$LDFLAGS -L/usr/local/ssl/lib"
+fi
+
+
+# Check if we need /usr/kerberos/include
+if test -d /usr/kerberos/include; then
+	CPPFLAGS="$CPPFLAGS -I/usr/kerberos/include"
+fi
+
+
+#######################################################################
+# Checks for libraries
+
+# Check that we have a libwired in this directory
+if ! test -f libwired/configure; then
+	WT_MSG_LIBWIRED_ERROR
+fi
+
+
+# Check if we need the math library
+AC_CHECK_FUNC([pow], [], [
+	AC_CHECK_LIB([m], [sqrt], [
+		LIBS="$LIBS -lm"
+	])
+])
+
+
+# Check if we need the socket library
+AC_CHECK_FUNC(setsockopt, [], [
+	AC_CHECK_LIB([socket], [setsockopt], [
+		LIBS="$LIBS -lsocket"
+	])
+])
+
+
+# Check if we need the network services library
+AC_CHECK_FUNC([gethostent], [], [
+	AC_CHECK_LIB([nsl], [gethostent], [
+		LIBS="$LIBS -lnsl"
+	])
+])
+
+
+# Check for the OpenSSL crypto library
+AC_CHECK_HEADERS([openssl/sha.h], [
+	AC_CHECK_LIB([crypto], [MD5_Init], [
+		LIBS="$LIBS -lcrypto"
+	], [
+		WT_MSG_LIB_ERROR([OpenSSL])
+	])
+], [
+	WT_MSG_LIB_ERROR([OpenSSL])
+])
+
+
+# Check for the OpenSSL ssl library
+AC_CHECK_HEADERS([openssl/ssl.h], [
+	AC_CHECK_LIB([ssl], [SSL_library_init], [
+		LIBS="$LIBS -lssl"
+	], [
+		WT_MSG_LIB_ERROR([OpenSSL])
+	])
+], [
+	WT_MSG_LIB_ERROR([OpenSSL])
+])
+
+
+# Check for CoreServices (Mac OS X)
+AC_CHECK_HEADERS([CoreServices/CoreServices.h], [
+	LIBS="$LIBS -framework CoreServices -framework Carbon"
+])
+
+
+#######################################################################
+# Check for host-specific semantics
+
+case $host in
+	*-solaris*)
+		AC_DEFINE([_POSIX_PTHREAD_SEMANTICS], [], [Define on Solaris to get sigwait() to work using pthreads semantics.])
+		;;
+esac
+
+
+#######################################################################
+# Checks for pthread
+
+# pthreads test includes
+AC_DEFUN([WT_PTHREAD_TEST_INCLUDES], [ 
+	#include <pthread.h>
+	#include <errno.h>
+
+	void * thread(void *arg) {
+		return NULL;
+	}
+])
+
+
+# pthreads test function
+AC_DEFUN([WT_PTHREAD_TEST_FUNCTION], [ 
+	pthread_t tid;
+
+	if(pthread_create(&tid, 0, thread, NULL) < 0)
+		return errno;
+
+	return 0;
+])
+
+
+# pthreads test program
+AC_DEFUN([WT_PTHREAD_TEST_PROGRAM], [ 
+	WT_PTHREAD_TEST_INCLUDES
+
+	int main(void) {
+		WT_PTHREAD_TEST_FUNCTION
+	}
+])
+
+
+# Try to compile the pthreads program
+AC_DEFUN([WT_PTHREAD_TRY], [
+	if test "$wt_pthreads_found" != yes ; then
+		# Save libs
+		OLD_LIBS="$LIBS"
+		LIBS="$1 $LIBS"
+	
+		# Try to run it
+		AC_RUN_IFELSE([AC_LANG_SOURCE([WT_PTHREAD_TEST_PROGRAM])], [
+			wt_pthreads_test=yes
+		], [
+			wt_pthreads_test=no
+		], [
+			AC_LINK_IFELSE([AC_LANG_PROGRAM([WT_PTHREAD_TEST_INCLUDES], [WT_PTHREAD_TEST_FUNCTION])], [
+				wt_pthreads_test=yes
+			], [
+				wt_pthreads_test=no
+			])
+		])
+	
+		# Restore libs
+		LIBS="$OLD_LIBS"
+		
+		# Did we find something?
+		if test "$wt_pthreads_test" = yes ; then
+			wt_pthreads_found=yes
+			wt_pthreads_libs="$1"
+		fi
+	fi
+])
+
+
+# Check for pthreads
+AC_CHECK_HEADERS([pthread.h], [
+	AC_MSG_CHECKING([for pthreads])
+
+	# Try to compile with the following libraries linked
+	WT_PTHREAD_TRY([-lpthread])
+	WT_PTHREAD_TRY([-pthread])
+	WT_PTHREAD_TRY([])
+	
+	# Did we find something?
+	if test "$wt_pthreads_found" = yes ; then
+		AC_MSG_RESULT([yes])
+		LIBS="$wt_pthreads_libs $LIBS"
+	else
+		AC_MSG_RESULT([no])
+		AC_MSG_ERROR([could not locate pthreads])
+	fi
+], [
+	AC_MSG_ERROR([could not locate pthreads])
+])
+
+
+#######################################################################
+# Checks for typedefs, structures, and compiler characteristics
+
+AC_SYS_LARGEFILE
+
+
+#######################################################################
+# Output
+
+AC_CONFIG_FILES([Makefile])
+
+# Configure libwired
+ac_configure_args="$ac_configure_args --enable-ssl --enable-pthreads"
+AC_CONFIG_SUBDIRS([libwired])
+
+AC_OUTPUT
+
+
+#######################################################################
+# Print summary
+
+A=$(eval echo ${prefix});   A=$(eval echo ${A})
+B=$(eval echo ${mandir});   B=$(eval echo ${B})
+
+echo ""
+echo "trackerd has been configured with the following options:"
+
+echo ""
+echo "                Root: ${A}/${wt_trackerddir}"
+echo "        Manual pages: ${B}/man1/trackerdctl.1"
+echo "                      ${B}/man5/trackerd.conf.5"
+echo "                      ${B}/man8/trackerd.8"
+echo "                User: ${wt_user}"
+echo "               Group: ${wt_group}"
+
+echo ""
+echo "                Host: ${host}"
+echo "            Compiler: ${CC}"
+echo "      Compiler flags: ${CFLAGS}"
+echo "  Preprocessor flags: ${CPPFLAGS}"
+echo "        Linker flags: ${LDFLAGS}"
+echo "           Libraries: ${LIBS}"
+
+echo ""

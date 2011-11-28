@@ -1,0 +1,52 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {back = id; down = id; forward = id; up = id; }; 
+            CLASS = NSObject; 
+            LANGUAGE = ObjC; 
+        }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                disconnect = id; 
+                hide = id; 
+                hideConnection = id; 
+                nextConnection = id; 
+                open = id; 
+                previousConnection = id; 
+            }; 
+            CLASS = WCDock; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_disconnectMenuItem" = NSMenuItem; 
+                "_dockTableView" = WITableView; 
+                "_hideButton" = NSButton; 
+                "_nameTableColumn" = NSTableColumn; 
+                "_openButton" = NSButton; 
+                "_statusTableColumn" = NSTableColumn; 
+                "_statusTextField" = NSTextField; 
+                "_usersTableColumn" = NSTableColumn; 
+            }; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            ACTIONS = {showViewOptions = id; }; 
+            CLASS = WITableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

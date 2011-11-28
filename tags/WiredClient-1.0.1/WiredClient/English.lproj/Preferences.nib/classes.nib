@@ -1,0 +1,88 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {CLASS = WCIconMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                addIgnore = id; 
+                addTracker = id; 
+                cancelBookmark = id; 
+                cancelIgnore = id; 
+                cancelTracker = id; 
+                deleteBookmark = id; 
+                deleteIgnore = id; 
+                deleteTracker = id; 
+                editBookmark = id; 
+                editIgnore = id; 
+                editTracker = id; 
+                ok = id; 
+                okBookmark = id; 
+                okIgnore = id; 
+                okTracker = id; 
+                selectDownloadFolder = id; 
+                selectSound = id; 
+                showFontPanel = id; 
+            }; 
+            CLASS = WCPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bookmarkAddressTableColumn" = NSTableColumn; 
+                "_bookmarkAddressTextField" = NSTextField; 
+                "_bookmarkLoginTableColumn" = NSTableColumn; 
+                "_bookmarkLoginTextField" = NSTextField; 
+                "_bookmarkNameTableColumn" = NSTableColumn; 
+                "_bookmarkNameTextField" = NSTextField; 
+                "_bookmarkPanel" = NSPanel; 
+                "_bookmarkPasswordTextField" = NSSecureTextField; 
+                "_bookmarkTableView" = NSTableView; 
+                "_chatBackgroundColorWell" = NSColorWell; 
+                "_chatEventColorWell" = NSColorWell; 
+                "_chatTextColorWell" = NSColorWell; 
+                "_chatURLColorWell" = NSColorWell; 
+                "_confirmDisconnectButton" = NSButton; 
+                "_downloadFolderTextField" = NSTextField; 
+                "_encryptTransfersButton" = NSButton; 
+                "_fontTextField" = NSTextField; 
+                "_iconMatrix" = WCIconMatrix; 
+                "_ignoreAddressTableColumn" = NSTableColumn; 
+                "_ignoreAddressTextField" = NSTextField; 
+                "_ignoreLoginTableColumn" = NSTableColumn; 
+                "_ignoreLoginTextField" = NSTextField; 
+                "_ignoreNickTableColumn" = NSTableColumn; 
+                "_ignoreNickTextField" = NSTextField; 
+                "_ignorePanel" = NSPanel; 
+                "_ignoreTableView" = NSTableView; 
+                "_loadNewsOnLoginButton" = NSButton; 
+                "_messageBackgroundColorWell" = NSColorWell; 
+                "_messageTextColorWell" = NSColorWell; 
+                "_newsBackgroundColorWell" = NSColorWell; 
+                "_newsTextColorWell" = NSColorWell; 
+                "_nickCompleteWithTextField" = NSTextField; 
+                "_nickTextField" = NSTextField; 
+                "_openFoldersInNewWindowsButton" = NSButton; 
+                "_preferencesTabView" = NSTabView; 
+                "_queueTransfersButton" = NSButton; 
+                "_showChatTimestampsButton" = NSButton; 
+                "_showConnectAtStartupButton" = NSButton; 
+                "_showEventTimestampsButton" = NSButton; 
+                "_showMessagesInForegroundButton" = NSButton; 
+                "_soundsPopUpButton" = NSPopUpButton; 
+                "_trackerAddressTableColumn" = NSTableColumn; 
+                "_trackerAddressTextField" = NSTextField; 
+                "_trackerNameTableColumn" = NSTableColumn; 
+                "_trackerNameTextField" = NSTextField; 
+                "_trackerPanel" = NSPanel; 
+                "_trackerTableView" = NSTableView; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

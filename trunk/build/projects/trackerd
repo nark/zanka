@@ -1,0 +1,10 @@
+svn_path=trackerd
+
+configure=1
+configure_flags=--enable-warnings
+
+tarball=wiredtracker-*.tar.gz
+distname=wiredtracker-%X.tar.gz
+releaseball=wiredtracker-latest.tar.gz
+
+readme=NEWS

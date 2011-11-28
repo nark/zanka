@@ -1,0 +1,10 @@
+svn_path=WiredClient
+
+xcodebuild=1
+
+tarball=WiredClient.zip
+distname=WiredClient-%X.zip
+releaseball=wiredclient-latest.zip
+
+readme=English.lproj/ReleaseNotes.rtf
+appcasts=nightly=wiredclient-nightly.xml release=wiredclient.xml

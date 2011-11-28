@@ -1,0 +1,123 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {cancelSheet = id; submitSheet = id; }; 
+            CLASS = NSWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {CLASS = WCIconMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                addIgnore = id; 
+                addTracker = id; 
+                addWord = id; 
+                clearIcon = id; 
+                deleteBookmark = id; 
+                deleteIgnore = id; 
+                deleteTracker = id; 
+                deleteWord = id; 
+                editBookmark = id; 
+                editIgnore = id; 
+                editTracker = id; 
+                selectDownloadFolder = id; 
+                selectSound = id; 
+                setIcon = id; 
+                showFontPanel = id; 
+                showWordsSheet = id; 
+                useOldIcon = id; 
+            }; 
+            CLASS = WCPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_URLColorWell" = NSColorWell; 
+                "_bookmarkAddressTableColumn" = NSTableColumn; 
+                "_bookmarkAddressTextField" = NSTextField; 
+                "_bookmarkLoginTableColumn" = NSTableColumn; 
+                "_bookmarkLoginTextField" = NSTextField; 
+                "_bookmarkNameTableColumn" = NSTableColumn; 
+                "_bookmarkNameTextField" = NSTextField; 
+                "_bookmarkPanel" = NSPanel; 
+                "_bookmarkPasswordTextField" = NSSecureTextField; 
+                "_bookmarkTableView" = NSTableView; 
+                "_broadcastEventPopUpButton" = NSPopUpButton; 
+                "_chatBackgroundColorWell" = NSColorWell; 
+                "_chatEventPopUpButton" = NSPopUpButton; 
+                "_chatStyleMatrix" = NSMatrix; 
+                "_chatTextColorWell" = NSColorWell; 
+                "_confirmDisconnectButton" = NSButton; 
+                "_connectedEventPopUpButton" = NSPopUpButton; 
+                "_disconnectedEventPopUpButton" = NSPopUpButton; 
+                "_downloadFolderTextField" = NSTextField; 
+                "_encryptTransfersButton" = NSButton; 
+                "_eventColorWell" = NSColorWell; 
+                "_fontTextField" = NSTextField; 
+                "_highlightWordsAddButton" = NSButton; 
+                "_highlightWordsButton" = NSButton; 
+                "_highlightWordsColorWell" = NSColorWell; 
+                "_highlightWordsDeleteButton" = NSButton; 
+                "_highlightWordsPanel" = NSPanel; 
+                "_highlightWordsTableView" = NSTableView; 
+                "_highlightWordsWordTableColumn" = NSTableColumn; 
+                "_historyScrollbackButton" = NSButton; 
+                "_historyScrollbackModifierPopUpButton" = NSPopUpButton; 
+                "_iconImageView" = NSImageView; 
+                "_iconMatrix" = WCIconMatrix; 
+                "_iconSizeMatrix" = NSMatrix; 
+                "_ignoreAddressTableColumn" = NSTableColumn; 
+                "_ignoreAddressTextField" = NSTextField; 
+                "_ignoreLoginTableColumn" = NSTableColumn; 
+                "_ignoreLoginTextField" = NSTextField; 
+                "_ignoreNickTableColumn" = NSTableColumn; 
+                "_ignoreNickTextField" = NSTextField; 
+                "_ignorePanel" = NSPanel; 
+                "_ignoreTableView" = NSTableView; 
+                "_loadNewsOnLoginButton" = NSButton; 
+                "_messageBackgroundColorWell" = NSColorWell; 
+                "_messageTextColorWell" = NSColorWell; 
+                "_messagesEventPopUpButton" = NSPopUpButton; 
+                "_newsBackgroundColorWell" = NSColorWell; 
+                "_newsEventPopUpButton" = NSPopUpButton; 
+                "_newsFontTextField" = NSTextField; 
+                "_newsTextColorWell" = NSColorWell; 
+                "_nickTextField" = NSTextField; 
+                "_openFoldersInNewWindowsButton" = NSButton; 
+                "_preferencesTabView" = NSTabView; 
+                "_queueTransfersButton" = NSButton; 
+                "_removeTransfersButton" = NSButton; 
+                "_showConnectAtStartupButton" = NSButton; 
+                "_showJoinLeaveButton" = NSButton; 
+                "_showMessagesInForegroundButton" = NSButton; 
+                "_showNickChangesButton" = NSButton; 
+                "_showTransfersAtStartupButton" = NSButton; 
+                "_statusTextField" = NSTextField; 
+                "_tabCompleteNicksButton" = NSButton; 
+                "_tabCompleteNicksTextField" = NSTextField; 
+                "_timestampChatButton" = NSButton; 
+                "_timestampChatIntervalTextField" = NSTextField; 
+                "_timestampEveryLineButton" = NSButton; 
+                "_timestampEveryLineColorWell" = NSColorWell; 
+                "_trackerAddressTableColumn" = NSTableColumn; 
+                "_trackerAddressTextField" = NSTextField; 
+                "_trackerNameTableColumn" = NSTableColumn; 
+                "_trackerNameTextField" = NSTextField; 
+                "_trackerPanel" = NSPanel; 
+                "_trackerTableView" = NSTableView; 
+                "_transferDoneEventPopUpButton" = NSPopUpButton; 
+                "_transferStartedEventPopUpButton" = NSPopUpButton; 
+                "_userJoinEventPopUpButton" = NSPopUpButton; 
+                "_userLeaveEventPopUpButton" = NSPopUpButton; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

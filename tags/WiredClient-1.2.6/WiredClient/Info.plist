@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredIcons</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredIcons</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Icon Pack</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>WiredTransfer</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>WiredTransfer</string>
+			<key>CFBundleTypeName</key>
+			<string>Wired Transfer</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Wired Client</string>
+	<key>CFBundleIconFile</key>
+	<string>WiredClient</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.zanka.WiredClient</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLIconFile</key>
+			<string>WiredScheme</string>
+			<key>CFBundleURLName</key>
+			<string>Wired URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wired</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLIconFile</key>
+			<string>WiredTrackerScheme</string>
+			<key>CFBundleURLName</key>
+			<string>Wired Tracker URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wiredtracker</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>CFBundleVersionKey</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>WCApplication</string>
+</dict>
+</plist>

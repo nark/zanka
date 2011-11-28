@@ -1,0 +1,55 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {ignore = id; info = id; sendPrivateMessage = id; unignore = id; }; 
+            CLASS = WCChat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_chatInputTextView" = NSTextView; 
+                "_chatOutputScrollView" = NSScrollView; 
+                "_chatOutputTextView" = WCURLTextView; 
+                "_chatSplitView" = WCSplitView; 
+                "_infoButton" = NSButton; 
+                "_nickTableColumn" = NSTableColumn; 
+                "_privateMessageButton" = NSButton; 
+                "_userListSplitView" = WCSplitView; 
+                "_userListTableView" = WCTypeAheadTableView; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                ban = id; 
+                cancelBanMessage = id; 
+                cancelKickMessage = id; 
+                kick = id; 
+                okBanMessage = id; 
+                okKickMessage = id; 
+                startPrivateChat = id; 
+            }; 
+            CLASS = WCPublicChat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_banButton" = NSButton; 
+                "_banMessagePanel" = NSPanel; 
+                "_banMessageTextField" = NSTextField; 
+                "_kickButton" = NSButton; 
+                "_kickMessagePanel" = NSPanel; 
+                "_kickMessageTextField" = NSTextField; 
+                "_privateChatButton" = NSButton; 
+            }; 
+            SUPERCLASS = WCChat; 
+        }, 
+        {CLASS = WCSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = WCTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = WCTypeAheadTableView; LANGUAGE = ObjC; SUPERCLASS = WCTableView; }, 
+        {CLASS = WCURLTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

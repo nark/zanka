@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WCConnectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = WIWindowController; 
+        }, 
+        {
+            CLASS = WCConsole; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_consoleScrollView" = NSScrollView; "_consoleTextView" = NSTextView; }; 
+            SUPERCLASS = WCConnectionController; 
+        }, 
+        {CLASS = WITextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WIWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

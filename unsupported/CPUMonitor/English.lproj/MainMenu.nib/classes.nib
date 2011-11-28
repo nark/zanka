@@ -1,0 +1,41 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                changeApplicationIcon = id; 
+                changeExpandedView = id; 
+                changeFloatingView = id; 
+                clearExpandedWindow = id; 
+                openActivityMonitor = id; 
+                openTop = id; 
+                releaseNotes = id; 
+                toggleFloatingWindow = id; 
+            }; 
+            CLASS = CPUController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_applicationIconMatrix" = NSMatrix; 
+                "_expandedPanel" = NSPanel; 
+                "_expandedView" = CPUExpandedView; 
+                "_expandedViewBackgroundColorWell" = NSColorWell; 
+                "_expandedViewNiceColorWell" = NSColorWell; 
+                "_expandedViewSystemColorWell" = NSColorWell; 
+                "_expandedViewUserColorWell" = NSColorWell; 
+                "_floatingViewAlphaMatrix" = NSMatrix; 
+                "_floatingViewColorWell" = NSColorWell; 
+                "_floatingViewOrientationMatrix" = NSMatrix; 
+                "_preferencesWindow" = NSWindow; 
+                "_releaseNotesTextView" = NSTextView; 
+                "_releaseNotesWindow" = NSWindow; 
+                "_standardBackgroundImageView" = NSImageView; 
+                "_standardBox" = NSBox; 
+                "_standardImageView" = NSImageView; 
+                "_standardPanel" = NSPanel; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = CPUExpandedView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

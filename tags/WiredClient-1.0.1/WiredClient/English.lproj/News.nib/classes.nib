@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {clear = id; post = id; reload = id; send = id; }; 
+            CLASS = WCNews; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_clearButton" = NSButton; 
+                "_newsTextView" = WCURLTextView; 
+                "_postButton" = NSButton; 
+                "_postTextView" = NSTextView; 
+                "_postWindow" = NSWindow; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {CLASS = WCURLTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

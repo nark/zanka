@@ -1,0 +1,186 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = id; 
+                "_initialKeyView" = id; 
+                "_lastKeyView" = id; 
+                "_window" = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = SFAuthorizationView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {add = id; delete = id; selectGroup = id; selectType = id; touch = id; }; 
+            CLASS = WCAccountsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addButton" = NSButton; 
+                "_banUsersButton" = NSButton; 
+                "_broadcastButton" = NSButton; 
+                "_cannotBeKickedButton" = NSButton; 
+                "_clearNewsButton" = NSButton; 
+                "_createAccountsButton" = NSButton; 
+                "_createFoldersButton" = NSButton; 
+                "_deleteAccountsButton" = NSButton; 
+                "_deleteButton" = NSButton; 
+                "_deleteFilesButton" = NSButton; 
+                "_downloadButton" = NSButton; 
+                "_downloadSpeedTextField" = NSTextField; 
+                "_editAccountsButton" = NSButton; 
+                "_elevatePrivilegesButton" = NSButton; 
+                "_getUserInfoButton" = NSButton; 
+                "_groupPopUpButton" = NSPopUpButton; 
+                "_kickUsersButton" = NSButton; 
+                "_moveFilesButton" = NSButton; 
+                "_nameTextField" = NSTextField; 
+                "_passwordTextField" = NSTextField; 
+                "_postNewsButton" = NSButton; 
+                "_setTopicButton" = NSButton; 
+                "_tableView" = NSTableView; 
+                "_typePopUpButton" = NSPopUpButton; 
+                "_uploadAnywhereButton" = NSButton; 
+                "_uploadButton" = NSButton; 
+                "_uploadSpeedTextField" = NSTextField; 
+                "_viewDropBoxesButton" = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addTracker = id; 
+                banner = id; 
+                clearBanner = id; 
+                createCertificate = id; 
+                deleteTracker = id; 
+                detectURL = id; 
+                selectFiles = id; 
+                selectLogFile = id; 
+                setBanner = id; 
+                touch = id; 
+            }; 
+            CLASS = WCConfigController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addTrackerButton" = NSButton; 
+                "_allowUnencryptedButton" = NSButton; 
+                "_bandwidthPopUpButton" = NSPopUpButton; 
+                "_bannerImageView" = NSImageView; 
+                "_categoryTableColumn" = NSTableColumn; 
+                "_certificateImageView" = NSImageView; 
+                "_certificatePanel" = NSPanel; 
+                "_certificateProgressIndicator" = NSProgressIndicator; 
+                "_certificateTextField" = NSTextField; 
+                "_clearBannerButton" = NSButton; 
+                "_clientDownloadsTextField" = NSTextField; 
+                "_clientUploadsTextField" = NSTextField; 
+                "_controlPortTextField" = NSTextField; 
+                "_createCertificateButton" = NSButton; 
+                "_deleteTrackerButton" = NSButton; 
+                "_descriptionTextField" = NSTextField; 
+                "_detectURLButton" = NSButton; 
+                "_downloadSpeedTextField" = NSTextField; 
+                "_filesTextField" = NSTextField; 
+                "_groupPopUpButton" = NSPopUpButton; 
+                "_indexPopUpButton" = NSPopUpButton; 
+                "_launchAtBootButton" = NSButton; 
+                "_limitLogFileButton" = NSButton; 
+                "_limitLogFileTextField" = NSTextField; 
+                "_limitNewsButton" = NSButton; 
+                "_limitNewsTextField" = NSTextField; 
+                "_logFileTextField" = NSTextField; 
+                "_logMethodMatrix" = NSMatrix; 
+                "_nameTextField" = NSTextField; 
+                "_registerWithTrackersButton" = NSButton; 
+                "_searchMethodMatrix" = NSMatrix; 
+                "_selectBannerButton" = NSButton; 
+                "_selectFilesButton" = NSButton; 
+                "_selectLogFileButton" = NSButton; 
+                "_showDotFilesButton" = NSButton; 
+                "_showInvisibleButton" = NSButton; 
+                "_syslogPopUpButton" = NSPopUpButton; 
+                "_totalDownloadsTextField" = NSTextField; 
+                "_totalUploadsTextField" = NSTextField; 
+                "_trackerTableColumn" = NSTableColumn; 
+                "_trackersTableView" = NSTableView; 
+                "_transferPortTextField" = NSTextField; 
+                "_uploadSpeedTextField" = NSTextField; 
+                "_urlTextField" = NSTextField; 
+                "_useZeroconfButton" = NSButton; 
+                "_userPopUpButton" = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                indexFiles = id; 
+                registerWithTracker = id; 
+                reload = id; 
+                restart = id; 
+                start = id; 
+            }; 
+            CLASS = WCDashboardController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_authorizationView" = SFAuthorizationView; 
+                "_indexButton" = NSButton; 
+                "_registerButton" = NSButton; 
+                "_reloadButton" = NSButton; 
+                "_restartButton" = NSButton; 
+                "_startButton" = NSButton; 
+                "_statusController" = WCStatusController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {filter = id; mark = id; reload = id; }; 
+            CLASS = WCLogController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_textView" = NSTextView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = WCStatusController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bandwidthGraphView" = WIGraphView; 
+                "_currentDownloadsTextField" = NSTextField; 
+                "_currentUploadsTextField" = NSTextField; 
+                "_currentUsersTextField" = NSTextField; 
+                "_dataInPerSecTextField" = NSTextField; 
+                "_dataInTextField" = NSTextField; 
+                "_dataOutPerSecTextField" = NSTextField; 
+                "_dataOutTextField" = NSTextField; 
+                "_statusTextField" = NSTextField; 
+                "_totalDownloadsTextField" = NSTextField; 
+                "_totalUploadsTextField" = NSTextField; 
+                "_totalUsersTextField" = NSTextField; 
+                "_transfersGraphView" = WIGraphView; 
+                "_usersGraphView" = WIGraphView; 
+                "_versionTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = WIGraphView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {help = id; }; 
+            CLASS = WPWired; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_accountsController" = WCAccountsController; 
+                "_accountsTabView" = NSTabView; 
+                "_configController" = WCConfigController; 
+                "_dashboardController" = WCDashboardController; 
+                "_logController" = WCLogController; 
+                "_statusController" = WCStatusController; 
+                "_tabView" = NSTabView; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }
+    ); 
+    IBVersion = 1; 
+}

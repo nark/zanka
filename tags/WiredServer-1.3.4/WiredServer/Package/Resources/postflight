@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# Set prefix
+defaults write com.apple.systempreferences WCPrefixPath /Library/Wired
+
+# Generate new key
+if [ ! -f /Library/Wired/etc/certificate.pem ]; then
+	/Library/Wired/wiredctl certificate
+fi
+
+# Touch log file
+touch /Library/Wired/wired.log
+
+# Set owner to that in prefs
+OWNER=$(/Library/Wired/wiredctl config | grep "^user = " | cut -d "=" -f2)
+
+if [ -z "$OWNER" ]; then
+	OWNER=wired
+fi
+
+GROUP=$(/Library/Wired/wiredctl config | grep "^group = " | cut -d "=" -f2)
+
+if [ -z "$GROUP" ]; then
+	GROUP=daemon
+fi
+
+chown $OWNER:$GROUP /Library/Wired /Library/Wired/*
+
+# Set TMPDIR so that AuthorizationExecuteWithPrivileges() works
+export TMPDIR=/tmp
+
+# Open System Preferences
+/usr/bin/osascript <<EOF
+tell application "System Preferences"
+	activate
+	set current pane to pane "com.zanka.WiredServer"
+end tell
+EOF
+
+exit 0

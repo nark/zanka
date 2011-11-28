@@ -1,0 +1,147 @@
+SUBDIRS					= hl2wired wired
+DISTFILES				= INSTALL LICENSE README Makefile Makefile.in config.guess config.h.in config.sub configure configure.in hl2wired install-sh man run wired
+
+WD_PACKAGE_VERSION		= @WD_PACKAGE_VERSION@
+WD_USER					= @WD_USER@
+WD_GROUP				= @WD_GROUP@
+
+bindir					= @bindir@
+datadir					= @datadir@
+exec_prefix				= @exec_prefix@
+includedir				= @includedir@
+infodir					= @infodir@
+libdir					= @libdir@
+libexecdir				= @libexecdir@
+localstatedir			= @localstatedir@
+mandir					= @mandir@
+prefix					= @prefix@
+sbindir					= @sbindir@
+srcdir					= @srcdir@
+sysconfdir				= @sysconfdir@
+top_srcdir				= @top_srcdir@
+
+INSTALL					= @INSTALL@
+RM						= @RM@
+CP						= @CP@
+MV						= @MV@
+MKDIR					= @MKDIR@
+CHMOD					= @CHMOD@
+TAR						= @TAR@
+SED						= @SED@
+CUT						= @CUT@
+FIND					= @FIND@
+XARGS					= @XARGS@
+OPENSSL					= @OPENSSL@
+
+all: all-recursive
+
+all-recursive clean-recursive appclean-recursive distclean-recursive:
+	@list='$(SUBDIRS)'; \
+	for subdir in $$list; do \
+		target=`echo $@ | $(SED) s/-recursive//`; \
+		echo "Making $$target in $$subdir"; \
+		(cd $$subdir && $(MAKE) $$target); \
+	done
+
+install: all install-man
+	@echo "Making $@ in ."
+	
+	if [ -e $(prefix)/wired/wired ]; then \
+		touch .update; \
+	fi
+
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/etc/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/files/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/files/Uploads/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/files/Drop\ Box/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) -d $(prefix)/wired/tmp/
+
+	if [ ! -f $(prefix)/wired/banlist ]; then \
+		$(INSTALL) -m 644 -o $(WD_USER) -g $(WD_GROUP) run/banlist $(prefix)/wired/; \
+	fi
+
+	if [ ! -f $(prefix)/wired/groups ]; then \
+		$(INSTALL) -m 644 -o $(WD_USER) -g $(WD_GROUP) run/groups $(prefix)/wired/; \
+	fi
+
+	if [ ! -f $(prefix)/wired/news ]; then \
+		$(INSTALL) -m 644 -o $(WD_USER) -g $(WD_GROUP) run/news $(prefix)/wired/; \
+	fi
+
+	if [ ! -f $(prefix)/wired/users ]; then \
+		$(INSTALL) -m 600 -o $(WD_USER) -g $(WD_GROUP) run/users $(prefix)/wired/; \
+	fi
+
+	if [ ! -f $(prefix)/wired/etc/wired.conf ]; then \
+		$(INSTALL) -m 644 -o $(WD_USER) -g $(WD_GROUP) run/etc/wired.conf $(prefix)/wired/etc/; \
+	fi
+	
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) run/hl2wired $(prefix)/wired/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) run/wired $(prefix)/wired/
+	$(INSTALL) -m 755 -o $(WD_USER) -g $(WD_GROUP) run/wiredctl $(prefix)/wired/
+	$(INSTALL) -m 644 -o $(WD_USER) -g $(WD_GROUP) /etc/resolv.conf $(prefix)/wired/etc/
+
+
+	@if [ -f .update ]; then \
+		echo ""; \
+		echo "Update complete!"; \
+		echo ""; \
+		echo "You should now run:"; \
+		echo "    $(prefix)/wired/wiredctl restart"; \
+		echo "to restart a running server."; \
+	else \
+		echo ""; \
+		echo "Installation complete!"; \
+		echo ""; \
+		echo "An administrator account with login \"admin\" and no password has been created."; \
+		echo ""; \
+		echo "Remember to edit $(prefix)/wired/etc/wired.conf if you want to make any changes before starting the server."; \
+		echo ""; \
+		echo "When you are done, run:"; \
+		echo "    $(prefix)/wired/wiredctl start"; \
+		echo "to start the server."; \
+	fi
+	
+	@$(RM) -f .update
+
+install-man:
+	$(INSTALL) -m 644 -o root -g bin man/hl2wired.1 $(mandir)/man1/
+	$(INSTALL) -m 644 -o root -g bin man/wiredctl.1 $(mandir)/man1/
+	$(INSTALL) -m 644 -o root -g bin man/wired.conf.5 $(mandir)/man5/
+	$(INSTALL) -m 644 -o root -g bin man/wired.8 $(mandir)/man8/
+
+dist:
+	@echo "Making $@ in ."
+
+	$(RM) -rf wired-$(WD_PACKAGE_VERSION)
+	$(RM) -f wired-$(WD_PACKAGE_VERSION).tar.gz
+	$(MKDIR) wired-$(WD_PACKAGE_VERSION)
+
+	@for i in $(DISTFILES); do \
+		$(CP) -pr $$i wired-$(WD_PACKAGE_VERSION)/$$i; \
+	done
+	
+	$(MAKE) -C wired-$(WD_PACKAGE_VERSION) -f Makefile distclean
+
+	$(TAR) -czf wired-$(WD_PACKAGE_VERSION).tar.gz wired-$(WD_PACKAGE_VERSION)
+	$(RM) -rf wired-$(WD_PACKAGE_VERSION)
+
+clean: clean-recursive
+	@echo "Making $@ in ."
+
+	$(RM) -f *.core
+
+distclean: clean distclean-recursive
+	@echo "Making $@ in ."
+
+	$(FIND) . -name .DS_Store -print0 | $(XARGS) -0 $(RM) -f
+	$(FIND) . -name CVS -print0 | $(XARGS) -0 $(RM) -rf
+	$(RM) -f Makefile config.h config.log config.status
+	$(RM) -f wired-$(WD_PACKAGE_VERSION).tar.gz
+
+autoclean:
+	@echo "Making $@ in ."
+	
+	$(RM) -rf autom4te.cache
+	$(RM) -f autoscan.log configure.scan config.h.in~

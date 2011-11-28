@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WCOutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }, 
+        {
+            ACTIONS = {search = id; }; 
+            CLASS = WCTrackers; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_progressIndicator" = NSProgressIndicator; 
+                "_searchTextField" = NSTextField; 
+                "_statusTextField" = NSTextField; 
+                "_trackersOutlineView" = NSOutlineView; 
+                "_viewOptionsPanel" = NSPanel; 
+            }; 
+            SUPERCLASS = WCWindowController; 
+        }, 
+        {
+            ACTIONS = {cancelSheet = id; okSheet = id; }; 
+            CLASS = WCWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

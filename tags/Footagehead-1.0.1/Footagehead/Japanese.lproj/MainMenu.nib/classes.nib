@@ -1,0 +1,46 @@
+{
+    IBClasses = (
+        {
+            CLASS = FHBrowserView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_controller" = FHController; }; 
+            SUPERCLASS = NSMatrix; 
+        }, 
+        {
+            ACTIONS = {
+                cancelOpenURL = id; 
+                delete = id; 
+                menu = id; 
+                okOpenURL = id; 
+                open = id; 
+                openFolder = id; 
+                openImage = id; 
+                openParent = id; 
+                openURL = id; 
+                revealInFinder = id; 
+                slideshow = id; 
+            }; 
+            CLASS = FHController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_browserView" = FHBrowserView; 
+                "_fullscreenImageView" = FHImageView; 
+                "_fullscreenPanel" = NSPanel; 
+                "_imageView" = NSImageView; 
+                "_menu" = NSPopUpButton; 
+                "_moveToTrashButton" = NSButton; 
+                "_openURLPanel" = NSPanel; 
+                "_openURLTextView" = NSTextView; 
+                "_progressIndicator" = NSProgressIndicator; 
+                "_revealInFinderButton" = NSButton; 
+                "_splitView" = FHSplitView; 
+                "_statusTextField" = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FHImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = FHSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

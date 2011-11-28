@@ -1,0 +1,27 @@
+NEWS
+====
+
+1.1
+- IPv6 support
+- Add /search command
+- When called without arguments, /topic prints the current topic
+- Add -P flag to /open for alternate port
+- Display status in user listings, remove login and IP
+- Remove /icon command, icon ids are being phased out
+- Add default custom 32x32 Wire icon
+- Several bug fixes related to scrolling
+- Server pinging to keep connections alive
+- Add /ping command
+- Add /charset command to change character set during execution, remove -c flag
+- Add /serverinfo command
+- Timestamp chat
+
+1.0.2
+- Handle kick and ban messages
+- Better handling of broadcast messages
+
+1.0.1
+- Fix an unhandled error message on 1.1 servers
+
+1.0
+- Initial release

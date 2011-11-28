@@ -1,0 +1,21 @@
+<a name="<? postid ?>"></a>
+<div class="post">
+	<div class="postheader">
+		<div class="posticon"><img src="<? icon ?>" width="32" height="32" alt="" /></div>
+		<div class="postfrom"><? from ?><? unreadimage ?></div>
+		<div class="postpostdate"><? postdate ?></div>
+		<div class="posteditdate"><? editdate ?></div>
+	</div>
+
+	<div class="postbody">
+		<? body ?>
+	</div>
+
+	<div class="postbuttons">
+		<form action="">
+			<input class="postbutton" type="button" <? quotedisabled ?> onclick="window.Boards.replyToPostWithID_('<? postid ?>');" value="<? quotestring ?>" />
+			<input class="postbutton" type="button" <? editdisabled ?> onclick="window.Boards.editPostWithID_('<? postid ?>');" value="<? editstring ?>" />
+			<input class="postbutton" type="button" <? deletedisabled ?> onclick="window.Boards.deletePostWithID_('<? postid ?>');" value="<? deletestring ?>" />
+		</form>
+	</div>
+</div>
